@@ -1,0 +1,36 @@
+plugins {
+	id 'org.springframework.boot' version '2.3.4.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+	id 'java'
+}
+
+group = 'com.cccr'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	// // mybatis
+	// implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.0'
+	// //jdbc
+	// implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	// //mysql
+	// implementation 'mysql:mysql-connector-java'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.3.0.RELEASE'
+	compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '9.0.35'
+	compile 'javax.servlet:jstl:1.2'
+	
+}
+
+test {
+	useJUnitPlatform()
+}
