@@ -91,7 +91,7 @@
 			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
 			   				<div class="slider-text-inner">
 			   					<h1 class="heading-section">About Us</h1>
-									<h2>Free html5 templates Made by <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2>
+									<%-- <h2>Free html5 templates Made by <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2> --%>
 			   				</div>
 			   			</div>
 			   		</div>
@@ -113,8 +113,27 @@
                 <p>5. 기부완료</p>
                 <p>6. 그동안의 기부내용은 마이페이지의 기부한 현황을 누르면 확인 할 수 있어요</p>
 			</div>
+			<%-- 기부하기 이미지 넣기 --%>
 			<div class="col-md-6">
-				<img class="img-responsive" src="resources/images/img_bg_2.jpg" alt="Free HTML5 Bootstrap Template">
+				<img class="img-responsive" src="resources/images/img_bg_2.jpg" alt="Free HTML5 Bootstrap Template"> 
+			</div>
+		</div>
+	</div>
+
+	<div class="seperate_div"></div>
+	
+	<div id="fh5co-about">
+		<div class="container">
+			<div class="col-md-6 animate-box">
+				<span>using your credit</span>
+				<h2>헌혈증 사용법</h2>
+				<p>1. 로그인 후 오른쪽 상단 mypage로 이동하세요</p>
+				<p>2. 보유한 헌혈증을 클릭해주세요</p>
+				<p>3. 화면에 올라온 바코드 로 직접 사용가능합니다</p>
+			</div>
+			<%-- 사용하기 이미지 넣기 --%>
+			<div class="col-md-6">
+				<img class="img-responsive" src="resources/images/img_bg_2.jpg" alt="Free HTML5 Bootstrap Template"> 
 			</div>
 		</div>
 	</div>
@@ -125,25 +144,16 @@
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
 					<div class="row">
-						<div class="col-md-3 col-sm-6 text-center animate-box">
-							<span class="icon"><i class="icon-world"></i></span>
-							<span class="fh5co-counter js-counter" data-from="0" data-to="3297" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="fh5co-counter-label">Foreign Followers</span>
-						</div>
-						<div class="col-md-3 col-sm-6 text-center animate-box">
-							<span class="icon"><i class="icon-study"></i></span>
-							<span class="fh5co-counter js-counter" data-from="0" data-to="3700" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="fh5co-counter-label">Students Enrolled</span>
-						</div>
-						<div class="col-md-3 col-sm-6 text-center animate-box">
+					
+						<div class="col-md-5 col-sm-6 text-center animate-box">
 							<span class="icon"><i class="icon-bulb"></i></span>
 							<span class="fh5co-counter js-counter" data-from="0" data-to="5034" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="fh5co-counter-label">Classes Complete</span>
+							<span class="fh5co-counter-label">기증된 헌혈증</span>
 						</div>
-						<div class="col-md-3 col-sm-6 text-center animate-box">
+						<div class="col-md-5 col-sm-6 text-center animate-box">
 							<span class="icon"><i class="icon-head"></i></span>
 							<span class="fh5co-counter js-counter" data-from="0" data-to="1080" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="fh5co-counter-label">Certified Teachers</span>
+							<span class="fh5co-counter-label">수혜자</span>
 						</div>
 					</div>
 				</div>

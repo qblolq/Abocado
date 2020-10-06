@@ -31,7 +31,7 @@
 <!--[if lt IE 9]>
 <script src="js/respond.min.js"></script>
 <![endif]-->
-<title>Insert title here</title>
+<title>Abocado main page</title>
 </head>
 <body>
 
@@ -46,43 +46,43 @@
     <aside id="fh5co-hero">
 		<div class="flexslider">
 			<ul class="slides">
-		   	<li style="background-image: url(resources/images/img_bg_1.jpg);">
+		   	<li style="background-image: url(resources/images/img_bg_1.jpg);"> <!--service flow imge-->
 		   		<div class="overlay-gradient"></div>
 		   		<div class="container">
 		   			<div class="row">
 			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
 			   				<div class="slider-text-inner">
-			   					<h1>The Roots of Education are Bitter, But the Fruit is Sweet</h1>
-									<h2>Brought to you by <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2>
-									<p><a class="btn btn-primary btn-lg" href="#">Start Learning Now!</a></p>
+			   					<h1>This is our service flow image</h1>
+									<h2>this is our service flow image <a href="#" target="_blank">go to about</a></h2>
+									<p><a class="btn btn-primary btn-lg" href="#">Learnig how to flow your credit</a></p>
 			   				</div>
 			   			</div>
 			   		</div>
 		   		</div>
 		   	</li>
-		   	<li style="background-image: url(resources/images/img_bg_2.jpg);">
+		   	<li style="background-image: url(resources/images/img_bg_2.jpg);"> <!--donate image-->
 		   		<div class="overlay-gradient"></div>
 		   		<div class="container">
 		   			<div class="row">
 			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
 			   				<div class="slider-text-inner">
-			   					<h1>The Great Aim of Education is not Knowledge, But Action</h1>
-									<h2>Brought to you by <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2>
-									<p><a class="btn btn-primary btn-lg btn-learn" href="#">Start Learning Now!</a></p>
+			   					<h1>This is our donation image</h1>
+									<h2>Show how to Donate your credit by <a href="./aboutPage" target="_blank">about</a></h2>
+									<p><a class="btn btn-primary btn-lg btn-learn" href="./aboutPage">Learning how to donate</a></p>
 			   				</div>
 			   			</div>
 			   		</div>
 		   		</div>
 		   	</li>
-		   	<li style="background-image: url(resources/images/img_bg_3.jpg);">
+		   	<li style="background-image: url(resources/images/img_bg_3.jpg);"> <!--use credit image-->
 		   		<div class="overlay-gradient"></div>
 		   		<div class="container">
 		   			<div class="row">
 			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
 			   				<div class="slider-text-inner">
-			   					<h1>We Help You to Learn New Things</h1>
-									<h2>Brought to you by <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2>
-									<p><a class="btn btn-primary btn-lg btn-learn" href="#">Start Learning Now!</a></p>
+			   					<h1>This is our using credit image</h1>
+									<h2>Show how to user your credit by<a href="aboutPage" target="_blank">about</a></h2>
+									<p><a class="btn btn-primary btn-lg btn-learn" href="aboutPage">Learning how to use your credit</a></p>
 			   				</div>
 			   			</div>
 			   		</div>
@@ -92,13 +92,14 @@
 	  	</div>
 	</aside>
 
+	<div class="seperate_div"></div>
 
-    <div id="fh5co-testimonial" style="background-image: url(resources/images/school.jpg);">
+    <div id="fh5co-testimonial" "> <!--backgound check tuesday-->
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-					<h2><span>Testimonials</span></h2>
+					<h2><span>Message to Donator</span></h2>
 				</div>
 			</div>
 			<div class="row">
@@ -107,28 +108,28 @@
 						<div class="owl-carousel owl-carousel-fullwidth">
 							<div class="item">
 								<div class="testimony-slide active text-center">
-									<div class="user" style="background-image: url(resources/images/person1.jpg);"></div>
-									<span>Mary Walker<br><small>Students</small></span>
+									<div class="user" style="background-image: url(resources/images/gongyou.jpg);"></div>
+									<span>공유<br></span>
 									<blockquote>
-										<p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
+										<p>&ldquo;너와 함께한 모든 헌혈이 눈부셨다 &rdquo;</p>
 									</blockquote>
 								</div>
 							</div>
 							<div class="item">
 								<div class="testimony-slide active text-center">
-									<div class="user" style="background-image: url(resources/images/person2.jpg);"></div>
-									<span>Mike Smith<br><small>Students</small></span>
+									<div class="user" style="background-image: url(resources/images/jos.jpg);"></div>
+									<span>조승우<br></span>
 									<blockquote>
-										<p>&ldquo;Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
+										<p>&ldquo;이 피 어떤 피일까? 무슨 형인지 알수 있다면...&rdquo;</p>
 									</blockquote>
 								</div>
 							</div>
 							<div class="item">
 								<div class="testimony-slide active text-center">
-									<div class="user" style="background-image: url(resources/images/person3.jpg);"></div>
-									<span>Rita Jones<br><small>Teacher</small></span>
+									<div class="user" style="background-image: url(resources/images/kimh.jpg);"></div>
+									<span>김혜수<br></span>
 									<blockquote>
-										<p>&ldquo;Far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
+										<p>&ldquo; 슨배님 ...고마워요.&rdquo;</p>
 									</blockquote>
 								</div>
 							</div>
@@ -144,71 +145,37 @@
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Blog &amp; Events</h2>
-					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+					<h2>응급환자</h2>
+					<p>수혈이 급하게 필요합니다.</p>
 				</div>
 			</div>
 			<div class="row row-padded-mb">
 				<div class="col-md-4 animate-box">
 					<div class="fh5co-event">
-						<div class="date text-center"><span>15<br>Mar.</span></div>
-						<h3><a href="#">USA, International Triathlon Event</a></h3>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-						<p><a href="#">Read More</a></p>
+						<div class="date text-center"><span>10월<br>17일</span></div>
+						<h3><a href="#">고려대 병원</a></h3>
+						<p>현재 코피를 흘려 수혈이 필요합니다</p>
+						<p><a href="#">기부하기</a></p>
 					</div>
 				</div>
 				<div class="col-md-4 animate-box">
 					<div class="fh5co-event">
-						<div class="date text-center"><span>15<br>Mar.</span></div>
-						<h3><a href="#">USA, International Triathlon Event</a></h3>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-						<p><a href="#">Read More</a></p>
+						<div class="date text-center"><span>10월<br>18일</span></div>
+						<h3><a href="#">연세대 병원</a></h3>
+						<p>가시에 찔려 수혈이 필요합니다</p>
+						<p><a href="#">기부하기</a></p>
 					</div>
 				</div>
 				<div class="col-md-4 animate-box">
 					<div class="fh5co-event">
-						<div class="date text-center"><span>15<br>Mar.</span></div>
-						<h3><a href="#">New Device Develope by Microsoft</a></h3>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-						<p><a href="#">Read More</a></p>
+						<div class="date text-center"><span>10월<br>19일</span></div>
+						<h3><a href="#">서울대 병원</a></h3>
+						<p>수혈이 필요합니다</p>
+						<p><a href="#">기부하기</a></p>
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-lg-4 col-md-4">
-					<div class="fh5co-blog animate-box">
-						<a href="#" class="blog-img-holder" style="background-image: url(resources/images/project-1.jpg);"></a>
-						<div class="blog-text">
-							<h3><a href="#">Healty Lifestyle &amp; Living</a></h3>
-							<span class="posted_on">March. 15th</span>
-							<span class="comment"><a href="">21<i class="icon-speech-bubble"></i></a></span>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-						</div> 
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-4">
-					<div class="fh5co-blog animate-box">
-						<a href="#" class="blog-img-holder" style="background-image: url(resources/images/project-2.jpg);"></a>
-						<div class="blog-text">
-							<h3><a href="#">Healty Lifestyle &amp; Living</a></h3>
-							<span class="posted_on">March. 15th</span>
-							<span class="comment"><a href="">21<i class="icon-speech-bubble"></i></a></span>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-						</div> 
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-4">
-					<div class="fh5co-blog animate-box">
-						<a href="#" class="blog-img-holder" style="background-image: url(resources/images/project-3.jpg);"></a>
-						<div class="blog-text">
-							<h3><a href="#">Healty Lifestyle &amp; Living</a></h3>
-							<span class="posted_on">March. 15th</span>
-							<span class="comment"><a href="">21<i class="icon-speech-bubble"></i></a></span>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-						</div> 
-					</div>
-				</div>
-			</div>
+			
 		</div>
 	</div>
 
@@ -219,25 +186,16 @@
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
 					<div class="row">
-						<div class="col-md-3 col-sm-6 text-center animate-box">
-							<span class="icon"><i class="icon-world"></i></span>
-							<span class="fh5co-counter js-counter" data-from="0" data-to="3297" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="fh5co-counter-label">Foreign Followers</span>
-						</div>
-						<div class="col-md-3 col-sm-6 text-center animate-box">
-							<span class="icon"><i class="icon-study"></i></span>
-							<span class="fh5co-counter js-counter" data-from="0" data-to="3700" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="fh5co-counter-label">Students Enrolled</span>
-						</div>
-						<div class="col-md-3 col-sm-6 text-center animate-box">
+					
+						<div class="col-md-5 col-sm-6 text-center animate-box">
 							<span class="icon"><i class="icon-bulb"></i></span>
 							<span class="fh5co-counter js-counter" data-from="0" data-to="5034" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="fh5co-counter-label">Classes Complete</span>
+							<span class="fh5co-counter-label">기증된 헌혈증</span>
 						</div>
-						<div class="col-md-3 col-sm-6 text-center animate-box">
+						<div class="col-md-5 col-sm-6 text-center animate-box">
 							<span class="icon"><i class="icon-head"></i></span>
 							<span class="fh5co-counter js-counter" data-from="0" data-to="1080" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="fh5co-counter-label">Certified Teachers</span>
+							<span class="fh5co-counter-label">수혜자</span>
 						</div>
 					</div>
 				</div>
