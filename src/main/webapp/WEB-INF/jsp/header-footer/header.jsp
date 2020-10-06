@@ -79,7 +79,7 @@
 				</div>
 			</div>
 		</nav>
-
+	</c:when>	
 	<c:when test="${not empty session_hosinfo}">
 			<!--hospital 로그인 되어있을떄 헤더-->
 			<div class="fh5co-loader"></div>
@@ -121,7 +121,7 @@
 					</div>
 				</div>
 			</nav>
-
+	</c:when>
 	<c:when test="${not empty session_govinfo}">
 			<!--user 로그인 되어있을떄 헤더-->
 			<div class="fh5co-loader"></div>
@@ -163,11 +163,6 @@
 					</div>
 				</div>
 			</nav>
-	
-			
-	
-	
-	
 	</c:when>
 	<c:otherwise>
 		<!--로그인이 안되어있을 떄 해더-->
@@ -211,7 +206,6 @@
 			</div>
 		</nav>
 	</c:otherwise>
-
 </c:choose>
 
 
