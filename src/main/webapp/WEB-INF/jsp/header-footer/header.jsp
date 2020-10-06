@@ -113,8 +113,14 @@
 								<div id="fh5co-logo"><a href="./indexPage"><img src="resources/images/abocado-main.png" width="120px" height="60px"></a></div>
 							</div>
 							<div class="col-xs-8 text-right menu-2">
-								<ul>			
-									<li><a href="./aboutPage">소개</a></li>
+								<ul>
+									<li class="has-dropdown">
+									<a href="./aboutPage">소개</a>
+									<ul class="dropdown">
+										<li><a href="./aboutPage">about donation</a></li>
+										<li><a href="./aboutPage1">about image</a></li>
+									</ul>
+									</li>	
 									<li ><a href="./statusPage">현황</a></li>
 									<li ><a href="./donatePage">기부</a></li>
 									<li ><a href="./myPage">mypage</a></li>
@@ -155,8 +161,14 @@
 								<div id="fh5co-logo"><a href="./indexPage"><img src="resources/images/abocado-main.png" width="120px" height="60px"></a></div>
 							</div>
 							<div class="col-xs-8 text-right menu-2">
-								<ul>			
-									<li><a href="./aboutPage">소개</a></li>
+								<ul>
+									<li class="has-dropdown">
+									<a href="./aboutPage">소개</a>
+									<ul class="dropdown">
+										<li><a href="./aboutPage">about donation</a></li>
+										<li><a href="./aboutPage1">about image</a></li>
+									</ul>
+									</li>			
 									<li ><a href="./statusPage">현황</a></li>
 									<li ><a href="./donatePage">기부</a></li>
 									<li ><a href="./myPage">mypage</a></li>
@@ -197,8 +209,14 @@
 							<div id="fh5co-logo"><a href="./"><img src="resources/images/abocado-main.png" width="120px" height="60px"></a></div>
 						</div>
 						<div class="col-xs-8 text-right menu-2">
-							<ul>			
-								<li><a href="./aboutPage">소개</a></li>
+							<ul>
+								<li class="has-dropdown">
+									<a href="./aboutPage">소개</a>
+									<ul class="dropdown">
+										<li><a href="./aboutPage">about donation</a></li>
+										<li><a href="./aboutPage1">about image</a></li>
+									</ul>
+								</li>			
 								<li ><a href="./statusPage">현황</a></li>
 								<li ><a href="./donatePage">기부</a></li>
 								

@@ -48,6 +48,4 @@ public class Main_controller{
         return "navi/statusPage";
     }
 
-
-   
 }
