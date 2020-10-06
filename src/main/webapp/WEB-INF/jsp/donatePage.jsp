@@ -129,9 +129,9 @@
         <div class="donate_setting">
             <p><form>
                 <td style="text-align:left; font_size:30px">헌혈증 갯수&emsp;&emsp;</td>
-                <input type=button value="-" onClick="javascript:this.form.amount.value--;">
-                <input type=text name=amount value=1 style="width:100px">
-                <input type=button value="+" onClick="javascript:this.form.amount.value++;">
+                <input type=button value="-" onClick="javascript:this.form.b_amount.value--;">
+                <input type=text name=b_amount value=1 style="width:100px">
+                <input type=button value="+" onClick="javascript:this.form.b_amount.value++;">
             </form></p>
             <p><td style="text-align:left; margin-top:20px; font_size:30px">헌혈증 종류&emsp;&emsp;</td>
                 <select id="blood_kinds" name="전혈 400" style="width:100px; height:30px; margin-top:20px">

@@ -82,7 +82,8 @@
 
     	#ulTable > li:first-child > ul > li {
 			list-style:none;
-        	background-color:#B9A691;
+        	background-color:#66493f;
+			color:#FFFFFF;
         	font-weight:bold;
         	text-align:center;
 		}
