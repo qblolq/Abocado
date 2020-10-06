@@ -35,5 +35,23 @@ public class Main_controller{
         return "navi/aboutPage";
     }
 
-    
+    @RequestMapping(value="aboutPage1")
+    public String aboutPage1(){ 
+        return "navi/aboutPage1";
+    }
+
+
+
+    //current code
+    @RequestMapping(value="statusPage")
+    public String statusPage(){ 
+        return "navi/statusPage";
+    }
+
+
+    //register code
+    @RequestMapping(value="donatePage")
+    public String donatePage(){ 
+        return "navi/donatePage";
+    }
 }
