@@ -81,10 +81,10 @@
      <!-- include header-footer/header.jsp-->
 
 
-	<aside id="fh5co-hero" style="margin-bottom:30px">
-		<div class="flexslider" style="margin-bottom:30px">
-			<ul class="slides" style="margin-bottom:30px">
-		   	<li style="background-image: url(resources/images/img_bg_4.jpg);" style="margin-bottom:30px">
+	<aside id="fh5co-hero" style="margin-bottom:50px">
+		<div class="flexslider">
+			<ul class="slides">
+		   	<li style="background-image: url(resources/images/img_bg_4.jpg)">
 		   		<div class="overlay-gradient"></div>
 		   		<div class="container">
 		   			<div class="row">
@@ -105,7 +105,7 @@
 	<div style="height: 1500%; margin: 0">
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2 text-center slider-text">
-				<div id="container" style="height: 500%"></div>
+				<div id="container" style="height: 500%; margin-bottom:50px"></div>
 				<div id="containertwo" style="height: 500%"></div>
     			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
     			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
@@ -116,6 +116,7 @@
        			
        			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/bmap.min.js"></script>
        			<script type="text/javascript">
+// 월에 따른 헌혈 현황
 var dom = document.getElementById("container");
 var myChart = echarts.init(dom);
 var app = {};
@@ -178,7 +179,7 @@ if (option && typeof option === "object") {
 }
 
 
-
+// 혈액형 별 현재 보유량 pie
 var domtwo = document.getElementById("containertwo");
 var myCharttwo = echarts.init(domtwo);
 var app = {};
@@ -268,25 +269,16 @@ if (option && typeof option === "object") {
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
 					<div class="row">
-						<div class="col-md-3 col-sm-6 text-center animate-box">
-							<span class="icon"><i class="icon-world"></i></span>
-							<span class="fh5co-counter js-counter" data-from="0" data-to="3297" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="fh5co-counter-label">Foreign Followers</span>
-						</div>
-						<div class="col-md-3 col-sm-6 text-center animate-box">
-							<span class="icon"><i class="icon-study"></i></span>
-							<span class="fh5co-counter js-counter" data-from="0" data-to="3700" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="fh5co-counter-label">Students Enrolled</span>
-						</div>
-						<div class="col-md-3 col-sm-6 text-center animate-box">
+					
+						<div class="col-md-5 col-sm-6 text-center animate-box">
 							<span class="icon"><i class="icon-bulb"></i></span>
 							<span class="fh5co-counter js-counter" data-from="0" data-to="5034" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="fh5co-counter-label">Classes Complete</span>
+							<span class="fh5co-counter-label">기증된 헌혈증</span>
 						</div>
-						<div class="col-md-3 col-sm-6 text-center animate-box">
+						<div class="col-md-5 col-sm-6 text-center animate-box">
 							<span class="icon"><i class="icon-head"></i></span>
 							<span class="fh5co-counter js-counter" data-from="0" data-to="1080" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="fh5co-counter-label">Certified Teachers</span>
+							<span class="fh5co-counter-label">수혜자</span>
 						</div>
 					</div>
 				</div>

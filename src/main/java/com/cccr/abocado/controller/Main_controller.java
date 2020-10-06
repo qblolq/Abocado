@@ -48,10 +48,4 @@ public class Main_controller{
         return "navi/statusPage";
     }
 
-
-    //register code
-    @RequestMapping(value="donatePage")
-    public String donatePage(){ 
-        return "navi/donatePage";
-    }
 }

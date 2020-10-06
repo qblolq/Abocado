@@ -7,18 +7,18 @@ public class Session_userVo {
     
     private String user_idx; // 소유자 고유키
     private String u_id; // 소유자 아이디
-    private String u_pw; // 소유자 비밀번호
+    private String u_name; // 소유자 비밀번호
 
 
     public Session_userVo(){}
 
-    public Session_userVo(String user_idx, String u_id, String u_pw){
+    public Session_userVo(String user_idx, String u_id, String u_name){
 
         super();
 
         this.user_idx = user_idx;
         this.u_id = u_id;
-        this.u_pw = u_pw;
+        this.u_name = u_name;
     }
 
 
@@ -40,12 +40,12 @@ public class Session_userVo {
         this.u_id = u_id;
     }
 
-    public String getU_pw() {
-        return this.u_pw;
+    public String getU_name() {
+        return this.u_name;
     }
 
-    public void setU_pw(String u_pw) {
-        this.u_pw = u_pw;
+    public void setU_name(String u_name) {
+        this.u_name = u_name;
     }
   
   

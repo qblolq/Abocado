@@ -38,7 +38,7 @@ public class Login_controller {
     public String user_loginAction(Basic_userVo param, HttpSession session){
 
         Session_userVo session_info = login_service.user_login(param);
-
+    
         if(session_info == null){
             return "loginFailPage";
         }    

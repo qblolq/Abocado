@@ -14,4 +14,5 @@ public interface Login_service {
     public abstract Session_hosVo hos_login(Basic_hospitalVo hosVo);
 
     public abstract Session_govVo gov_login(Basic_govVo govVo);
+    
 }

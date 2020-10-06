@@ -18,12 +18,14 @@ spring:
       suffix: .jsp
     static-path-pattern: /resources/**
 
-  # datasource:
-  #   hikari:
-  #     driver-class-name: com.mysql.cj.jdbc.Driver
-  #     jdbc-url: jdbc:mysql://54.180.117.255:3306/test?useUnicode=true&characterEncoding=utf-8 
-  #     username: cccr
-  #     password: cccr
+---
+spring:
+  datasource:
+    hikari:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://13.209.26.83:3306/abocado  #주소 바뀔수도 있음  서버 재시작하면
+      username: chain
+      password: chain
       
         
     
