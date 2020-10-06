@@ -49,9 +49,5 @@ public class Main_controller{
     }
 
 
-    //register code
-    @RequestMapping(value="donatePage")
-    public String donatePage(){ 
-        return "navi/donatePage";
-    }
+   
 }

@@ -18,10 +18,9 @@ public class Basic_bloodVo {
 
     public Basic_bloodVo(String blood_idx, String user_idx, String patient_idx, String hos_idx,
             String b_usage, String b_date, String b_kind){
-
         super();
 
-        this. blood_idx = blood_idx;
+        this.blood_idx = blood_idx;
         this.user_idx = user_idx;
         this.patient_idx = patient_idx;
         this.hos_idx = hos_idx;
