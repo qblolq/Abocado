@@ -75,9 +75,8 @@
 								</li>
 								<li ><a href="./statusPage">현황</a></li>
 								<li ><a href="./donatePage">기부</a></li>
-								<li ><a href="./myPage">mypage</a></li>
+								<li ><a href="./myPage">마이페이지</a></li>
 								<li class="btn-cta"><a href="./logoutPage"><span>LoginOut</span></a></li>
-								
 							</ul>
 						</div>
 					</div>
@@ -192,8 +191,8 @@
 			</div>
 			<div class="top-menu">
 				<div class="container">
-					<div class="row">
-						<div class="col-xs-2">
+					<div class="nav-menus">
+						<div class="col-xs-4">
 							<div id="fh5co-logo"><a href="./"><img src="resources/images/abocado-main.png" width="120px" height="60px"></a></div>
 						</div>
 						<div class="col-xs-8 text-right menu-2">
@@ -201,8 +200,7 @@
 								<li><a href="./aboutPage">소개</a></li>
 								<li ><a href="./statusPage">현황</a></li>
 								<li ><a href="./donatePage">기부</a></li>
-								
-								<li class="btn-cta"><a href="./loginPage"><span>Login</span></a></li>
+								<li class=" btn-cta"><a href="./loginPage"><span>Login</span></a></li>
 								
 							</ul>
 						</div>

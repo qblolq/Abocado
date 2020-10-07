@@ -15,7 +15,7 @@ body {
   font-weight: 400;
   font-size: 15px;
   line-height: 1.7;
-  color: #828282;
+  
   background: #fff;
 }
 
@@ -173,22 +173,21 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .fh5co-nav ul li {
   padding: 0;
-  margin: 0;
+  margin: 0 10px;
   list-style: none;
   display: inline;
   font-weight: 300;
 }
 .fh5co-nav ul li a {
-  font-size: 14px;
+  font-size: 18px;
+  font-weight: bolder;
   padding: 30px 15px;
   color: rgba(0, 0, 0, 0.9);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
-.fh5co-nav ul li a:hover, .fh5co-nav ul li a:focus, .fh5co-nav ul li a:active {
-  color: black;
-}
+
 .fh5co-nav ul li.has-dropdown {
   position: relative;
 }
@@ -254,7 +253,8 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #fff;
 }
 .fh5co-nav ul li.btn-cta a span {
-  background: #2d6cdf;
+  background: #66493f;
+  border-radius: 2px;
   padding: 4px 10px;
   display: -moz-inline-stack;
   display: inline-block;
@@ -495,7 +495,7 @@ h1, h2, h3, h4, h5, h6, figure {
   left: 0;
   right: 0;
   content: '';
-  background: rgba(0, 0, 0, 0.5);
+  background-color: white;
 }
 .fh5co-counters .counter-wrap {
   border: 1px solid red !important;
@@ -518,7 +518,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .fh5co-counters .icon i {
   font-size: 45px;
-  color: #fff;
+  color: rgb(17, 16, 16);
 }
 
 .course {
@@ -689,14 +689,14 @@ h1, h2, h3, h4, h5, h6, figure {
   width: 50px;
   height: 1px;
   margin: 0 auto;
-  background: rgba(0, 0, 0, 0.08);
+  background: white;
 }
 .fh5co-heading p {
   font-size: 14px;
 }
 
 #fh5co-testimonial {
-  background: #1F5F8B;
+  background:  rgb(102, 71, 61, 0.7);
   position: relative;
 }
 #fh5co-testimonial .overlay {
@@ -706,7 +706,7 @@ h1, h2, h3, h4, h5, h6, figure {
   left: 0;
   right: 0;
   content: '';
-  background: rgba(31, 95, 139, 0.7);
+  background: rgb(102, 71, 61, 0.7);
 }
 #fh5co-testimonial .testimony-slide {
   text-align: center;
@@ -872,6 +872,7 @@ h1, h2, h3, h4, h5, h6, figure {
   margin-bottom: 30px;
   width: 100%;
   float: left;
+  
 }
 @media screen and (max-width: 768px) {
   .fh5co-blog {
@@ -1643,7 +1644,20 @@ h1, h2, h3, h4, h5, h6, figure {
 
 
 /*kijo css*/
+
+
 .seperate_div {
-  margin-top: 100px;
+  margin-top: 50px;
 }
+
+.emergency-man{
+  color: #66493f;
+}
+
+.emergency-man:hover{
+  color:  #bf4044;
+}
+
+
+
 
