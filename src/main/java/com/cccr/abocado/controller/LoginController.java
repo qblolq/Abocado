@@ -2,13 +2,13 @@ package com.cccr.abocado.controller;
 
 import javax.servlet.http.HttpSession;
 
-import com.cccr.abocado.dto.basic.Basic_govVo;
-import com.cccr.abocado.dto.basic.Basic_hospitalVo;
-import com.cccr.abocado.dto.basic.Basic_userVo;
-import com.cccr.abocado.dto.session.Session_govVo;
-import com.cccr.abocado.dto.session.Session_hosVo;
-import com.cccr.abocado.dto.session.Session_userVo;
-import com.cccr.abocado.service.Login_service;
+import com.cccr.abocado.dto.basic.BasicGovVo;
+import com.cccr.abocado.dto.basic.BasicHospitalVo;
+import com.cccr.abocado.dto.basic.BasicUserVo;
+import com.cccr.abocado.dto.session.SessionGovVo;
+import com.cccr.abocado.dto.session.SessionHosVo;
+import com.cccr.abocado.dto.session.SessionUserVo;
+import com.cccr.abocado.service.LoginService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Controller
-public class Login_controller {
+public class LoginController {
 
     @Autowired
-    private Login_service login_service;
+    private LoginService loginService;
     
 
     //login code
@@ -35,14 +35,14 @@ public class Login_controller {
 
     //유저 로그인 정보를 확인
     @RequestMapping("user_loginAction")
-    public String user_loginAction(Basic_userVo param, HttpSession session){
+    public String user_loginAction(BasicUserVo param, HttpSession session){
 
-        Session_userVo session_info = login_service.user_login(param);
+        SessionUserVo sessionInfo = loginService.userLogin(param);
     
-        if(session_info == null){
+        if(sessionInfo == null){
             return "loginFailPage";
         }    
-        session.setAttribute("session_userinfo", session_info);
+        session.setAttribute("session_userinfo", sessionInfo);
 
         return "redirect:indexPage";
     }
@@ -50,14 +50,14 @@ public class Login_controller {
     
     //병원 로그인 정보를 확인
     @RequestMapping("hos_loginAction")
-    public String hos_loginAction(Basic_hospitalVo param, HttpSession session){
+    public String hos_loginAction(BasicHospitalVo param, HttpSession session){
 
 
-        Session_hosVo session_info = login_service.hos_login(param);
-        if(session_info == null){
+        SessionHosVo sessionInfo = loginService.hosLogin(param);
+        if(sessionInfo == null){
             return "loginFail";
         }    
-        session.setAttribute("session_hosinfo", session_info);
+        session.setAttribute("session_hosinfo", sessionInfo);
             
         return "redirect:indexPage";
     }
@@ -65,14 +65,14 @@ public class Login_controller {
 
     //보건복지부 로그인 정보를 확인
     @RequestMapping("gov_loginAction")
-    public String gov_loginAction(Basic_govVo param, HttpSession session){
+    public String gov_loginAction(BasicGovVo param, HttpSession session){
 
 
-        Session_govVo session_info = login_service.gov_login(param); 
-        if(session_info == null){
+        SessionGovVo sessionInfo = loginService.govLogin(param); 
+        if(sessionInfo == null){
             return "loginFail";
         }    
-        session.setAttribute("session_govinfo", session_info);
+        session.setAttribute("session_govinfo", sessionInfo);
             
         return "redirect:indexPage";
     }

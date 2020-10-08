@@ -2,7 +2,7 @@ package com.cccr.abocado.dto.basic;
 
 
 //헌혈증 테이블과 연결된 기본 vo입니다
-public class Basic_bloodVo {
+public class BasicBloodVo {
     
     private String blood_idx;   //헌혈증 고유키
     private String user_idx;    //소유자 고유키
@@ -14,9 +14,9 @@ public class Basic_bloodVo {
 
 
 
-    public Basic_bloodVo(){}
+    public BasicBloodVo(){}
 
-    public Basic_bloodVo(String blood_idx, String user_idx, String patient_idx, String hos_idx,
+    public BasicBloodVo(String blood_idx, String user_idx, String patient_idx, String hos_idx,
             String b_usage, String b_date, String b_kind){
         super();
 
