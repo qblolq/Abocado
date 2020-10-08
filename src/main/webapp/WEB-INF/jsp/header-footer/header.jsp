@@ -39,11 +39,13 @@
 <c:choose>
 	<c:when test="${not empty session_userinfo}">
 		<!--user 로그인 되어있을떄 헤더-->
+		<div class="fh5co-loader"></div>
+		<nav class="fh5co-nav" role="navigation">
 			<div class="top-menu">
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-2">
-							<div id="fh5co-logo"><a href="./indexPage"><img src="resources/images/abocado-main.png" width="120px" height="60px"></a></div>
+							<div id="fh5co-logo"><a href="./indexPage"><img src="resources/images/abo.png" width="120px" height="60px"></a></div>
 						</div>
 						<div class="col-xs-8 text-right menu-2">
 							<ul>			
@@ -69,12 +71,13 @@
 		</nav>
 	</c:when>	
 	<c:when test="${not empty session_hosinfo}">
+	<nav class="fh5co-nav" role="navigation">
 			<!--hospital 로그인 되어있을떄 헤더-->
 				<div class="top-menu">
 					<div class="container">
 						<div class="row">
 							<div class="col-xs-2">
-								<div id="fh5co-logo"><a href="./indexPage"><img src="resources/images/abocado-main.png" width="120px" height="60px"></a></div>
+								<div id="fh5co-logo"><a href="./indexPage"><img src="resources/images/abo.png" width="120px" height="60px"></a></div>
 							</div>
 							<div class="col-xs-8 text-right menu-2">
 								<ul>
@@ -100,11 +103,12 @@
 	</c:when>
 	<c:when test="${not empty session_govinfo}">
 			<!--user 로그인 되어있을떄 헤더-->
+			<nav class="fh5co-nav" role="navigation">
 				<div class="top-menu">
 					<div class="container">
 						<div class="row">
 							<div class="col-xs-2">
-								<div id="fh5co-logo"><a href="./indexPage"><img src="resources/images/abocado-main.png" width="120px" height="60px"></a></div>
+								<div id="fh5co-logo"><a href="./indexPage"><img src="resources/images/abo.png" width="120px" height="60px"></a></div>
 							</div>
 							<div class="col-xs-8 text-right menu-2">
 								<ul>
@@ -133,9 +137,9 @@
 		<nav class="fh5co-nav" role="navigation">
 			<div class="top-menu">
 				<div class="container">
-					<div class="nav-menus">
-						<div class="col-xs-4">
-							<div id="fh5co-logo"><a href="./"><img src="resources/images/abocado-main.png" width="120px" height="60px"></a></div>
+					<div class="row">
+						<div class="col-xs-2">
+							<div id="fh5co-logo"><a href="./"><img src="resources/images/abo.png" width="120px"></a></div>
 						</div>
 						<div class="col-xs-8 text-right menu-2">
 							<ul>
