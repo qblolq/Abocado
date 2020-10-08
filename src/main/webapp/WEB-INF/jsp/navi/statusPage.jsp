@@ -81,7 +81,7 @@
      <!-- include header-footer/header.jsp-->
 
 
-	<aside id="fh5co-hero" style="margin-bottom:50px">
+	<%-- <aside id="fh5co-hero" style="margin-bottom:50px">
 		<div class="flexslider">
 			<ul class="slides">
 		   	<li style="background-image: url(resources/images/img_bg_4.jpg)">
@@ -99,13 +99,13 @@
 		   	</li>
 		  	</ul>
 	  	</div>
-	</aside>
+	</aside> --%>
 	
 
 	<div style="height: 1500%; margin: 0">
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2 text-center slider-text">
-				<div id="container" style="height: 500%; margin-bottom:50px"></div>
+				<div id="container" style="height: 500%; margin-top:100px; margin-bottom:250px"></div>
 				<div id="containertwo" style="height: 500%"></div>
     			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
     			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
@@ -123,13 +123,15 @@ var app = {};
 option = null;
 option = {
     title: {
-        text: '헌혈 현황'
+        text: '헌혈 현황',
+		left: 'center'
     },
     tooltip: {
         trigger: 'axis'
     },
     legend: {
-        data: ['A형', 'B형', 'O형', 'AB형']
+        data: ['A형', 'B형', 'O형', 'AB형'],
+		left: 'right'
     },
     grid: {
         left: '3%',
@@ -137,11 +139,11 @@ option = {
         bottom: '3%',
         containLabel: true
     },
-    toolbox: {
-        feature: {
-            saveAsImage: {}
-        }
-    },
+    // toolbox: {
+    //     feature: {
+    //         saveAsImage: {}
+    //     }
+    // },
     xAxis: {
         type: 'category',
         boundaryGap: false,
@@ -187,7 +189,7 @@ option = null;
 option = {
     title: {
         text: '혈액형 별 현재 보유량',
-        left: 'left'
+        left: 'center'
     },
     tooltip: {
         trigger: 'item',
@@ -271,7 +273,7 @@ if (option && typeof option === "object") {
 					<div class="row">
 					
 						<div class="col-md-5 col-sm-6 text-center animate-box">
-							<span class="icon"><i class="icon-bulb"></i></span>
+							<span class="icon"><i class="icon-heart4"></i></span>
 							<span class="fh5co-counter js-counter" data-from="0" data-to="5034" data-speed="5000" data-refresh-interval="50"></span>
 							<span class="fh5co-counter-label">기증된 헌혈증</span>
 						</div>
