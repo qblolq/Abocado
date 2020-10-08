@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="resources/css/login.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <%-- <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo&display=swap" rel="stylesheet"> --%>
-    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet"> 
     <title>loginPage</title>
 
     <script>
@@ -176,33 +176,6 @@
 
     </div>
 
-
-
-
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <div class="modal-title" id="exampleModalLabel">아이디/비밀번호 찾기</div>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                    
-                     <div class="ResetButtons"> 
-                        <a href="./idReset">
-                            <div class="idResetButton">아이디찾기</div>  
-                        </a>
-                        <a href="./passwordReset">
-                            <div class="passwordResetButton">비밀번호찾기</div>  
-                        </a>
-                    </div>
-                    </div>
-                </div>
-              </div>
-            </div>
-          </div>
     
     
           <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

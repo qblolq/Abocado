@@ -92,8 +92,36 @@
 		  	</ul>
 	  	</div>
 	</aside>
-	<%-- 구분 --%>
-	<div class="seperate_div"></div>
+
+
+	<%-- 현재 기부된 횟수와 완치된 횟수 섹션 --%>
+    <div id="fh5co-counter" class="fh5co-counters"  data-stellar-background-ratio="0.5">
+		<%-- <div class="overlay"></div> --%>
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+					<h2 style="font-weight: 500; border-bottom: .5px solid #66493f;">오늘 현황</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="row">
+					
+						<div class="col-md-6 col-sm-6 text-center animate-box">
+							<span class="icon"><i class="icon-bulb"></i></span>
+							<span class="fh5co-counter js-counter" style="color:black;" data-from="0" data-to="5034" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="fh5co-counter-label" style="color:black;">기증된 헌혈증</span>
+						</div>
+						<div class="col-md-6 col-sm-6 text-center animate-box">
+							<span class="icon"><i class="icon-head"></i></span>
+							<span class="fh5co-counter js-counter" style="color:black;" data-from="0" data-to="1080" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="fh5co-counter-label" style="color:black;" >수혜자</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<%-- 응급환자 섹션 --%>
 	<div id="fh5co-blog">
@@ -187,31 +215,7 @@
 	</div>
 
 	<%-- 구분 --%>
-	<div class="seperate_div"></div>
 
-	<%-- 현재 기부된 횟수와 완치된 횟수 섹션 --%>
-    <div id="fh5co-counter" class="fh5co-counters"  data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-10 col-md-offset-1">
-					<div class="row">
-					
-						<div class="col-md-6 col-sm-6 text-center animate-box">
-							<span class="icon"><i class="icon-bulb"></i></span>
-							<span class="fh5co-counter js-counter" style="color:black;" data-from="0" data-to="5034" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="fh5co-counter-label" style="color:black;">기증된 헌혈증</span>
-						</div>
-						<div class="col-md-6 col-sm-6 text-center animate-box">
-							<span class="icon"><i class="icon-head"></i></span>
-							<span class="fh5co-counter js-counter" style="color:black;" data-from="0" data-to="1080" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="fh5co-counter-label" style="color:black;" >수혜자</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 
 
     <!-- jQuery -->
