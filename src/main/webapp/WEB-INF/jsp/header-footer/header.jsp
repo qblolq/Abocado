@@ -30,7 +30,6 @@
 <!--[if lt IE 9]>
 <script src="js/respond.min.js"></script>
 <![endif]-->
-<title>Insert title here</title>
 </head>
 <body>
 
@@ -74,7 +73,7 @@
 									</ul>
 								</li>
 								<li ><a href="./statusPage">현황</a></li>
-								<li ><a href="./donatePage">기부</a></li>
+								<li ><a href="./listPage">기부</a></li>
 								<li ><a href="./myPage">mypage</a></li>
 								<li class="btn-cta"><a href="./logoutPage"><span>LoginOut</span></a></li>
 								
@@ -122,7 +121,7 @@
 									</ul>
 									</li>	
 									<li ><a href="./statusPage">현황</a></li>
-									<li ><a href="./donatePage">기부</a></li>
+									<li ><a href="./listPage">기부</a></li>
 									<li ><a href="./myPage">mypage</a></li>
 									<li class="btn-cta"><a href="./logoutPage"><span>LoginOut</span></a></li>
 
@@ -170,7 +169,7 @@
 									</ul>
 									</li>			
 									<li ><a href="./statusPage">현황</a></li>
-									<li ><a href="./donatePage">기부</a></li>
+									<li ><a href="./listPage">기부</a></li>
 									<li ><a href="./myPage">mypage</a></li>
 									<li class="btn-cta"><a href="./logoutPage"><span>LoginOut</span></a></li>
 
@@ -218,7 +217,7 @@
 									</ul>
 								</li>			
 								<li ><a href="./statusPage">현황</a></li>
-								<li ><a href="./donatePage">기부</a></li>
+								<li ><a href="./listPage">기부</a></li>
 								
 								<li class="btn-cta"><a href="./loginPage"><span>Login</span></a></li>
 								

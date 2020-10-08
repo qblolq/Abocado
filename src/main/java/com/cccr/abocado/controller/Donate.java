@@ -1,11 +1,13 @@
 package com.cccr.abocado.controller;
 
+import com.cccr.abocado.dto.blood.Blood_donateVo;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class sueb {
+public class Donate {
 
     //기부받을사람 list
     @RequestMapping("listPage")
@@ -20,6 +22,11 @@ public class sueb {
 
         return "donatePage";
     } 
+
+    @RequestMapping("donateAction")
+    public String donateAction(Blood_donateVo param) {
+        return "indexPage";
+    }
 
     //헌혈증 전체 거래 list (보건복지부확인)
     @RequestMapping("gov_listPage")

@@ -7,7 +7,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>All transaction</title>
+	<title>헌혈증을 기다리는 사람들</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -161,13 +161,13 @@
 			<li style="list-style:none; text-align:center; padding:0; margin:0;">
 			<ul id ="ulTable" style="list-style:none; text-align:center; padding:0; margin:0;">
                 <li style="list-style:none; text-align:center; padding:0; margin:0;"><ul style="list-style:none; text-align:center; padding:0; margin:0;">
-                    <li>No</li>
-                    <li>환자</li>
-                    <li>증상</li>
-                    <li>종류</li>
-                    <li>모금갯수</li>
-					<li>모금 마감일</li>
-					<li>기부하러가기</li>
+                    <li><b>No</b></li>
+                    <li><b>환자</b></li>
+                    <li><b>증상</b></li>
+                    <li><b>종류</b></li>
+                    <li><b>모금갯수</b></li>
+					<li><b>모금 마감일</b></li>
+					<li><b>기부하러가기</b></li>
             	</ul></li>
 
                 <!-- 게시물이 출력될 영역 -->
@@ -178,7 +178,7 @@
 					<li>전혈</li>
 					<li>6/10</li>
                     <li>2019.01.05</li>
-					<li><a href="./donatePage">기부하기</a></li>
+					<li><a href="./donatePage" style="color=#66493f">기부하기</a></li>
                 </ul></li>
 
                 <li style="list-style:none; text-align:center; padding:0; margin:0;"><ul style="list-style:none; text-align:center; padding:0; margin:0;">
@@ -188,7 +188,7 @@
 					<li>혈장,혈소판</li>
                     <li>3/5</li>
                     <li>2020.06.11</li>
-					<li><a href="./donatePage">기부하기</a></li>
+					<li><a href="./donatePage" style="color=#66493f">기부하기</a></li>
                 </ul></li>
 
                 <li style="list-style:none; text-align:center; padding:0; margin:0;"><ul style="list-style:none; text-align:center; padding:0; margin:0;">
@@ -198,7 +198,7 @@
                     <li>전혈</li>
                     <li>2/4</li>
                     <li>2019.12.12</li>
-					<li><a href="./donatePage">기부하기</a></li>
+					<li><a href="./donatePage" style="color=#66493f">기부하기</a></li>
                 </ul></li>
 
                 <li style="list-style:none; text-align:center; padding:0; margin:0;"><ul style="list-style:none; text-align:center; padding:0; margin:0;">
@@ -208,7 +208,7 @@
 					<li>전혈</li>
                     <li>4/5</li>
                     <li>2020.02.20</li>
-					<li><a href="./donatePage">기부하기</a></li>
+					<li><a href="./donatePage" style="color=#66493f">기부하기</a></li>
                 </ul></li> 
 
 				<li style="list-style:none; text-align:center; padding:0; margin:0;"><ul style="list-style:none; text-align:center; padding:0; margin:0;">
@@ -218,7 +218,7 @@
                     <li>혈장</li>
 					<li>4/5</li>
                     <li>2020.07.10</li>
-					<li><a href="./donatePage">기부하기</a></li>
+					<li><a href="./donatePage" onmouseover="this.style.fontWeight=bold; this.style.color=#66493f" onmouseout="this.style.color=#bf4044">기부하기</a></li>
                 </ul></li>
 
 				<li style="list-style:none; text-align:center; padding:0; margin:0;"><ul style="list-style:none; text-align:center; padding:0; margin:0;">
@@ -228,7 +228,7 @@
 					<li>전혈</li>
                     <li>1/4</li>
                     <li>2020.03.03</li>
-					<li><a href="./donatePage">기부하기</a></li>
+					<li><a href="./donatePage" onmouseover="this.style.fontWeight=bold; this.style.color=#66493f" onmouseout="this.style.color=#bf4044">기부하기</a></li>
                 </ul></li> 
 
 				<li style="list-style:none; text-align:center; padding:0; margin:0;"><ul style="list-style:none; text-align:center; padding:0; margin:0;">
@@ -238,7 +238,7 @@
                     <li>혈소판</li>
 					<li>1/4</li>
                     <li>2019.08.23</li>
-					<li><a href="./donatePage">기부하기</a></li>
+					<li><a href="./donatePage" onmouseover="this.style.fontWeight=bold; this.style.color=#66493f" onmouseout="this.style.color=#bf4044">기부하기</a></li>
                 </ul></li>                                         
             </ul>
             </li>
