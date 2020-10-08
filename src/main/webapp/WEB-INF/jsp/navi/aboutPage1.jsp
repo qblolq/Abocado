@@ -103,9 +103,9 @@
 
 	<div id="fh5co-about">
 		<div class="container">
-			<div class="col-md-6 col-md-offset-1">
-				<span>about image</span>
-				<img class="img-responsive" src="resources/images/img_about_1.png">
+			<div class="col-md-10 col-md-offset-1">
+				<span>service flow image</span>
+				<img class="img-responsive" src="resources/images/img_about_3.png">
 			</div>
 		</div>
 	</div>
@@ -116,25 +116,16 @@
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
 					<div class="row">
-						<div class="col-md-3 col-sm-6 text-center animate-box">
-							<span class="icon"><i class="icon-world"></i></span>
-							<span class="fh5co-counter js-counter" data-from="0" data-to="3297" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="fh5co-counter-label">Foreign Followers</span>
-						</div>
-						<div class="col-md-3 col-sm-6 text-center animate-box">
-							<span class="icon"><i class="icon-study"></i></span>
-							<span class="fh5co-counter js-counter" data-from="0" data-to="3700" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="fh5co-counter-label">Students Enrolled</span>
-						</div>
-						<div class="col-md-3 col-sm-6 text-center animate-box">
-							<span class="icon"><i class="icon-bulb"></i></span>
+					
+						<div class="col-md-5 col-sm-6 text-center animate-box">
+							<span class="icon"><i class="icon-heart4"></i></span>
 							<span class="fh5co-counter js-counter" data-from="0" data-to="5034" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="fh5co-counter-label">Classes Complete</span>
+							<span class="fh5co-counter-label">기증된 헌혈증</span>
 						</div>
-						<div class="col-md-3 col-sm-6 text-center animate-box">
+						<div class="col-md-5 col-sm-6 text-center animate-box">
 							<span class="icon"><i class="icon-head"></i></span>
 							<span class="fh5co-counter js-counter" data-from="0" data-to="1080" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="fh5co-counter-label">Certified Teachers</span>
+							<span class="fh5co-counter-label">수혜자</span>
 						</div>
 					</div>
 				</div>
