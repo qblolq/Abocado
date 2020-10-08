@@ -41,15 +41,16 @@ body{
 #mainWrapper{
     width: 1000px;
     margin: 0 auto; /*가운데 정렬*/
+    font-family:NotoSansKR-Light;
 }
 
 mainWrapper > ul > li:first-child {
     list-style:none;
     text-align: center;
-    font-size:14pt;
+    font-size:15pt;
     height:40px;
     vertical-align:middle;
-    line-height:30px;
+    line-height:35px;
 }
 
 #ulTable {margin-top:10px;}
@@ -73,7 +74,7 @@ mainWrapper > ul > li:first-child {
 #ulTable > li > ul > li { 
     list-style:none;
     float:left;
-    font-size:10pt;
+    font-size:14pt;
     border-bottom:1px solid silver;
     vertical-align:baseline;
 }    
@@ -123,8 +124,9 @@ mainWrapper > ul > li:first-child {
 
         <ul style="list-style:none; text-align:center; padding:0; margin:0;">
             <!-- 제목 -->
-            <li style="color:#30240F" style="list-style:none; text-align:center; padding:0; margin:0;">
-                <b>헌혈증 거래 목록</b></li>
+            <li style="color:#30240F; text-align:center; font-size:25px; padding:10px; margin-top:10px; margin-bottom:10px;">
+                <b>헌혈증 거래 목록</b>
+            </li>
 
             <!-- 게시판 목록  -->
             <li style="list-style:none; text-align:center; padding:0; margin:0;">

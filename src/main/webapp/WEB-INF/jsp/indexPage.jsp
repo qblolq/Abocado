@@ -43,6 +43,7 @@
 	
     <!-- include header-footer/header.jsp-->
 
+	<%-- 메인 이미지 슬라이드 섹션 --%>
     <aside id="fh5co-hero">
 		<div class="flexslider">
 			<ul class="slides">
@@ -92,16 +93,89 @@
 	  	</div>
 	</aside>
 
-	<div class="seperate_div"></div>
 
-    <div id="fh5co-testimonial" "> <!--backgound check tuesday-->
-		<div class="overlay"></div>
+	<%-- 현재 기부된 횟수와 완치된 횟수 섹션 --%>
+    <div id="fh5co-counter" class="fh5co-counters"  data-stellar-background-ratio="0.5">
+		<%-- <div class="overlay"></div> --%>
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-					<h2><span>Message to Donator</span></h2>
+					<h2 style="font-weight: 500; border-bottom: .5px solid #66493f;">오늘 현황</h2>
 				</div>
 			</div>
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="row">
+					
+						<div class="col-md-6 col-sm-6 text-center animate-box">
+							<span class="icon"><i class="icon-bulb"></i></span>
+							<span class="fh5co-counter js-counter" style="color:black;" data-from="0" data-to="5034" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="fh5co-counter-label" style="color:black;">기증된 헌혈증</span>
+						</div>
+						<div class="col-md-6 col-sm-6 text-center animate-box">
+							<span class="icon"><i class="icon-head"></i></span>
+							<span class="fh5co-counter js-counter" style="color:black;" data-from="0" data-to="1080" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="fh5co-counter-label" style="color:black;" >수혜자</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<%-- 응급환자 섹션 --%>
+	<div id="fh5co-blog">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+					<h2 style="font-weight: 500; border-bottom: .5px solid #66493f;">응급환자</h2>
+				</div>
+			</div>
+			<div class="seperate_div"></div>
+			<div class="row row-padded-mb">
+				<div class="col-md-4 animate-box">
+					<div class="fh5co-event">
+						<div class="date text-center"><span>10월<br>17일</span></div>
+						<h3>고려대 병원</h3>
+						<p>현재 코피를 흘려 수혈이 필요합니다</p>
+						<p><a href="#" class="emergency-man">기부하기</a></p>
+					</div>
+				</div>
+				<div class="col-md-4 animate-box">
+					<div class="fh5co-event">
+						<div class="date text-center"><span>10월<br>18일</span></div>
+						<h3>연세대 병원</h3>
+						<p>가시에 찔려 수혈이 필요합니다</p>
+						<p><a href="#" class="emergency-man">기부하기</a></p>
+					</div>
+				</div>
+				<div class="col-md-4 animate-box">
+					<div class="fh5co-event">
+						<div class="date text-center"><span>10월<br>19일</span></div>
+						<h3>서울대 병원</h3>
+						<p>수혈이 필요합니다</p>
+						<p><a href="#" class="emergency-man">기부하기</a></p>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+	<%-- 구분 --%>
+	<%-- <div class="seperate_div"></div>  --%>
+
+	<%-- 수혜자들 편지 섹션 --%>
+	<div id="fh5co-testimonial" "> <!--backgound check tuesday-->
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row animate-box" ">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading"  >
+					<h2><span>아보카더 들에게</span></h2>
+				</div>
+			</div>
+
+			<div class="seperate_div"></div>
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
 					<div class="row animate-box">
@@ -140,68 +214,8 @@
 		</div>
 	</div>
 
+	<%-- 구분 --%>
 
-	<div id="fh5co-blog">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>응급환자</h2>
-					<p>수혈이 급하게 필요합니다.</p>
-				</div>
-			</div>
-			<div class="row row-padded-mb">
-				<div class="col-md-4 animate-box">
-					<div class="fh5co-event">
-						<div class="date text-center"><span>10월<br>17일</span></div>
-						<h3><a href="#">고려대 병원</a></h3>
-						<p>현재 코피를 흘려 수혈이 필요합니다</p>
-						<p><a href="#">기부하기</a></p>
-					</div>
-				</div>
-				<div class="col-md-4 animate-box">
-					<div class="fh5co-event">
-						<div class="date text-center"><span>10월<br>18일</span></div>
-						<h3><a href="#">연세대 병원</a></h3>
-						<p>가시에 찔려 수혈이 필요합니다</p>
-						<p><a href="#">기부하기</a></p>
-					</div>
-				</div>
-				<div class="col-md-4 animate-box">
-					<div class="fh5co-event">
-						<div class="date text-center"><span>10월<br>19일</span></div>
-						<h3><a href="#">서울대 병원</a></h3>
-						<p>수혈이 필요합니다</p>
-						<p><a href="#">기부하기</a></p>
-					</div>
-				</div>
-			</div>
-			
-		</div>
-	</div>
-
-
-    <div id="fh5co-counter" class="fh5co-counters" style="background-image: url(resources/images/img_bg_4.jpg);" data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-10 col-md-offset-1">
-					<div class="row">
-					
-						<div class="col-md-5 col-sm-6 text-center animate-box">
-							<span class="icon"><i class="icon-bulb"></i></span>
-							<span class="fh5co-counter js-counter" data-from="0" data-to="5034" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="fh5co-counter-label">기증된 헌혈증</span>
-						</div>
-						<div class="col-md-5 col-sm-6 text-center animate-box">
-							<span class="icon"><i class="icon-head"></i></span>
-							<span class="fh5co-counter js-counter" data-from="0" data-to="1080" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="fh5co-counter-label">수혜자</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 
 
     <!-- jQuery -->
