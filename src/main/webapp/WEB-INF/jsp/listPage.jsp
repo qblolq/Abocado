@@ -66,15 +66,16 @@
     	#mainWrapper{
         	width: 1000px;
         	margin: 0 auto; /*가운데 정렬*/
+			font-family:NotoSansKR-Light;
     	}
 
     	mainWrapper > ul > li:first-child {
 			list-style:none;
         	text-align: center;
-        	font-size:14pt;
+        	font-size:15pt;
         	height:40px;
         	vertical-align:middle;
-        	line-height:30px;
+        	line-height:34px;
 		}
 
     	#ulTable {margin-top:10px;}
@@ -98,7 +99,7 @@
     	#ulTable > li > ul > li { 
 			list-style:none;
         	float:left;
-        	font-size:10pt;
+        	font-size:14pt;
         	border-bottom:1px solid silver;
         	vertical-align:baseline;
 		}    
@@ -134,6 +135,9 @@
         	width:auto; 
         	height:100px;
 		}	
+
+		a:link { color: #66493f; }
+		a:visited { color: #66493f; }
 	
 	</style>
 </head>
@@ -150,14 +154,14 @@
 	<div id="mainWrapper">
 
 	    <!-- 제목 -->
-        <p style="color:#30240F; text-align:left; padding:0; margin:0;">
-			<b style="font_size:30px">헌혈증을 기다리는 사람들</b><br>
+        <p style="color:#30240F; text-align:left; font-size:18px; padding:10px; margin:0;">
+			<b style="font-size:30px">헌혈증을 기다리는 사람들</b><br>
 
             <!-- 게시판 목록  -->
             당신의 헌혈증으로 따뜻한 마음을 전하세요
 		</p>
 
-        <ul style="list-style:none; text-align:center; padding:0; margin:0;">
+        <ul style="list-style:none; text-align:center; padding:0; margin:0; margin-top:5.5px;">
 			<li style="list-style:none; text-align:center; padding:0; margin:0;">
 			<ul id ="ulTable" style="list-style:none; text-align:center; padding:0; margin:0;">
                 <li style="list-style:none; text-align:center; padding:0; margin:0;"><ul style="list-style:none; text-align:center; padding:0; margin:0;">
