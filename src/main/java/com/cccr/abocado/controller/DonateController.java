@@ -7,7 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class Donate {
+public class DonateController {
 
     //기부받을사람 list
     @RequestMapping("listPage")

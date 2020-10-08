@@ -121,7 +121,6 @@
 			margin-bottom: 10px;	
 			margin-left: 20px;
 			margin-right: 450px;
-			padding-top: 10px;
 		}
 
 	tr,th{
@@ -145,7 +144,7 @@
 		background-color:#fff;
 		color: grey;
 		border: 2px solid #66493f;
-		padding: 10px 90px;
+		padding: 10px 100px;
 		text-align: center;
 		text-decoration: none;
 		display: inline-block;
@@ -238,15 +237,16 @@
 							<div class="myPageInfo1">
 								<img src="images/profile.jpg" alt="My Image" width="100px" height="100px">
 								<div class="donateInfoArea">
-									<h4><b>연세대학교 세브란스 님, 반갑습니다.</b></h4>
-									<h4>- ID: 123456789(병원 회원)</h4>
+									<h4><b>이소영 님, 반갑습니다.</b></h4>
+									<h4>- ID: 123456789(일반회원)</h4>
+									<h4>- 헌혈 가능 일: 2020년 10월 17일</h4>
 								</div> 
-								<a href="#" class="donateButton"role="button">환자 등록하기</button><br></a>
+								<a href="./listPage" class="donateButton"role="button">기부하기</button><br></a>
 							</div>
 							<div class="myPageInfo2">
-								<button type="button" class="paperButton"onclick="openTable(event, 'totalPaper')">총 기부 받은 헌혈증<br><br>123 개</button>
-								<button type="button" class="paperButton"onclick="openTable(event, 'usedPaper')">기부 대기 중인 환자<br><br>3 명</button>
-								<button type="button" class="paperButton"onclick="openTable(event, 'currentPaper')">기부 완료된 환자<br><br>3 명</button>
+								<button type="button" class="paperButton"onclick="openTable(event, 'totalPaper')">총 헌혈 횟수<br><br>6 회</button>
+								<button type="button" class="paperButton"onclick="openTable(event, 'usedPaper')">현재 보유 헌혈증<br><br>3 개</button>
+								<button type="button" class="paperButton"onclick="openTable(event, 'currentPaper')">기부한 헌혈증<br><br>3 개</button>
 							</div>
 							
 						</div>
@@ -255,25 +255,61 @@
 					<!-- Tab content -->
 					<div id="totalPaper" class="tabcontent">
 						<br>
-						<h3><b>총 기부 받은 헌혈증</b></h3>
-						<p>등록 환자가 기부받은 모든 헌혈증이 표시됩니다.</p>            
+						<h3><b>전체 헌혈증</b></h3>
+						<p>보유하고 있는 헌혈증과 기부하여 차감된 헌혈증을 합쳐 표시됩니다.</p>            
 						<table class="table table-striped">
 							<thead>
 								<tr>
-									<th>기부 날짜</th>
-									<th>환자 번호</th>
-									<th>환자명</th>
-									<th>개수</th>
+									<th>헌혈 날짜</th>
+									<th>헌혈 장소</th>
+									<th>헌혈 종류</th>
+									<th>사용 여부</th>
 								</tr>
 								</thead>
 								<tbody>
+								<tr>
+									<td>2019년 10월 26일</td>
+									<td>헌혈의집 구로디지털단지역센터</td>
+									<td>전혈 400ml</td>
+									<td>사용</td>
+								</tr>
+								<tr>
+									<td>2019년 12월 08일</td>
+									<td>헌혈의집 서울역센터</td>
+									<td>혈장</td>
+									<td>사용</td>
+								</tr>
+								<tr>
+									<td>2020년 05월 06일</td>
+									<td>헌혈의집 구로디지털단지역센터</td>
+									<td>전혈 400ml</td>
+									<td>사용</td>
+								</tr>
+								<tr>
+									<td>2020년 6월 07일</td>
+									<td>헌혈의집 서울역센터</td>
+									<td>혈장</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>2020년 9월 11일</td>
+									<td>헌혈의집 서울역센터</td>
+									<td>전혈 400ml</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>2020년 10월 8일</td>
+									<td>헌혈의집 구로디지털단지역센터</td>
+									<td>전혈 400ml</td>
+									<td></td>
+								</tr>
 								</tbody>
 						</table>
 					</div>
 					<div id="usedPaper" class="tabcontent">
 						<br>
-						<h3><b>기부 대기 중인 환자</b></h3>
-						<p>목표 헌혈증을 달성하지 못한 환자가 표시됩니다.</p>            
+						<h3><b>기부한 헌혈증</b></h3>
+						<p>과거에 기부하여 차감된 헌혈증입니다.</p>            
 						<table class="table table-striped">
 							<thead>
 							<tr>
@@ -308,8 +344,8 @@
 					</div>
 					<div id="currentPaper" class="tabcontent">
 						<br>
-						<h3><b>기부 완료된 환자</b></h3>
-						<p>목표 헌혈증을 달성했거나 기간이 만료된 환자가 표시됩니다.</p>            
+						<h3><b>현재 보유한 헌혈증</b></h3>
+						<p>현재 보유 헌혈증은 총 헌혈한 횟수에서 기부한 헌혈증 갯수를 차감하여 표시됩니다.</p>            
 						<table class="table">
 							<thead>
 							<tr>
