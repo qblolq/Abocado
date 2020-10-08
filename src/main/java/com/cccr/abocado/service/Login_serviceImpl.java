@@ -67,20 +67,15 @@ public class Login_serviceImpl implements Login_service {
     @Override
     public Session_hosVo hos_login(Basic_hospitalVo hosVo) {
 
-<<<<<<< HEAD
-=======
         Basic_hospitalVo hosInfo = loginSQL.selectHosInfoByHos_Id(hosVo.getHos_id());
-<<<<<<< HEAD
->>>>>>> 8d09448805fe12be2f9dc615c2bb6f18fc6a454d
-        
-=======
+
 
         if(hosInfo != null ){
             Session_hosVo session_hosVo = new Session_hosVo(hosInfo.getHos_idx(), hosInfo.getHos_id(), hosInfo.getHos_name());
             return session_hosVo;
         }
 
->>>>>>> f912acdd48343764445119c5d9b08aaebe42554e
+
         return null;
     }
 
