@@ -9,10 +9,10 @@ import org.apache.ibatis.annotations.Select;
 
 
 @Mapper
-public interface LoginSQL_mapper {
+public interface LoginSQLMapper {
     
-    @Select("SELECT * FROM user WHERE u_id=#{u_id}")
-    public BasicUserVo selectUserInfobyUserId(String u_id);
+    @Select("SELECT * FROM user WHERE u_id=#{userId}")
+    public BasicUserVo selectUserInfobyUserId(String userId);
 
     @Select("SELECT * FROM hospital WHERE hos_id=#{hos_id}")
     public BasicHospitalVo selectHosInfobyHosId(String hos_id);

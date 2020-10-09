@@ -42,7 +42,7 @@ public class LoginController {
         if(sessionInfo == null){
             return "loginFailPage";
         }    
-        session.setAttribute("session_userinfo", sessionInfo);
+        session.setAttribute("sessionUserInfo", sessionInfo);
 
         return "redirect:indexPage";
     }
@@ -57,7 +57,7 @@ public class LoginController {
         if(sessionInfo == null){
             return "loginFail";
         }    
-        session.setAttribute("session_hosinfo", sessionInfo);
+        session.setAttribute("sessionHosInfo", sessionInfo);
             
         return "redirect:indexPage";
     }
@@ -72,7 +72,7 @@ public class LoginController {
         if(sessionInfo == null){
             return "loginFail";
         }    
-        session.setAttribute("session_govinfo", sessionInfo);
+        session.setAttribute("sessionGovInfo", sessionInfo);
             
         return "redirect:indexPage";
     }

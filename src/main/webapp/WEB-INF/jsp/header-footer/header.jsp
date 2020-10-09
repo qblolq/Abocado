@@ -37,7 +37,7 @@
 
 
 <c:choose>
-	<c:when test="${not empty session_userinfo}">
+	<c:when test="${not empty sessionUserInfo}">
 		<!--user 로그인 되어있을떄 헤더-->
 		<div class="fh5co-loader"></div>
 		<nav class="fh5co-nav" role="navigation">
@@ -47,7 +47,7 @@
 						<div class="col-xs-2">
 							<div id="fh5co-logo"><a href="./indexPage"><img src="resources/images/abo.png" width="120px" height="60px"></a></div>
 						</div>
-						<div class="col-xs-8 text-right menu-2">
+						<div class="col-xs-10 text-right menu-2">
 							<ul>			
 								<li class="has-dropdown">
 									<a href="./aboutPage">소개</a>
@@ -70,7 +70,7 @@
 			</div>
 		</nav>
 	</c:when>	
-	<c:when test="${not empty session_hosinfo}">
+	<c:when test="${not empty sessionHosInfo}">
 	<nav class="fh5co-nav" role="navigation">
 			<!--hospital 로그인 되어있을떄 헤더-->
 				<div class="top-menu">
@@ -79,7 +79,7 @@
 							<div class="col-xs-2">
 								<div id="fh5co-logo"><a href="./indexPage"><img src="resources/images/abo.png" width="120px" height="60px"></a></div>
 							</div>
-							<div class="col-xs-8 text-right menu-2">
+							<div class="col-xs-10 text-right menu-2">
 								<ul>
 									<li class="has-dropdown">
 									<a href="./aboutPage">소개</a>
@@ -101,7 +101,7 @@
 				</div>
 			</nav>
 	</c:when>
-	<c:when test="${not empty session_govinfo}">
+	<c:when test="${not empty sessionGovInfo}">
 			<!--user 로그인 되어있을떄 헤더-->
 			<nav class="fh5co-nav" role="navigation">
 				<div class="top-menu">
@@ -110,7 +110,7 @@
 							<div class="col-xs-2">
 								<div id="fh5co-logo"><a href="./indexPage"><img src="resources/images/abo.png" width="120px" height="60px"></a></div>
 							</div>
-							<div class="col-xs-8 text-right menu-2">
+							<div class="col-xs-10 text-right menu-2">
 								<ul>
 									<li class="has-dropdown">
 									<a href="./aboutPage">소개</a>
@@ -141,7 +141,7 @@
 						<div class="col-xs-2">
 							<div id="fh5co-logo"><a href="./"><img src="resources/images/abo.png" width="120px"></a></div>
 						</div>
-						<div class="col-xs-8 text-right menu-2">
+						<div class="col-xs-10 text-right menu-2">
 							<ul>
 								<li class="has-dropdown">
 									<a href="./aboutPage">소개</a>

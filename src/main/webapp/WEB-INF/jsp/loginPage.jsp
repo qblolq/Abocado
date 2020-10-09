@@ -129,8 +129,8 @@
                 <!--일반유저 로그인-->
                   <form action="./user_loginAction" method="post" id="user_login_form" class="board_tabcontent">
                       <div class="main_section1-loginBox">
-                            <input type="text" placeholder="일반유저 아이디"  name="u_id" class="LonIn_input">
-                            <input type="password" name="u_pw" placeholder="일반유저 비밀번호" class="LonIn_input">    
+                            <input type="text" placeholder="일반유저 아이디"  name="userId" class="LonIn_input">
+                            <input type="password" name="userPw" placeholder="일반유저 비밀번호" class="LonIn_input">    
                       </div>
                       <button type="submit" class="login_button">유저 로그인</button>
                   </form>
