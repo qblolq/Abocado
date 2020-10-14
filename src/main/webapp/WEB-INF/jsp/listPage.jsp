@@ -175,77 +175,19 @@
             	</ul></li>
 
                 <!-- 게시물이 출력될 영역 -->
+				<c:forEach items="${patientList}" var="patientList">
                 <li style="list-style:none; text-align:center; padding:0; margin:0;"><ul style="list-style:none; text-align:center; padding:0; margin:0;">
                     <li>1</li>
-					<li>박서준</li>
-                    <li>교통사고</li>
-					<li>전혈</li>
-					<li>6/10</li>
-                    <li>2019.01.05</li>
+					<li>${patientList.patientName}</li>
+                    <li>${patientList.patientSym}</li>
+					<li>${patientList.patientBtype}</li>
+					<li>${patientList.patientbdNow}/${patientList.patientbdMax}</li>
+                    <li>${patientList.patientEnddate}</li>
 					<li><a href="./donatePage" style="color=#66493f">기부하기</a></li>
                 </ul></li>
+				</c:forEach>
 
-                <li style="list-style:none; text-align:center; padding:0; margin:0;"><ul style="list-style:none; text-align:center; padding:0; margin:0;">
-                    <li>2</li>
-					<li>정우성</li>
-                    <li>백혈병</li>
-					<li>혈장,혈소판</li>
-                    <li>3/5</li>
-                    <li>2020.06.11</li>
-					<li><a href="./donatePage" style="color=#66493f">기부하기</a></li>
-                </ul></li>
-
-                <li style="list-style:none; text-align:center; padding:0; margin:0;"><ul style="list-style:none; text-align:center; padding:0; margin:0;">
-                    <li>3</li>
-                    <li>공유</li>
-					<li>과다출혈</li>
-                    <li>전혈</li>
-                    <li>2/4</li>
-                    <li>2019.12.12</li>
-					<li><a href="./donatePage" style="color=#66493f">기부하기</a></li>
-                </ul></li>
-
-                <li style="list-style:none; text-align:center; padding:0; margin:0;"><ul style="list-style:none; text-align:center; padding:0; margin:0;">
-                    <li>4</li>
-                    <li>한솔</li>
-                    <li>과다출혈</li>
-					<li>전혈</li>
-                    <li>4/5</li>
-                    <li>2020.02.20</li>
-					<li><a href="./donatePage" style="color=#66493f">기부하기</a></li>
-                </ul></li> 
-
-				<li style="list-style:none; text-align:center; padding:0; margin:0;"><ul style="list-style:none; text-align:center; padding:0; margin:0;">
-                    <li>5</li>
-                    <li>차은우</li>
-                    <li>백혈병</li>
-                    <li>혈장</li>
-					<li>4/5</li>
-                    <li>2020.07.10</li>
-					<li><a href="./donatePage" onmouseover="this.style.fontWeight=bold; this.style.color=#66493f" onmouseout="this.style.color=#bf4044">기부하기</a></li>
-                </ul></li>
-
-				<li style="list-style:none; text-align:center; padding:0; margin:0;"><ul style="list-style:none; text-align:center; padding:0; margin:0;">
-                    <li>6</li>
-                    <li>장소연</li>
-                    <li>과다출혈</li>
-					<li>전혈</li>
-                    <li>1/4</li>
-                    <li>2020.03.03</li>
-					<li><a href="./donatePage" onmouseover="this.style.fontWeight=bold; this.style.color=#66493f" onmouseout="this.style.color=#bf4044">기부하기</a></li>
-                </ul></li> 
-
-				<li style="list-style:none; text-align:center; padding:0; margin:0;"><ul style="list-style:none; text-align:center; padding:0; margin:0;">
-                    <li>7</li>
-                    <li>한재경</li>
-                    <li>백혈병</li>
-                    <li>혈소판</li>
-					<li>1/4</li>
-                    <li>2019.08.23</li>
-					<li><a href="./donatePage" onmouseover="this.style.fontWeight=bold; this.style.color=#66493f" onmouseout="this.style.color=#bf4044">기부하기</a></li>
-                </ul></li>                                         
-            </ul>
-            </li>
+                
 
             <!-- 게시판 페이징 영역 -->
             <li style="list-style:none; text-align:center; padding:0; margin:0;">
