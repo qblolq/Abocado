@@ -408,7 +408,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-staff,
 #fh5co-contact,
 #fh5co-footer {
-  padding: 7em 0;
+  padding: 3em 0;
   clear: both;
 }
 @media screen and (max-width: 768px) {
@@ -836,6 +836,7 @@ h1, h2, h3, h4, h5, h6, figure {
   width: 100%;
   float: left;
   margin-bottom: 30px;
+  
 }
 .fh5co-event .date {
   position: absolute;
@@ -1659,6 +1660,16 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 
+.item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-
+.item p{
+  color:white; 
+  padding-left: 50px;
+  font-weight: bolder;
+  font-size: 20px;
+}
 
