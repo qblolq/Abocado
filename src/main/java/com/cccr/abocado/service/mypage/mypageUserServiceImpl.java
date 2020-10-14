@@ -1,5 +1,13 @@
 package com.cccr.abocado.service.mypage;
 
-public class mypageUserServiceImpl implements mypageUserService{
+import com.cccr.abocado.dto.user.userBloodConVo;
+
+public class mypageUserServiceImpl implements mypageUserService {
+
+    @Override
+    public userBloodConVo getUserBloods(String userIdx) {
+        // TODO Auto-generated method stub
+        return null;
+    }
     
 }

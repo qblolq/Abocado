@@ -185,6 +185,9 @@
 					<li><a href="./donatePage" style="color=#66493f">기부하기</a></li>
                 </ul></li>
 
+
+
+
                 <li style="list-style:none; text-align:center; padding:0; margin:0;"><ul style="list-style:none; text-align:center; padding:0; margin:0;">
                     <li>2</li>
 					<li>정우성</li>

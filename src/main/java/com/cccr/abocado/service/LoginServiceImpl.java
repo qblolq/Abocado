@@ -19,7 +19,7 @@ public class LoginServiceImpl implements LoginService {
         
       
         BasicUserVo userInfo = loginMapper.selectUserInfobyUserId(userVo.getUserId());
-       
+
 
         if(userInfo != null && userVo.getUserPw().equals(userInfo.getUserPw())){
             SessionUserVo sessionInfo = new SessionUserVo(userInfo.getUserIdx(),userInfo.getUserId(),userInfo.getUserName());
