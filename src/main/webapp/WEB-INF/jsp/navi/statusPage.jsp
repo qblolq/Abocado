@@ -71,6 +71,44 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+    <style>
+        .containertwo{
+            border: none;
+            border-color: #66493f;
+			border-width: medium;
+            margin:0 auto;
+			display: flex;
+			flex-direction:initial;
+            align-items:center;
+			width: auto;
+			height: auto;
+            padding: 15px;
+			margin-bottom: 1px;
+        }
+
+        .line {
+            height:0.5px;
+            background:#66493f;
+            font-size:0;
+            line-height:0;
+            padding:0;
+            margin-bottom:20px;
+        }
+
+        .vl {
+            border-left: 0.5px solid #66493f;
+            background: #66493f;
+            height: 420px;
+            position: absolute;
+            left: 50%;
+            margin-left: 10px;
+            top: 0;
+        }
+
+
+    </style>
+
+
 	</head>
 	<body>
 		
@@ -100,13 +138,26 @@
 		  	</ul>
 	  	</div>
 	</aside> --%>
+    
+    <div id="fh5co-title">
+        <div class="container" style="margin-top:100px; margin-bottom:20px">
+            <div class="col-md-6 animate-box">
+                <h2><b>현황</b></h2>
+            </div>
+        </div>
+    </div>
 	
 
 	<div style="height: 1500%; margin: 0">
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2 text-center slider-text">
-				<div id="container" style="height: 500%; margin-top:100px; margin-bottom:250px"></div>
-				<div id="containertwo" style="height: 500%"></div>
+                <div class="containertwo">
+				    <div id="containertwo" style="height: 400%; width: 100%"></div>
+                    <div id="containerthree" style="height: 400%; width: 100%"></div>
+                    <div class="vl"></div>
+                </div>
+                <div class="line"><!-- --></div>
+                <div id="container" style="height: 300%; margin-bottom:50px"></div>
     			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
     			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
     			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>
@@ -123,7 +174,7 @@ var app = {};
 option = null;
 option = {
     title: {
-        text: '헌혈 현황',
+        text: '한 달간 헌혈 현황',
 		left: 'center'
     },
     tooltip: {
@@ -147,7 +198,7 @@ option = {
     xAxis: {
         type: 'category',
         boundaryGap: false,
-        data: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월']
+        data: ['1일', '2일', '3일', '4일', '5일', '6일', '7일', '8일', '9일', '10일', '11일', '12일', '13일', '14일', '15일', '16일', '17일', '18일', '19일', '20일', '21일', '22일', '23일', '24일', '25일', '26일', '27일', '28일', '29일', '30일']
     },
     yAxis: {
         type: 'value'
@@ -156,22 +207,22 @@ option = {
         {
             name: 'A형',
             type: 'line',
-            data: [120, 132, 101, 134, 90, 230, 210, 250, 180]
+            data: [120, 132, 101, 134, 90, 230, 210, 250, 180, 120, 132, 101, 134, 90, 230, 210, 250, 180, 120, 132, 101, 134, 90, 230, 210, 250, 180, 200, 160, 180]
         },
         {
             name: 'B형',
             type: 'line',
-            data: [220, 182, 191, 234, 290, 330, 310, 300, 280]
+            data: [220, 182, 191, 234, 290, 330, 310, 300, 280, 220, 182, 191, 234, 290, 330, 310, 300, 280, 220, 182, 191, 234, 290, 330, 310, 300, 280, 200, 180, 150]
         },
         {
             name: 'O형',
             type: 'line',
-            data: [150, 232, 201, 154, 190, 330, 410, 380, 400]
+            data: [150, 232, 201, 154, 190, 330, 410, 380, 400, 150, 232, 201, 154, 190, 330, 410, 380, 400, 150, 232, 201, 154, 190, 330, 410, 380, 400, 300, 280, 250]
         },
         {
             name: 'AB형',
             type: 'line',
-            data: [320, 332, 301, 334, 390, 330, 320, 300, 250]
+            data: [320, 332, 301, 334, 390, 330, 320, 300, 250, 320, 332, 301, 334, 390, 330, 320, 300, 250, 320, 332, 301, 334, 390, 330, 320, 300, 250, 200, 170, 160]
         }
     ]
 };
@@ -181,9 +232,89 @@ if (option && typeof option === "object") {
 }
 
 
-// 혈액형 별 현재 보유량 pie
+// 기부된 헌혈증 pie
 var domtwo = document.getElementById("containertwo");
 var myCharttwo = echarts.init(domtwo);
+var app = {};
+option = null;
+option = {
+    title: {
+        text: '기부된 헌혈증',
+        left: 'center'
+    },
+    tooltip: {
+        trigger: 'item',
+        formatter: '{a} <br/>{b}: {c} ({d}%)'
+    },
+    legend: {
+        orient: 'vertical',
+        left: 'right',
+        data: ['전혈320', '전혈400', '혈장', '혈소판']
+    },
+    series: [
+        {
+            name: '기부된 헌혈증',
+            type: 'pie',
+            radius: '55%',
+            label: {
+                formatter: '{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ',
+                backgroundColor: '#eee',
+                borderColor: '#aaa',
+                borderWidth: 1,
+                borderRadius: 4,
+                // shadowBlur:3,
+                // shadowOffsetX: 2,
+                // shadowOffsetY: 2,
+                // shadowColor: '#999',
+                // padding: [0, 7],
+                rich: {
+                    a: {
+                        color: '#999',
+                        lineHeight: 22,
+                        align: 'center'
+                    },
+                    // abg: {
+                    //     backgroundColor: '#333',
+                    //     width: '100%',
+                    //     align: 'right',
+                    //     height: 22,
+                    //     borderRadius: [4, 4, 0, 0]
+                    // },
+                    hr: {
+                        borderColor: '#aaa',
+                        width: '100%',
+                        borderWidth: 0.5,
+                        height: 0
+                    },
+                    b: {
+                        fontSize: 16,
+                        lineHeight: 33
+                    },
+                    per: {
+                        color: '#eee',
+                        backgroundColor: '#334455',
+                        padding: [2, 4],
+                        borderRadius: 2
+                    }
+                }
+            },
+            data: [
+                {value: 2187, name: '전혈320'},
+                {value: 3296, name: '전혈400'},
+                {value: 658, name: '혈장'},
+                {value: 327, name: '혈소판'},
+            ]
+		},
+    ]
+};;
+if (option && typeof option === "object") {
+    myCharttwo.setOption(option, true);
+}
+
+
+//혈액형 별 현재 보유량 pie
+var domthree = document.getElementById("containerthree");
+var myChartthree = echarts.init(domthree);
 var app = {};
 option = null;
 option = {
@@ -253,11 +384,64 @@ option = {
                 {value: 6298, name: 'O형'},
                 {value: 3349, name: 'AB형'},
             ]
+		},
+		{
+            name: '혈액형 별 현재 보유량',
+            type: 'pie',
+            radius: '55%',
+            label: {
+                formatter: '{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ',
+                backgroundColor: '#eee',
+                borderColor: '#aaa',
+                borderWidth: 1,
+                borderRadius: 4,
+                // shadowBlur:3,
+                // shadowOffsetX: 2,
+                // shadowOffsetY: 2,
+                // shadowColor: '#999',
+                // padding: [0, 7],
+                rich: {
+                    a: {
+                        color: '#999',
+                        lineHeight: 22,
+                        align: 'center'
+                    },
+                    // abg: {
+                    //     backgroundColor: '#333',
+                    //     width: '100%',
+                    //     align: 'right',
+                    //     height: 22,
+                    //     borderRadius: [4, 4, 0, 0]
+                    // },
+                    hr: {
+                        borderColor: '#aaa',
+                        width: '100%',
+                        borderWidth: 0.5,
+                        height: 0
+                    },
+                    b: {
+                        fontSize: 16,
+                        lineHeight: 33
+                    },
+                    per: {
+                        color: '#eee',
+                        backgroundColor: '#334455',
+                        padding: [2, 4],
+                        borderRadius: 2
+                    }
+                }
+            },
+            data: [
+                {value: 11735, name: 'A형'},
+                {value: 7862, name: 'B형'},
+                {value: 6298, name: 'O형'},
+                {value: 3349, name: 'AB형'},
+            ]
         }
     ]
 };;
 if (option && typeof option === "object") {
-    myCharttwo.setOption(option, true);
+    myChartthree.setOption(option, true);
 }
        			</script>
 			</div>
@@ -265,7 +449,7 @@ if (option && typeof option === "object") {
 	</div>
 
 
-	<div id="fh5co-counter" class="fh5co-counters" style="background-image: url(resources/images/img_bg_4.jpg);" data-stellar-background-ratio="0.5">
+	<%-- <div id="fh5co-counter" class="fh5co-counters" style="background-image: url(resources/images/img_bg_4.jpg);" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
@@ -286,7 +470,7 @@ if (option && typeof option === "object") {
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> --%>
 
 
 	
