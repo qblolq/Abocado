@@ -33,6 +33,12 @@ public class DonateController {
    
   
 
+    @RequestMapping("listpage")
+    public String listPage(Model model){
+
+        return "listPage";
+    } 
+
     //기부페이지
     @RequestMapping("donatePage")
     public String donatePage(Model model){
