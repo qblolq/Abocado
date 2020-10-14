@@ -54,6 +54,7 @@ public class LoginController {
 
 
         SessionHosVo sessionInfo = loginService.hosLogin(param);
+
         if(sessionInfo == null){
             return "loginFail";
         }    

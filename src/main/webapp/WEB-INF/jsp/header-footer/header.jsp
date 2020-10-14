@@ -45,7 +45,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-2">
-							<div id="fh5co-logo"><a href="./indexPage"><img src="resources/images/abo.png" width="120px" height="60px"></a></div>
+							<div id="fh5co-logo"><a href="./indexPage"><img src="resources/images/abo.png" width="120px"></a></div>
 						</div>
 						<div class="col-xs-10 text-right menu-2">
 							<ul>			
@@ -59,7 +59,7 @@
 								<li ><a href="./statusPage">현황</a></li>
 
 								<li ><a href="./listPage">기부</a></li>
-								<li ><a href="./myPage">mypage</a></li>
+								<li ><a href="./mypagePersonal">mypage</a></li>
 
 								<li class="btn-cta"><a href="./logoutPage"><span>LoginOut</span></a></li>
 							</ul>
@@ -77,7 +77,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-xs-2">
-								<div id="fh5co-logo"><a href="./indexPage"><img src="resources/images/abo.png" width="120px" height="60px"></a></div>
+								<div id="fh5co-logo"><a href="./indexPage"><img src="resources/images/abo.png" width="120px"></a></div>
 							</div>
 							<div class="col-xs-10 text-right menu-2">
 								<ul>
@@ -90,7 +90,7 @@
 									</li>	
 									<li ><a href="./statusPage">현황</a></li>
 									<li ><a href="./listPage">기부</a></li>
-									<li ><a href="./myPage">mypage</a></li>
+									<li ><a href="./mypageHospital">mypage</a></li>
 									<li class="btn-cta"><a href="./logoutPage"><span>LoginOut</span></a></li>
 
 								</ul>
@@ -108,7 +108,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-xs-2">
-								<div id="fh5co-logo"><a href="./indexPage"><img src="resources/images/abo.png" width="120px" height="60px"></a></div>
+								<div id="fh5co-logo"><a href="./indexPage"><img src="resources/images/abo.png" width="120px"></a></div>
 							</div>
 							<div class="col-xs-10 text-right menu-2">
 								<ul>

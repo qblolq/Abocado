@@ -138,8 +138,8 @@
                 <!--병원유저 로그인-->
                   <form action="./hos_loginAction" method="post" id="hospital_login_form" class="board_tabcontent">
                     <div class="main_section1-loginBox">
-                      <input type="text" placeholder="병원유저 아이디"  name="hos_id" class="LonIn_input">
-                      <input type="password" name="hos_pw" placeholder="병원유저 비밀번호" class="LonIn_input">    
+                      <input type="text" placeholder="병원유저 아이디"  name="hosId" class="LonIn_input">
+                      <input type="password" name="hosPw" placeholder="병원유저 비밀번호" class="LonIn_input">    
                     </div>
                     <button type="submit" class="login_button">병원 로그인</button>
                   </form>
@@ -147,8 +147,8 @@
                 <!--보건복지부유저 로그인-->
                   <form action="./gov_loginAction" method="post" id="gov_login_form" class="board_tabcontent">
                     <div class="main_section1-loginBox">
-                      <input type="text" placeholder="보건복지부 아이디"  name="gov_id" class="LonIn_input">
-                      <input type="password" name="gov_pw" placeholder="보건복지부 비밀번호" class="LonIn_input">    
+                      <input type="text" placeholder="보건복지부 아이디"  name="govId" class="LonIn_input">
+                      <input type="password" name="govPw" placeholder="보건복지부 비밀번호" class="LonIn_input">    
                     </div>
                     <button type="submit" class="login_button">보건복지부 로그인</button>
                   </form>

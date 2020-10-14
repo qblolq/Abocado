@@ -6,8 +6,7 @@
 <html>
 <head profile="http://www.w3.org/2005/10/profile">
 <meta charset="UTF-8">
-<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet"> 
 <!-- Animate.css -->
 <link rel="stylesheet" href="resources/css/animate.css">
 <!-- Icomoon Icon Fonts-->
@@ -93,37 +92,6 @@
 	  	</div>
 	</aside>
 
-
-	<%-- 현재 기부된 횟수와 완치된 횟수 섹션 --%>
-    <div id="fh5co-counter" class="fh5co-counters"  data-stellar-background-ratio="0.5">
-		<%-- <div class="overlay"></div> --%>
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-					<h2 style="font-weight: 500; border-bottom: .5px solid #66493f;">오늘 현황</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-10 col-md-offset-1">
-					<div class="row">
-					
-						<div class="col-md-6 col-sm-6 text-center animate-box">
-							<span class="icon"><i class="icon-bulb"></i></span>
-							<span class="fh5co-counter js-counter" style="color:black;" data-from="0" data-to="5034" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="fh5co-counter-label" style="color:black;">기증된 헌혈증</span>
-						</div>
-						<div class="col-md-6 col-sm-6 text-center animate-box">
-							<span class="icon"><i class="icon-head"></i></span>
-							<span class="fh5co-counter js-counter" style="color:black;" data-from="0" data-to="1080" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="fh5co-counter-label" style="color:black;" >수혜자</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<%-- 응급환자 섹션 --%>
 	<div id="fh5co-blog">
 		<div class="container">
 			<div class="row animate-box">
@@ -136,9 +104,11 @@
 				<div class="col-md-4 animate-box">
 					<div class="fh5co-event">
 						<div class="date text-center"><span>10월<br>17일</span></div>
-						<h3>고려대 병원</h3>
-						<p>현재 코피를 흘려 수혈이 필요합니다</p>
-						<p><a href="#" class="emergency-man">기부하기</a></p>
+						<div>
+							<h3>고려대 병원</h3>
+							<p>현재 코피를 흘려 수혈이 필요합니다</p>
+							<p><a href="#" class="emergency-man">기부하기</a></p>
+						</div>
 					</div>
 				</div>
 				<div class="col-md-4 animate-box">
@@ -153,7 +123,7 @@
 					<div class="fh5co-event">
 						<div class="date text-center"><span>10월<br>19일</span></div>
 						<h3>서울대 병원</h3>
-						<p>수혈이 필요합니다</p>
+						<p>수혈이 필요합니다 수혈이 필요합니다</p>
 						<p><a href="#" class="emergency-man">기부하기</a></p>
 					</div>
 				</div>
@@ -161,6 +131,49 @@
 			
 		</div>
 	</div>
+
+	<%-- 현재 기부된 횟수와 완치된 횟수 섹션 --%>
+    <div id="fh5co-counter" class="fh5co-counters"  data-stellar-background-ratio="0.5">
+		<%-- <div class="overlay"></div> --%>
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+					<h2 style="font-weight: 500; border-bottom: .5px solid #66493f;">오늘 현황</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="row">
+					
+						<div class="col-md-3 col-sm-3 text-center animate-box">
+							<span class="icon"><i class="icon-bulb"></i></span>
+							<span class="fh5co-counter js-counter" style="color:black;" data-from="0" data-to="5034" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="fh5co-counter-label" style="color:black;">기증된 헌혈증</span>
+						</div>
+						<div class="col-md-3 col-sm-3 text-center animate-box">
+							<span class="icon"><i class="icon-head"></i></span>
+							<span class="fh5co-counter js-counter" style="color:black;" data-from="0" data-to="1080" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="fh5co-counter-label" style="color:black;" >금일 헌혈자</span>
+						</div>
+						<div class="col-md-3 col-sm-3 text-center animate-box">
+							<span class="icon"><i class="icon-head"></i></span>
+							<span class="fh5co-counter js-counter" style="color:black;" data-from="0" data-to="1080" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="fh5co-counter-label" style="color:black;" >수혜자</span>
+						</div>
+						<div class="col-md-3 col-sm-3 text-center animate-box">
+							<span class="icon"><i class="icon-head"></i></span>
+							<span class="fh5co-counter js-counter" style="color:black;" data-from="0" data-to="1080" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="fh5co-counter-label" style="color:black;" >헌혈팩 보유량</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="seperate_div"></div>
+	<%-- 응급환자 섹션 --%>
+	
 
 	<%-- 구분 --%>
 	<%-- <div class="seperate_div"></div>  --%>
@@ -175,7 +188,6 @@
 				</div>
 			</div>
 
-			<div class="seperate_div"></div>
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
 					<div class="row animate-box">
@@ -184,36 +196,31 @@
 								<div class="testimony-slide active text-center">
 									<div class="user" style="background-image: url(resources/images/gongyou.jpg);"></div>
 									<span>공유<br></span>
-									<blockquote>
-										<p>&ldquo;너와 함께한 모든 헌혈이 눈부셨다 &rdquo;</p>
-									</blockquote>
 								</div>
+								<p>&ldquo;너와 함께한 모든 헌혈이 눈부셨다 &rdquo;</p>	
 							</div>
 							<div class="item">
 								<div class="testimony-slide active text-center">
 									<div class="user" style="background-image: url(resources/images/jos.jpg);"></div>
 									<span>조승우<br></span>
-									<blockquote>
-										<p>&ldquo;이 피 어떤 피일까? 무슨 형인지 알수 있다면...&rdquo;</p>
-									</blockquote>
-								</div>
+								</div>	
+								<p>&ldquo;이 피 어떤 피일까? 무슨 형인지 알수 있다면...&rdquo;</p>	
 							</div>
 							<div class="item">
 								<div class="testimony-slide active text-center">
 									<div class="user" style="background-image: url(resources/images/kimh.jpg);"></div>
 									<span>김혜수<br></span>
-									<blockquote>
-										<p>&ldquo; 슨배님 ...고마워요.&rdquo;</p>
-									</blockquote>
-								</div>
+								</div>	
+								<p>&ldquo; 슨배님 ...고마워요.&rdquo;</p>		
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<div class="seperate_div"></div>
 	</div>
-
+	
 	<%-- 구분 --%>
 
 
