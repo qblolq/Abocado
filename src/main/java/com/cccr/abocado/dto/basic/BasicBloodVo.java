@@ -8,25 +8,24 @@ public class BasicBloodVo {
     private String userIdx; // 소유자 고유키
     private String patientIdx; // 환자 고유키 NULL가능
     private String hosIdx; // 병원 고유키 NULL가능
-    private String bUsage; // 헌혈증 사용여부
-    private String bDate; // 헌혈 날짜
-    private String bKind; // 헌혈 종류
+    private String bloodUsage; // 헌혈증 사용여부 
+    private String bloodDate; // 헌혈 날짜
+    private String bloodKind; // 헌혈 종류
 
-
+    
 
     public BasicBloodVo(){}
 
-    public BasicBloodVo(String bloodIdx, String userIdx, String patientIdx, String hosidx,
-            String bUsage, String bDate, String bkind){
+    public BasicBloodVo(String bloodIdx, String userIdx, String patientIdx, String hosidx, String bloodUsage, String bloodDate, String bloodkind){
         super();
 
         this.bloodIdx = bloodIdx;
         this.userIdx = userIdx;
         this.patientIdx = patientIdx;
         this.hosIdx = hosidx;
-        this.bUsage = bUsage;
-        this.bDate = bDate;
-        this.bKind = bkind;
+        this.bloodUsage = bloodUsage;
+        this.bloodDate = bloodDate;
+        this.bloodKind = bloodkind;
     }
 
     
@@ -62,30 +61,32 @@ public class BasicBloodVo {
         this.hosIdx = hosIdx;
     }
 
-    public String getBUsage() {
-        return this.bUsage;
+    public String getBloodUsage() {
+        return this.bloodUsage;
     }
 
-    public void setBUsage(String bUsage) {
-        this.bUsage = bUsage;
+    public void setBloodUsage(String bloodUsage) {
+        this.bloodUsage = bloodUsage;
     }
 
-    public String getBDate() {
-        return this.bDate;
+    public String getBloodDate() {
+        return this.bloodDate;
     }
 
-    public void setBDate(String bDate) {
-        this.bDate = bDate;
+    public void setBloodDate(String bloodDate) {
+        this.bloodDate = bloodDate;
     }
 
-    public String getBKind() {
-        return this.bKind;
+    public String getBloodKind() {
+        return this.bloodKind;
     }
 
-    public void setBKind(String bKind) {
-        this.bKind = bKind;
+    public void setBloodKind(String bloodKind) {
+        this.bloodKind = bloodKind;
     }
-
+    
+    
+    
 
     
 }

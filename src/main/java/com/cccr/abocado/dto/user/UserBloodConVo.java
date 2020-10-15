@@ -1,16 +1,15 @@
 package com.cccr.abocado.dto.user;
 
-import com.cccr.abocado.dto.basic.BasicBloodVo;
-import com.cccr.abocado.dto.basic.BasicUserVo;
+import com.cccr.abocado.dto.basic.*;
 
-public class userBloodConVo {
+public class UserBloodConVo {
     
     private BasicUserVo basicUserVo;
     private BasicBloodVo basicBloodVo;
 
-    public userBloodConVo(){}
+    public UserBloodConVo(){}
 
-    public userBloodConVo(BasicUserVo basicUserVo, BasicBloodVo basicBloodVo){
+    public UserBloodConVo(BasicUserVo basicUserVo, BasicBloodVo basicBloodVo){
 
         this.basicUserVo = basicUserVo;
         this.basicBloodVo = basicBloodVo;

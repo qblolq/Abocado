@@ -237,16 +237,16 @@
 							<div class="myPageInfo1">
 								<img src="resources/images/profile.jpg" alt="My Image" width="100px" height="100px">
 								<div class="donateInfoArea">
-									<h4><b>이소영 님, 반갑습니다.</b></h4>
-									<h4>- ID: 123456789(일반회원)</h4>
+									<h4><b>${userBloodList[0].basicUserVo.userName} 님, 반갑습니다.</b></h4>
+									<h4>- ID: ${userBloodList[0].basicUserVo.userId}</h4>
 									<h4>- 헌혈 가능 일: 2020년 10월 17일</h4>
 								</div> 
 								<a href="./listPage" class="donateButton"role="button">기부하기</button><br></a>
 							</div>
 							<div class="myPageInfo2">
-								<button type="button" class="paperButton"onclick="openTable(event, 'totalPaper')">총 헌혈 횟수<br><br>6 회</button>
-								<button type="button" class="paperButton"onclick="openTable(event, 'usedPaper')">현재 보유 헌혈증<br><br>3 개</button>
-								<button type="button" class="paperButton"onclick="openTable(event, 'currentPaper')">기부한 헌혈증<br><br>3 개</button>
+								<button type="button" class="paperButton"onclick="openTable(event, 'totalPaper')">총 헌혈 횟수<br><br>${totalListSize} 개</button>
+								<button type="button" class="paperButton"onclick="openTable(event, 'usedPaper')">현재 보유 헌혈증<br><br>${gettingBloodSize} 개</button>
+								<button type="button" class="paperButton"onclick="openTable(event, 'currentPaper')">기부한 헌혈증<br><br>${donatedUsageBloodSize} 개</button>
 							</div>
 							
 						</div>
@@ -267,45 +267,25 @@
 								</tr>
 								</thead>
 								<tbody>
+								<c:forEach items="${userBloodList}" var="userBloodList">
 								<tr>
-									<td>2019년 10월 26일</td>
+									<td>${userBloodList.basicBloodVo.bloodDate}</td>
 									<td>헌혈의집 구로디지털단지역센터</td>
-									<td>전혈 400ml</td>
-									<td>사용</td>
+									<td>${userBloodList.basicBloodVo.bloodKind}</td>
+									<td>${userBloodList.basicBloodVo.bloodUsage}</td>
 								</tr>
+								</c:forEach>
 								<tr>
-									<td>2019년 12월 08일</td>
-									<td>헌혈의집 서울역센터</td>
-									<td>혈장</td>
-									<td>사용</td>
-								</tr>
-								<tr>
-									<td>2020년 05월 06일</td>
-									<td>헌혈의집 구로디지털단지역센터</td>
-									<td>전혈 400ml</td>
-									<td>사용</td>
-								</tr>
-								<tr>
-									<td>2020년 6월 07일</td>
-									<td>헌혈의집 서울역센터</td>
-									<td>혈장</td>
 									<td></td>
-								</tr>
-								<tr>
-									<td>2020년 9월 11일</td>
-									<td>헌혈의집 서울역센터</td>
-									<td>전혈 400ml</td>
 									<td></td>
-								</tr>
-								<tr>
-									<td>2020년 10월 8일</td>
-									<td>헌혈의집 구로디지털단지역센터</td>
-									<td>전혈 400ml</td>
 									<td></td>
+									<th>총 ${totalListSize}개 기부</th>
 								</tr>
 								</tbody>
 						</table>
 					</div>
+
+					
 					<div id="usedPaper" class="tabcontent">
 						<br>
 						<h3><b>기부한 헌혈증</b></h3>
@@ -319,26 +299,21 @@
 							</tr>
 							</thead>
 							<tbody>
+							<c:forEach items="${userBloodList}" var="userBlood">
+								<c:if test="${userBlood.basicBloodVo.bloodUsage == 'n'}">
+									<tr>
+										<td>${userBlood.basicBloodVo.bloodDate}</td>
+										<td>헌혈의집 구로디지털단지역센터</td>
+										<td>${userBlood.basicBloodVo.bloodKind}</td>
+									</tr>
+								</c:if>
+							</c:forEach>
 							<tr>
-								<td>2019년 10월 26일</td>
-								<td>헌혈의집 구로디지털단지역센터</td>
-								<td>전혈 400ml</td>
-							</tr>
-							<tr>
-								<td>2019년 12월 08일</td>
-								<td>헌혈의집 서울역센터</td>
-								<td>혈장 </td>
-							</tr>
-							<tr>
-								<td>2020년 05월 06일</td>
-								<td>헌혈의집 구로디지털단지역센터</td>
-								<td>전혈 400ml</td>
-							</tr>
-							<tr>
-								<td></td>
-								<td></td>
-								<th>총 3개 보유 중</th>
-							</tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<th>총 ${totalListSize}개 기부</th>
+								</tr>
 							</tbody>
 						</table>
 					</div>
@@ -378,7 +353,7 @@
 								<td></td>
 								<td></td>
 								<td></td>
-								<th>총 3개 기부</th>
+								<th>총 ${donatedUsageBloodSize}개 기부</th>
 							</tr>
 							</tbody>
 						</table>
