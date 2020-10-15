@@ -3,6 +3,7 @@ package com.cccr.abocado.controller;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+import com.cccr.abocado.dto.basic.BasicPatientVo;
 import com.cccr.abocado.dto.blood.Blood_donateVo;
 import org.hyperledger.fabric.gateway.Gateway;
 import org.hyperledger.fabric.gateway.Wallet;
@@ -33,16 +34,14 @@ public class DonateController {
    
   
 
-    @RequestMapping("listpage")
-    public String listPage(Model model){
 
-        return "listPage";
-    } 
 
     //기부페이지
     @RequestMapping("donatePage")
-    public String donatePage(Model model){
+    public String donatePage(BasicPatientVo basicPatientVo, Model model){
 
+        basicPatientVo.getPatientIdx();
+        
         return "donatePage";
     } 
 

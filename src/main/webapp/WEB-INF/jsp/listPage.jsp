@@ -183,7 +183,7 @@
 					<li>${patientList.patientBtype}</li>
 					<li>${patientList.patientbdNow}/${patientList.patientbdMax}</li>
                     <li>${patientList.patientEnddate}</li>
-					<li><a href="./donatePage" style="color=#66493f">기부하기</a></li>
+					<li><a href="./donatePage?patientIdx=${patientList.patientIdx}" style="color=#66493f">기부하기</a></li>
                 </ul></li>
 				</c:forEach>
 
