@@ -3,11 +3,21 @@ package com.cccr.abocado.controller;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+
+import javax.servlet.http.HttpSession;
+
+//import com.cccr.abocado.dto.basic.BasicHospitalVo;
 import com.cccr.abocado.dto.basic.BasicPatientVo;
 import com.cccr.abocado.dto.blood.Blood_donateVo;
+import com.cccr.abocado.dto.hospital.PatientHosConVo;
+import com.cccr.abocado.dto.session.SessionUserVo;
+import com.cccr.abocado.service.DonateService;
+//import com.cccr.abocado.service.PatientListService;
+
 import org.hyperledger.fabric.gateway.Gateway;
 import org.hyperledger.fabric.gateway.Wallet;
 import org.hyperledger.fabric.gateway.Wallets;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,22 +41,37 @@ public class DonateController {
         return builder.connect();
     }
     
-   
-  
-
+    @Autowired
+    DonateService donateService;
 
 
     //기부페이지
     @RequestMapping("donatePage")
     public String donatePage(BasicPatientVo basicPatientVo, Model model){
 
-        basicPatientVo.getPatientIdx();
+        String patientIdx = basicPatientVo.getPatientIdx();
+
+
+        PatientHosConVo patientInfo = donateService.getPatientInfo(patientIdx);
+
+        model.addAttribute("patientInfo", patientInfo);
+
         
         return "donatePage";
     } 
 
     @RequestMapping("donateAction")
-    public String donateAction(Blood_donateVo param) {
+    public String donateAction(Blood_donateVo param, HttpSession session) {
+
+        SessionUserVo sessionInfo = (SessionUserVo)session.getAttribute("sessionUserInfo");
+        String userIdx = sessionInfo.getUserIdx();
+
+        param.setUserIdx(userIdx);
+
+    
+
+
+
         return "indexPage";
     }
 

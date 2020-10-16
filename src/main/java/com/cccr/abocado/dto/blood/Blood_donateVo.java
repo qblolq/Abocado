@@ -5,10 +5,8 @@ public class Blood_donateVo {
     private String userIdx;
     private String patientIdx;
     private String hosIdx;
-    private String bAmount;
-    private String bKind;
-
-   
+    private String bloodAmount;
+    private String bloodKind;
 
     public Blood_donateVo() {
     }
@@ -17,10 +15,11 @@ public class Blood_donateVo {
         this.userIdx = userIdx;
         this.patientIdx = patientIdx;
         this.hosIdx = hosIdx;
-        this.bAmount = bAmount;
-        this.bKind = bKind;
+        this.bloodAmount = bAmount;
+        this.bloodKind = bKind;
         
     }
+
 
     public String getUserIdx() {
         return this.userIdx;
@@ -46,20 +45,22 @@ public class Blood_donateVo {
         this.hosIdx = hosIdx;
     }
 
-    public String getBAmount() {
-        return this.bAmount;
+    public String getBloodAmount() {
+        return this.bloodAmount;
     }
 
-    public void setBAmount(String bAmount) {
-        this.bAmount = bAmount;
+    public void setBloodAmount(String bloodAmount) {
+        this.bloodAmount = bloodAmount;
     }
 
-    public String getBKind() {
-        return this.bKind;
+    public String getBloodKind() {
+        return this.bloodKind;
     }
 
-    public void setBKind(String bKind) {
-        this.bKind = bKind;
+    public void setBloodKind(String bloodKind) {
+        this.bloodKind = bloodKind;
     }
 
+   
+    
 }

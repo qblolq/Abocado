@@ -120,22 +120,26 @@
     </div>
     <main class="donatePage_main">
         <!-- 환자 상세 설명-->
+  
         <div class="donate_information">
             <img src="resources/images/snuhos.png" style="margin:0 auto; margin-left:150px; weight:210px; height:210px;">
             <ul style="margin:0 auto; margin-top:10px; margin-right:300px; color:#30240F; text-align:left;">
-                <p><b>등록한 병원명&emsp;</b>서울대 병원</p>
-                <p><b>환자 병명&emsp;</b>백혈병</p>
-                <p><b>목표 헌혈증 개수&emsp;</b>5개</p>
-                <p><b>모금된 헌혈증 개수&emsp;</b>3개</p>
-                <p><b>모금 마감 날짜&emsp;</b>2020.09.22 ~ 2020.09.25</p>
+                <p><b>등록한 병원명&emsp;</b>${patientInfo.basicHospitalVo.hosName}</p>
+                <p><b>환자 병명&emsp;</b>${patientInfo.basicPatientVo.patientSym}</p>
+                <p><b>목표 헌혈증 개수&emsp;</b>${patientInfo.basicPatientVo.patientbdMax}개</p>
+                <p><b>모금된 헌혈증 개수&emsp;</b>${patientInfo.basicPatientVo.patientbdNow}개</p>
+                <p><b>모금 마감 날짜&emsp;</b>${patientInfo.basicPatientVo.patientStartdate} ~ ${patientInfo.basicPatientVo.patientEnddate}</p>
             </ul>
         </div>
+ 
 
         <!--기부 상세 설정-->
         <form action="./donateAction" method="GET">
         <div class="donate_setting">
             <p>
                 <td><b>&emsp;&emsp;헌혈증 갯수&emsp;&emsp;</b></td>
+                <input type=hidden value="${patientInfo.basicPatientVo.patientIdx}" name="patientIdx">
+                <input type=hidden value="${patientInfo.basicHospitalVo.hosIdx}" name="hosIdx">
                 <input type=button value="-" onClick="javascript:this.form.b_amount.value--;">
                 <input type=text name=b_amount value=1 style="width:100px">
                 <input type=button value="+" onClick="javascript:this.form.b_amount.value++;">
