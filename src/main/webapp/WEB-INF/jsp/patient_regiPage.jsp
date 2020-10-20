@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ include file="../header-footer/header.jsp" %>
+<%@ include file="header-footer/header.jsp" %>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -79,54 +79,44 @@
       <div class="col-lg-4"></div>
       <div class="col=lg-4">
         <div class="jumbotron" style="padding-top:20px;">
-          <form method="post" action="joinAction">
-          <b><font size="6" color="gray">환자등록</font></b>
-          <br><br>
-            <div class="form-group" id="title">차트번호
-              <input type="text" placeholder="차트번호" name="patient_idx" maxlength="32" style="margin-left: 50px;">
-              <input type="button" value="중복확인">
-            </div>
-            <div class="form-group" id="title">이름
-              <input type="text" placeholder="이름" name="p_name" maxlength="20" style="margin-left: 80px;">
-            </div>
-            <div class="form-group" id="title">주민등록번호
-              <input type="text" name="p_regi_num" maxlength="6"style="margin-left: 20px;"> -
-              <input type="text" name="p_regi_num" maxlength="7">
-              <input type="button" value="조회">
-            </div>
+          <form method="GET" action="./insertPatientAction">
+          	<b><font size="6" color="gray">환자등록</font></b>
+          	<br><br>
+	
+			<input type="hidden" name="hosIdx" value="${sessionHosInfo.hosIdx}">	
+          	<div class="form-group" id="title">이름
+          		<input type="text" placeholder="이름" name="patientName" maxlength="20" style="margin-left: 80px;">
+          	</div>
+          	<div class="form-group" id="title">주민등록번호
+          	    <input type="text" name="patientRegiNum" maxlength="16"style="margin-left: 20px;"> 
+          	</div>
 
-            <div class="form-group" id="title">혈액형
-              <select name="p_btype" style="margin-left: 65px;">
-                <option value="A">A</option>
-                <option value="B">B</option>
-                <option value="O">O</option>
-                <option value="AB">AB</option>
-              </select>
-            </div>
 
-            <div class="form-group" id="title">담당의
-              <input type="text" name="doc" maxlength="5" style="margin-left: 65px;">
-            </div>
+			<div class="form-group" id="title">증상
+          	    <input type="text" name="patientSym" maxlength="25"style="margin-left: 20px;"> 
+          	</div>
 
-            <div class="form-group" id="title">환자등급
-              <input type="text" name="grade" maxlength="10" style="margin-left: 50px;">
-            </div>
 
-            <div class="form-group" id="title">환자종류
-              <input type="text" name="sort" maxlength="10" style="margin-left: 50px;">
-            </div>
+			<div class="form-group" id="title"> 수혈 종류
+          	    <select name="patientBtype" style="margin-left: 65px;">
+          	      <option value="전혈320">전혈 320</option>
+          	      <option value="전혈400">전혈 400</option>
+          	      <option value="혈장">혈장</option>
+          	      <option value="혈소판">혈소판</option>
+          	    </select>
+          	</div>
 
-            <div class="form-group" id="title">헌혈증 필요개수
-              <input type="text" name="p_bd_max" maxlength="50" style="margin-left: 2px;">개
-            </div>
+          	<div class="form-group" id="title">헌혈증 필요개수
+          	    <input type="text" name="patientbdMax" maxlength="50" style="margin-left: 2px;">개
+          	</div>
 
-            <div class="form-group" id="title">마감기한
-              <input type="date" name="p_enddate" style="margin-left: 50px;">
-            </div>
+          	<div class="form-group" id="title">마감기한
+          	    <input type="date" name="patientEnddate" style="margin-left: 50px;">
+          	</div>
 
-              <br>
-              <input type="submit" class="btn btn-primary" value="저장">
-              <input type="button" class="btn btn-primary" value="취소" onclick="myPage">
+          	    <br>
+          	<button type="submit" class="btn btn-primary" >저장</button>
+          	<button type="button" class="btn btn-primary">취소</button>
 
 
           </form>

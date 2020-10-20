@@ -1,5 +1,6 @@
 package com.cccr.abocado.dto.basic;
 
+import java.util.Date;
 
 //환자 테이블과 연결된 기본 vo입니다
 public class BasicPatientVo {
@@ -9,14 +10,11 @@ public class BasicPatientVo {
     private String patientName; // 환자 이름
     private String patientRegiNum; // 환자 주민번호
     private String patientSym; // 환자 증상
-    private String patientBtype; // 환자 혈액형
+    private String patientBtype; // 환자 필요한 수혈종류
     private String patientbdMax; // 환자 헌혈증 모금 목표 갯수
     private String patientbdNow; // 환자 헌혈증 현재 모금 갯수
     private String patientStartdate; // 환자 모금 등록일
-    private String patientEnddate;
-
-    
-    //환자 모금 마지막일
+    private String patientEnddate; //환자 모금 마지막일
 
 
     public BasicPatientVo(){}

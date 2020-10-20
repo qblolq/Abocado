@@ -109,6 +109,8 @@
     </style>
 
 </head>
+
+
 <body>
 		
 	<div class="fh5co-loader"></div>
@@ -134,18 +136,18 @@
  
 
         <!--기부 상세 설정-->
-        <form action="./donateAction" method="GET">
+        <form id="frm1" action="./donateAction" method="POST">
         <div class="donate_setting">
             <p>
                 <td><b>&emsp;&emsp;헌혈증 갯수&emsp;&emsp;</b></td>
-                <input type=hidden value="${patientInfo.basicPatientVo.patientIdx}" name="patientIdx">
-                <input type=hidden value="${patientInfo.basicHospitalVo.hosIdx}" name="hosIdx">
+                <input type=hidden value="${patientInfo.basicPatientVo.patientIdx}" id="patientIdx" name="patientIdx">
+                <input type=hidden value="${patientInfo.basicHospitalVo.hosIdx}" id="hosIdx" name="hosIdx">
                 <input type=button value="-" onClick="javascript:this.form.b_amount.value--;">
-                <input type=text name=b_amount value=1 style="width:100px">
+                <input type=text name=blood_amount value=1 style="width:100px">
                 <input type=button value="+" onClick="javascript:this.form.b_amount.value++;">
             </p>
             <p><td><b>&emsp;&emsp;헌혈증 종류&emsp;&emsp;</b></td>
-                <select id="blood_kinds" name="b_kind style="width:100px; height:30px; margin-top:20px">
+                <select id="blood_kinds" name="blood_kind" style="width:100px; height:30px; margin-top:20px">
                     <option value="전혈320">전혈 320</option>
                     <option value="전혈400">전혈 400</option>
                     <option value="혈장">혈장</option>
@@ -156,13 +158,15 @@
                 
         <!--확인/취소 버튼-->
         <div class="donate_buttons">
-            <button type=submit class="do_donate_btn" style="width:100pt; height:22pt; margin-top:10pt; margin-right:50pt; background-color:#846F58; color:#FFFFFF">기부 완료</button>
+            <button type=submit class="do_donate_btn"  style="width:100pt; height:22pt; margin-top:10pt; margin-right:50pt; background-color:#846F58; color:#FFFFFF">기부 완료</button>
             <button type=submit class="cancel_donate_btn" style="width:100pt; height:22pt; margin-top:10pt; margin-left:50pt; background-color:#846F58; color:#FFFFFF">기부 취소</button>
         </div>
         </form>
     </main>
     
     <div>footer</div>
+
+    
 
 </body>
 </html>

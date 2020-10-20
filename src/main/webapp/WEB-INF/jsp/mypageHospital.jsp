@@ -238,15 +238,15 @@
 							<div class="myPageInfo1">
 								<img src="resources/images/profile.jpg" alt="My Image" width="100px" height="100px">
 								<div class="donateInfoArea">
-									<h4><b>연세대학교 세브란스 님, 반갑습니다.</b></h4>
-									<h4>- ID: 123456789(병원 회원)</h4>
+									<h4><b>${mypageHosPatientList[0].basicHospitalVo.hosName} 병원, 반갑습니다.</b></h4>
+									<h4>- ID: ${mypageHosPatientList[0].basicHospitalVo.hosId}(병원 회원)</h4>
 								</div> 
-								<a href="./patient_regiPage" class="donateButton"role="button">환자 등록하기</button><br></a>
+								<a href="./patientEnrollPage" class="donateButton"role="button">환자 등록하기</button><br></a>
 							</div>
 							<div class="myPageInfo2">
-								<button type="button" class="paperButton"onclick="openTable(event, 'totalPaper')">총 기부 받은 헌혈증<br><br>123 개</button>
-								<button type="button" class="paperButton"onclick="openTable(event, 'usedPaper')">기부 대기 중인 환자<br><br>3 명</button>
-								<button type="button" class="paperButton"onclick="openTable(event, 'currentPaper')">기부 완료된 환자<br><br>3 명</button>
+								<button type="button" class="paperButton"onclick="openTable(event, 'totalPaper')">총 기부 받은 헌혈증<br><br>${totalCount} 명</button>
+								<button type="button" class="paperButton"onclick="openTable(event, 'usedPaper')">기부 대기 중인 환자<br><br>${waitCount} 명</button>
+								<button type="button" class="paperButton"onclick="openTable(event, 'currentPaper')">기부 완료된 환자<br><br>${endCount} 명</button>
 							</div>
 							
 						</div>
@@ -260,13 +260,26 @@
 						<table class="table table-striped">
 							<thead>
 								<tr>
-									<th>기부 날짜</th>
-									<th>환자 번호</th>
+									<th>등록 날짜</th>
+									<th>환자 주민번호</th>
 									<th>환자명</th>
-									<th>개수</th>
+								
 								</tr>
 								</thead>
 								<tbody>
+								<c:forEach items="${mypageHosPatientList}" var="mypageHos">
+									<tr>
+										<th>${mypageHos.basicPatientVo.patientStartdate}</th>
+										<th>${mypageHos.basicPatientVo.patientRegiNum}</th>
+										<th>${mypageHos.basicPatientVo.patientName}</th>
+									</tr>
+								</c:forEach>
+								<tr>
+								
+								<td></td>
+								<td></td>
+								<th>총 ${totalCount}명</th>
+							</tr>
 								</tbody>
 						</table>
 					</div>
@@ -277,31 +290,30 @@
 						<table class="table table-striped">
 							<thead>
 							<tr>
-								<th>헌혈 날짜</th>
-								<th>헌혈 장소</th>
+								<th>등록 날짜</th>
+								<th>환자 주민번호</th>
+								<th>환자명</th>
 								<th>헌혈 종류</th>
 							</tr>
 							</thead>
 							<tbody>
-							<tr>
-								<td>2019년 10월 26일</td>
-								<td>헌혈의집 구로디지털단지역센터</td>
-								<td>전혈 400ml</td>
-							</tr>
-							<tr>
-								<td>2019년 12월 08일</td>
-								<td>헌혈의집 서울역센터</td>
-								<td>혈장 </td>
-							</tr>
-							<tr>
-								<td>2020년 05월 06일</td>
-								<td>헌혈의집 구로디지털단지역센터</td>
-								<td>전혈 400ml</td>
-							</tr>
+
+							<c:forEach items="${waitingPatientList}" var="waitingPatient">
+								<tr>
+									<td>${waitingPatient.patientStartdate}</td>
+									<td>${waitingPatient.patientRegiNum}</td>
+									<td>${waitingPatient.patientName}</td>
+									<td>${waitingPatient.patientBtype}</td>
+								</tr>
+							</c:forEach>
+							
+								
+						
 							<tr>
 								<td></td>
 								<td></td>
-								<th>총 3개 보유 중</th>
+								<td></td>
+								<th>총 ${waitCount}명</th>
 							</tr>
 							</tbody>
 						</table>
@@ -313,36 +325,27 @@
 						<table class="table">
 							<thead>
 							<tr>
-								<th>기부 날짜</th>
-								<th>기부 대상(병원, 환자)</th>
-								<th>기부자</th>
-								<th>기부 개수</th>
+								<th>마감 날짜</th>
+								<th>환자명</th>
+								<th>기부받은 갯수</th>
+								<th>목표 갯수</th>
 							</tr>
 							</thead>
 							<tbody>
-							<tr>
-								<td>2019년 10월 26일</td>
-								<td>연세대학교 세브란스, 유*조</td>
-								<td>이소영</td>
-								<td>1 개</td>
-							</tr>
-							<tr>
-								<td>2019년 12월 08일</td>
-								<td>연세대학교 세브란스, 김*지</td>
-								<td>이소영 </td>
-								<td>1 개</td>
-							</tr>
-							<tr>
-								<td>2020년 05월 06일</td>
-								<td>연세대학교 세브란스, 조*빈</td>
-								<td>이소영</td>
-								<td>1 개</td>
-							</tr>
+							<c:forEach items="${endedPatientList}" var="endedPatient">
+								<tr>
+									<td>${endedPatient.patientEnddate}</td>
+									<td>${endedPatient.patientName}</td>
+									<td>${endedPatient.patientbdNow}</td>
+									<td>${endedPatient.patientbdMax}</td>
+								</tr>
+							</c:forEach>
+							
 							<tr>
 								<td></td>
 								<td></td>
 								<td></td>
-								<th>총 3개 기부</th>
+								<th>총 ${endCount}명</th>
 							</tr>
 							</tbody>
 						</table>

@@ -6,13 +6,20 @@ public class UserBloodConVo {
     
     private BasicUserVo basicUserVo;
     private BasicBloodVo basicBloodVo;
+    private BasicHospitalVo basicHospitalVo;
+    private BasicPatientVo basicPatientVo;
+
+   
+   
 
     public UserBloodConVo(){}
 
-    public UserBloodConVo(BasicUserVo basicUserVo, BasicBloodVo basicBloodVo){
+    public UserBloodConVo(BasicUserVo basicUserVo, BasicBloodVo basicBloodVo, BasicHospitalVo basicHospitalVo, BasicPatientVo basicPatientVo){
 
         this.basicUserVo = basicUserVo;
         this.basicBloodVo = basicBloodVo;
+        this.basicHospitalVo = basicHospitalVo;
+        this.basicPatientVo = basicPatientVo;
         
     }
 
@@ -33,5 +40,20 @@ public class UserBloodConVo {
         this.basicBloodVo = basicBloodVo;
     }
 
+    public BasicHospitalVo getBasicHospitalVo() {
+        return this.basicHospitalVo;
+    }
+
+    public void setBasicHospitalVo(BasicHospitalVo basicHospitalVo) {
+        this.basicHospitalVo = basicHospitalVo;
+    }
+
+    public BasicPatientVo getBasicPatientVo() {
+        return this.basicPatientVo;
+    }
+
+    public void setBasicPatientVo(BasicPatientVo basicPatientVo) {
+        this.basicPatientVo = basicPatientVo;
+    }
 
 }

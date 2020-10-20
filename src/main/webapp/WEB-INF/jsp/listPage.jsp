@@ -174,18 +174,66 @@
 					<li><b>기부하러가기</b></li>
             	</ul></li>
 
+				<c:choose>
+					<c:when test="${not empty sessionUserInfo}">
+						<c:forEach items="${patientList}" var="patientList">
+                			<li style="list-style:none; text-align:center; padding:0; margin:0;"><ul style="list-style:none; text-align:center; padding:0; margin:0;">
+                		    <li>1</li>
+							<li>${patientList.patientName}</li>
+                		    <li>${patientList.patientSym}</li>
+							<li>${patientList.patientBtype}</li>
+							<li>${patientList.patientbdNow}/${patientList.patientbdMax}</li>
+                		    <li>${patientList.patientEnddate}</li>
+							<li><a href="./donatePage?patientIdx=${patientList.patientIdx}" style="color=#66493f">기부하기</a></li>
+                		</ul></li>
+						</c:forEach>
+					</c:when>
+					<c:when test="${not empty sessionHosInfo}">
+						<c:forEach items="${patientList}" var="patientList">
+                			<li style="list-style:none; text-align:center; padding:0; margin:0;"><ul style="list-style:none; text-align:center; padding:0; margin:0;">
+                		    <li>1</li>
+							<li>${patientList.patientName}</li>
+                		    <li>${patientList.patientSym}</li>
+							<li>${patientList.patientBtype}</li>
+							<li>${patientList.patientbdNow}/${patientList.patientbdMax}</li>
+                		    <li>${patientList.patientEnddate}</li>
+							<li></li>
+                		</ul></li>
+						</c:forEach>
+						
+                	</ul></li>
+					</c:when>
+					<c:when test="${not empty sessionGovInfo}">
+						<c:forEach items="${patientList}" var="patientList">
+                			<li style="list-style:none; text-align:center; padding:0; margin:0;"><ul style="list-style:none; text-align:center; padding:0; margin:0;">
+                		    <li>1</li>
+							<li>${patientList.patientName}</li>
+                		    <li>${patientList.patientSym}</li>
+							<li>${patientList.patientBtype}</li>
+							<li>${patientList.patientbdNow}/${patientList.patientbdMax}</li>
+                		    <li>${patientList.patientEnddate}</li>
+							<li></li>
+                		</ul></li>
+						</c:forEach>
+                	</ul></li>
+					</c:when>
+					<c:otherwise>
+						<c:forEach items="${patientList}" var="patientList">
+                			<li style="list-style:none; text-align:center; padding:0; margin:0;"><ul style="list-style:none; text-align:center; padding:0; margin:0;">
+                		    <li>1</li>
+							<li>${patientList.patientName}</li>
+                		    <li>${patientList.patientSym}</li>
+							<li>${patientList.patientBtype}</li>
+							<li>${patientList.patientbdNow}/${patientList.patientbdMax}</li>
+                		    <li>${patientList.patientEnddate}</li>
+							<li><a href="./loginPage" style="color=#66493f">기부하기</a></li>
+                		</ul></li>
+						</c:forEach>
+					</c:otherwise>
+				</c:choose>
+
                 <!-- 게시물이 출력될 영역 -->
-				<c:forEach items="${patientList}" var="patientList">
-                <li style="list-style:none; text-align:center; padding:0; margin:0;"><ul style="list-style:none; text-align:center; padding:0; margin:0;">
-                    <li>1</li>
-					<li>${patientList.patientName}</li>
-                    <li>${patientList.patientSym}</li>
-					<li>${patientList.patientBtype}</li>
-					<li>${patientList.patientbdNow}/${patientList.patientbdMax}</li>
-                    <li>${patientList.patientEnddate}</li>
-					<li><a href="./donatePage?patientIdx=${patientList.patientIdx}" style="color=#66493f">기부하기</a></li>
-                </ul></li>
-				</c:forEach>
+				
 
                 
 

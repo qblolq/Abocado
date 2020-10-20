@@ -4,13 +4,12 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 
-import javax.servlet.http.HttpSession;
-
 //import com.cccr.abocado.dto.basic.BasicHospitalVo;
 import com.cccr.abocado.dto.basic.BasicPatientVo;
 import com.cccr.abocado.dto.blood.Blood_donateVo;
+import com.cccr.abocado.dto.donate.CheckDonateBloodCount;
+
 import com.cccr.abocado.dto.hospital.PatientHosConVo;
-import com.cccr.abocado.dto.session.SessionUserVo;
 import com.cccr.abocado.service.DonateService;
 //import com.cccr.abocado.service.PatientListService;
 
@@ -23,8 +22,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
+
+
 @Controller
 public class DonateController {
+
+    @Autowired
+    DonateService donateService;
 
     // helper function for getting connected to the gateway
     public static Gateway connect() throws Exception{
@@ -41,11 +45,10 @@ public class DonateController {
         return builder.connect();
     }
     
-    @Autowired
-    DonateService donateService;
+    
 
 
-    //기부페이지
+    //기부페이지 컨트롤러 
     @RequestMapping("donatePage")
     public String donatePage(BasicPatientVo basicPatientVo, Model model){
 
@@ -60,19 +63,15 @@ public class DonateController {
         return "donatePage";
     } 
 
+
+    //현혈증 기부 컨트롤러
     @RequestMapping("donateAction")
-    public String donateAction(Blood_donateVo param, HttpSession session) {
+    public String donateAction(Blood_donateVo param) {
 
-        SessionUserVo sessionInfo = (SessionUserVo)session.getAttribute("sessionUserInfo");
-        String userIdx = sessionInfo.getUserIdx();
+       donateService.updateDonateBloodToPatient(param);
 
-        param.setUserIdx(userIdx);
-
-    
-
-
-
-        return "indexPage";
+       return "redirect:listPage";
+        
     }
 
     //헌혈증 전체 거래 list (보건복지부확인)

@@ -3,6 +3,8 @@ package com.cccr.abocado.service.mypage;
 import java.util.ArrayList;
 
 import com.cccr.abocado.dto.basic.BasicBloodVo;
+import com.cccr.abocado.dto.basic.BasicHospitalVo;
+import com.cccr.abocado.dto.basic.BasicPatientVo;
 import com.cccr.abocado.dto.basic.BasicUserVo;
 import com.cccr.abocado.dto.user.UserBloodConVo;
 import com.cccr.abocado.mapper.MypageUserMapper;
@@ -27,7 +29,11 @@ public class MypageUserServiceImpl implements MypageUserService {
        for (BasicBloodVo bloodInfo : bloodList) {
 
             BasicUserVo userInfo = mypageUserMapper.selectUserByUserIdx(bloodInfo.getUserIdx());
-            UserBloodConVo bindUserBloodInfo = new UserBloodConVo(userInfo, bloodInfo);
+            BasicHospitalVo hosInfo = mypageUserMapper.selectHosByHosIdx(bloodInfo.getHosIdx());
+            BasicPatientVo patientInfo = mypageUserMapper.selectPatientByPatientIdx(bloodInfo.getPatientIdx());
+
+            UserBloodConVo bindUserBloodInfo = new UserBloodConVo(userInfo, bloodInfo, hosInfo, patientInfo);
+
 
             userBloodConVos.add(bindUserBloodInfo); 
        }

@@ -7,7 +7,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Education &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>
+	<title>Mypage</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -288,8 +288,8 @@
 					
 					<div id="usedPaper" class="tabcontent">
 						<br>
-						<h3><b>기부한 헌혈증</b></h3>
-						<p>과거에 기부하여 차감된 헌혈증입니다.</p>            
+						<h3><b>현재 보유한 헌혈증</b></h3>
+						<p>현재 보유 헌혈증은 총 헌혈한 횟수에서 기부한 헌혈증 갯수를 차감하여 표시됩니다.</p>            
 						<table class="table table-striped">
 							<thead>
 							<tr>
@@ -312,15 +312,15 @@
 									<td></td>
 									<td></td>
 									<td></td>
-									<th>총 ${totalListSize}개 기부</th>
+									<th>총 ${totalListSize}개 보유</th>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 					<div id="currentPaper" class="tabcontent">
 						<br>
-						<h3><b>현재 보유한 헌혈증</b></h3>
-						<p>현재 보유 헌혈증은 총 헌혈한 횟수에서 기부한 헌혈증 갯수를 차감하여 표시됩니다.</p>            
+						<h3><b>기부한 헌혈증</b></h3>
+						<p>과거에 기부하여 차감된 헌혈증입니다.</p>            
 						<table class="table">
 							<thead>
 							<tr>
@@ -331,24 +331,18 @@
 							</tr>
 							</thead>
 							<tbody>
-							<tr>
-								<td>2019년 10월 26일</td>
-								<td>연세대학교 세브란스, 유*조</td>
-								<td>이소영</td>
-								<td>1 개</td>
-							</tr>
-							<tr>
-								<td>2019년 12월 08일</td>
-								<td>연세대학교 세브란스, 김*지</td>
-								<td>이소영 </td>
-								<td>1 개</td>
-							</tr>
-							<tr>
-								<td>2020년 05월 06일</td>
-								<td>연세대학교 세브란스, 조*빈</td>
-								<td>이소영</td>
-								<td>1 개</td>
-							</tr>
+							<c:forEach items="${userBloodList}" var="userBlood">
+								<c:if test="${userBlood.basicBloodVo.bloodUsage == 'y'}">
+									<tr>
+										<td>${userBlood.basicBloodVo.bloodDate}</td>
+										<td>${userBlood.basicHospitalVo.hosName},${userBlood.basicPatientVo.patientName} </td>
+										<td>${userBlood.basicUserVo.userName}</td>
+										<td>1 개</td>
+									/tr>
+								</c:if>
+							</c:forEach>
+						
+							
 							<tr>
 								<td></td>
 								<td></td>
@@ -375,25 +369,6 @@
 
 	
 
-	<div id="fh5co-register" style="background-image: url(images/img_bg_2.jpg);">
-		<div class="overlay"></div>
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2 animate-box">
-				<div class="date-counter text-center">
-					<h2>Get 400 of Online Courses for Free</h2>
-					<h3>By Mike Smith</h3>
-					<div class="simply-countdown simply-countdown-one"></div>
-					<p><strong>Limited Offer, Hurry Up!</strong></p>
-					<p><a href="#" class="btn btn-primary btn-lg btn-reg">Register Now!</a></p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-	</div>
 	
 	<!-- jQuery -->
 	<script src="resources/js/jquery.min.js"></script>
