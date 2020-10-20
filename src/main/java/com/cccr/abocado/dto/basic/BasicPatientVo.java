@@ -1,6 +1,6 @@
 package com.cccr.abocado.dto.basic;
 
-import java.util.Date;
+
 
 //환자 테이블과 연결된 기본 vo입니다
 public class BasicPatientVo {

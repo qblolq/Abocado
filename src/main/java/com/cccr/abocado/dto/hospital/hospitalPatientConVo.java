@@ -1,6 +1,6 @@
 package com.cccr.abocado.dto.hospital;
 
-import java.util.ArrayList;
+
 
 import com.cccr.abocado.dto.basic.BasicHospitalVo;
 import com.cccr.abocado.dto.basic.BasicPatientVo;
