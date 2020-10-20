@@ -25,6 +25,7 @@ public class DonateServiceImpl implements DonateService {
         BasicHospitalVo hospitalInfo = donateMapper.selecthospitalInfo(patientInfo.getHosIdx());
 
         PatientHosConVo patientHosConVo = new PatientHosConVo(patientInfo, hospitalInfo);
+        
 
         return patientHosConVo;
     }

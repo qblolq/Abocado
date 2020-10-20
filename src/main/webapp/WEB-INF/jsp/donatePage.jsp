@@ -143,11 +143,11 @@
                 <input type=hidden value="${patientInfo.basicPatientVo.patientIdx}" id="patientIdx" name="patientIdx">
                 <input type=hidden value="${patientInfo.basicHospitalVo.hosIdx}" id="hosIdx" name="hosIdx">
                 <input type=button value="-" onClick="javascript:this.form.b_amount.value--;">
-                <input type=text name=blood_amount value=1 style="width:100px">
+                <input type=text name=bloodAmount value=1 style="width:100px">
                 <input type=button value="+" onClick="javascript:this.form.b_amount.value++;">
             </p>
             <p><td><b>&emsp;&emsp;헌혈증 종류&emsp;&emsp;</b></td>
-                <select id="blood_kinds" name="blood_kind" style="width:100px; height:30px; margin-top:20px">
+                <select id="blood_kinds" name="bloodKind" style="width:100px; height:30px; margin-top:20px">
                     <option value="전혈320">전혈 320</option>
                     <option value="전혈400">전혈 400</option>
                     <option value="혈장">혈장</option>

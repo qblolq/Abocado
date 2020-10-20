@@ -94,12 +94,12 @@ public class MyPageController {
 
            
             int compareResult = patientEndDate.compareTo(compareDate);
-            System.out.println(compareResult);
+            
             if(compareResult > 0){
-                endedPatient.add(vo);
-            }
-            else{
                 waitingPatient.add(vo);
+            }
+            else{  
+                endedPatient.add(vo);
             }
         }
 

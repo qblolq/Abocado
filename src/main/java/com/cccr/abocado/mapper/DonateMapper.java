@@ -20,7 +20,7 @@ public interface DonateMapper {
     @Select("SELECT COUNT(*) FROM blood WHERE userIdx=#{userIdx}")
     public int countBringBlood(String userIdx);
 
-    @Update("UPDATE blood SET bloodUsage='y', patientIdx=#{patientIdx}, hosIdx=#{hosIdx} WHERE userIdx=#{userIdx} and bloodKind=#{bloodKind} and bloodUsage='n' and patientIdx is null and hosIdx is null limit #{bAmount}")
+    @Update("UPDATE blood SET bloodUsage='y', patientIdx=#{patientIdx}, hosIdx=#{hosIdx} WHERE userIdx=#{userIdx} and bloodKind=#{bloodKind} and bloodUsage='n' and patientIdx is null and hosIdx is null limit #{bloodAmount}")
     public void updateDonateBloodToPatient(Blood_donateVo vo);
 
 
