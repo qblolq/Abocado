@@ -38,8 +38,9 @@
 	<meta name="twitter:url" content="" />
 	<meta name="twitter:card" content="" />
 
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
+	<%-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet"> --%>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
 	
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="resources/css/animate.css">
@@ -80,7 +81,21 @@
 			display: flex;
 			flex-direction:initial;
             align-items:center;
-			width: auto;
+			width: 1140px;
+			height: auto;
+            padding: 15px;
+			margin-bottom: 50px;
+        }
+
+        .containerone{
+            border: none;
+            border-color: #66493f;
+			border-width: medium;
+            margin:0 auto;
+			display: flex;
+			flex-direction:initial;
+            align-items:center;
+			width: 114px;
 			height: auto;
             padding: 15px;
 			margin-bottom: 1px;
@@ -91,14 +106,17 @@
             background:#66493f;
             font-size:0;
             line-height:0;
+            left: center;
+            width: 1140px;
             padding:0;
-            margin-bottom:20px;
+            margin-bottom:30px;
+            margin-left: 80px;
         }
 
         .vl {
             border-left: 0.5px solid #66493f;
             background: #66493f;
-            height: 420px;
+            height: 320px;
             position: absolute;
             left: 50%;
             margin-left: 10px;
@@ -139,8 +157,8 @@
 	  	</div>
 	</aside> --%>
     
-    <div id="fh5co-title">
-        <div class="container" style="margin-top:100px; margin-bottom:20px">
+    <div id="fh5co-contact">
+        <div class="container" style="margin-bottom:20px">
             <div class="col-md-6 animate-box">
                 <h2><b>현황</b></h2>
             </div>
@@ -148,16 +166,16 @@
     </div>
 	
 
-	<div style="height: 1500%; margin: 0">
+	<div style="height: 1000%; width: 100% margin: 0">
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2 text-center slider-text">
                 <div class="containertwo">
-				    <div id="containertwo" style="height: 400%; width: 100%"></div>
-                    <div id="containerthree" style="height: 400%; width: 100%"></div>
+				    <div id="containertwo" style="height: 250%; width: 80%"></div>
+                    <div id="containerthree" style="height: 250%; width: 80%"></div>
                     <div class="vl"></div>
                 </div>
                 <div class="line"><!-- --></div>
-                <div id="container" style="height: 300%; margin-bottom:50px"></div>
+                <div id="containerone" style="height: 300%; width: 92%; left: 60px; margin-bottom:10px"></div>
     			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
     			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
     			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>
@@ -168,7 +186,7 @@
        			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/bmap.min.js"></script>
        			<script type="text/javascript">
 // 월에 따른 헌혈 현황
-var dom = document.getElementById("container");
+var dom = document.getElementById("containerone");
 var myChart = echarts.init(dom);
 var app = {};
 option = null;
@@ -246,11 +264,11 @@ option = {
         trigger: 'item',
         formatter: '{a} <br/>{b}: {c} ({d}%)'
     },
-    legend: {
-        orient: 'vertical',
-        left: 'right',
-        data: ['전혈320', '전혈400', '혈장', '혈소판']
-    },
+    // legend: {
+    //     orient: 'vertical',
+    //     left: 'right',
+    //     data: ['전혈320', '전혈400', '혈장', '혈소판']
+    // },
     series: [
         {
             name: '기부된 헌혈증',
@@ -326,11 +344,11 @@ option = {
         trigger: 'item',
         formatter: '{a} <br/>{b}: {c} ({d}%)'
     },
-    legend: {
-        orient: 'vertical',
-        left: 'right',
-        data: ['A형', 'B형', 'O형', 'AB형']
-    },
+    // legend: {
+    //     orient: 'vertical',
+    //     left: 'right',
+    //     data: ['A형', 'B형', 'O형', 'AB형']
+    // },
     series: [
         {
             name: '혈액형 별 현재 보유량',

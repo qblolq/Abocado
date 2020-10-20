@@ -147,7 +147,7 @@
                 <input type=button value="+" onClick="javascript:this.form.b_amount.value++;">
             </p>
             <p><td><b>&emsp;&emsp;헌혈증 종류&emsp;&emsp;</b></td>
-                <select id="blood_kinds" name="bloodKind" style="width:100px; height:30px; margin-top:20px">
+                <select id="blood_kinds" name="bloodKind" style="width:145px; height:36px;" margin-top:"20px">
                     <option value="전혈320">전혈 320</option>
                     <option value="전혈400">전혈 400</option>
                     <option value="혈장">혈장</option>

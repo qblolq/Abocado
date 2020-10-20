@@ -253,7 +253,7 @@
             <!-- 검색 폼 영역 -->
             <li id='liSearchOption' style="list-style:none; text-align:center; padding:0; margin:0;">
                 <div>
-                    <select id='selSearchOption' >
+                    <select id='selSearchOption' style="width:70px; height:36px;">
                         <option value="환자번호">이름</option>
                         <option value="환자">환자</option>
                         <option value="병원">병원</option>
