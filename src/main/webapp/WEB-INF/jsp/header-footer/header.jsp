@@ -52,7 +52,7 @@
 								<li ><a href="./aboutPage">소개</a></li>
 								<li ><a href="./statusPage">현황</a></li>
 								<li ><a href="./listPage">기부</a></li>
-								<li ><a href="./mypagePersonal">mypage</a></li>
+								<li ><a href="./mypagePersonal">마이페이지</a></li>
 
 								<li class="btn-cta"><a href="./logoutPage"><span>LoginOut</span></a></li>
 							</ul>
@@ -77,7 +77,7 @@
 									<li ><a href="./aboutPage">소개</a></li>	
 									<li ><a href="./statusPage">현황</a></li>
 									<li ><a href="./listPage">기부</a></li>
-									<li ><a href="./mypageHospital">mypage</a></li>
+									<li ><a href="./mypageHospital">마이페이지</a></li>
 									<li class="btn-cta"><a href="./logoutPage"><span>LoginOut</span></a></li>
 
 								</ul>
@@ -102,7 +102,7 @@
 									<li ><a href="./aboutPage">소개</a></li>			
 									<li ><a href="./statusPage">현황</a></li>
 									<li ><a href="./listPage">기부</a></li>
-									<li ><a href="./myPage">mypage</a></li>
+									<li ><a href="./myPage">마이페이지</a></li>
 									<li class="btn-cta"><a href="./logoutPage"><span>LoginOut</span></a></li>
 
 								</ul>

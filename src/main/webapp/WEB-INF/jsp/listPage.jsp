@@ -64,7 +64,7 @@
 		}
 
     	#mainWrapper{
-        	width: 1000px;
+        	width: 1140px;
         	margin: 0 auto; /*가운데 정렬*/
 			font-family:NotoSansKR-Light;
     	}
@@ -104,7 +104,7 @@
         	vertical-align:baseline;
 		}    
 
- 		#ulTable > li > ul > li:first-child               {list-style:none; text-align:center; width:10%;} /*No 열 크기*/
+ 		#ulTable > li > ul > li:first-child               {list-style:none; text-align:center; width:8%;} /*No 열 크기*/
     	#ulTable > li > ul > li:first-child +li           {list-style:none; text-align:center; width:10%;} /*환자 열 크기*/
     	#ulTable > li > ul > li:first-child +li+li        {list-style:none; text-align:center; width:25%;} /*증상 열 크기*/
     	#ulTable > li > ul > li:first-child +li+li+li     {list-style:none; text-align:center; width:15%;} /*종류 열 크기*/
@@ -138,6 +138,15 @@
 
 		a:link { color: #66493f; }
 		a:visited { color: #66493f; }
+
+		.container4 {
+			text-align: center;
+			margin-right: auto;
+			margin-left: 110px;
+			margin-bottom: 60px;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
 	
 	</style>
 </head>
@@ -151,15 +160,25 @@
 
     </div>
 
+	<div id="fh5co-contact">
+        <div class="container4">
+            <div class="col-md-6">
+                <h2><b>헌혈증을 기다리는 사람들</b></h2>
+				<h4>&nbsp&nbsp-당신의 헌혈증으로 따뜻한 마음을 전하세요-</h4>
+            </div>
+        </div>
+    </div>
+
+
 	<div id="mainWrapper">
 
-	    <!-- 제목 -->
+	    <%-- <!-- 제목 -->
         <p style="color:#30240F; text-align:left; font-size:18px; padding:10px; margin:0;">
 			<b style="font-size:30px">헌혈증을 기다리는 사람들</b><br>
 
             <!-- 게시판 목록  -->
             당신의 헌혈증으로 따뜻한 마음을 전하세요
-		</p>
+		</p> --%>
 
         <ul style="list-style:none; text-align:center; padding:0; margin:0; margin-top:5.5px;">
 			<li style="list-style:none; text-align:center; padding:0; margin:0;">

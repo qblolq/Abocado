@@ -189,6 +189,14 @@
 		color: white;
 	}
 
+	.container6 {
+		text-align: left;
+		margin-right: auto;
+		margin-left: 370px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
 
     </style>
 
@@ -231,9 +239,14 @@
 	
 	<div id="fh5co-contact">
 		<div class="container">
+			<div class="fh5co-contact-info">
+				<h2><b>나의 정보</b></h2>
+			</div>
+		</div>
+
+			<div class="container">
 				<div class="animate-box">
-					<div class="fh5co-contact-info">
-						<h1><b>나의 정보</b></h1>
+					<div class="fh5co-contact-info">			
 						<div class="donate_information ">
 							<div class="myPageInfo1">
 								<img src="resources/images/profile.jpg" alt="My Image" width="100px" height="100px">

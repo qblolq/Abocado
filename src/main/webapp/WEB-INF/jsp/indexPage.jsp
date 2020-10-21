@@ -146,13 +146,13 @@
 					<div class="row">
 					
 						<div class="col-md-3 col-sm-3 text-center animate-box">
-							<span class="icon"><i class="icon-bulb"></i></span>
-							<span class="fh5co-counter js-counter" style="color:black;" data-from="0" data-to="5034" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="icon"><i class="icon-heart4"></i></span>
+							<span class="fh5co-counter js-counter" style="color:black;" data-from="0" data-to="1763" data-speed="5000" data-refresh-interval="50"></span>
 							<span class="fh5co-counter-label" style="color:black;">기증된 헌혈증</span>
 						</div>
 						<div class="col-md-3 col-sm-3 text-center animate-box">
 							<span class="icon"><i class="icon-head"></i></span>
-							<span class="fh5co-counter js-counter" style="color:black;" data-from="0" data-to="1080" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="fh5co-counter js-counter" style="color:black;" data-from="0" data-to="4683" data-speed="5000" data-refresh-interval="50"></span>
 							<span class="fh5co-counter-label" style="color:black;" >금일 헌혈자</span>
 						</div>
 						<div class="col-md-3 col-sm-3 text-center animate-box">
@@ -161,8 +161,8 @@
 							<span class="fh5co-counter-label" style="color:black;" >수혜자</span>
 						</div>
 						<div class="col-md-3 col-sm-3 text-center animate-box">
-							<span class="icon"><i class="icon-head"></i></span>
-							<span class="fh5co-counter js-counter" style="color:black;" data-from="0" data-to="1080" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="icon"><i class="icon-heart4"></i></span>
+							<span class="fh5co-counter js-counter" style="color:black;" data-from="0" data-to="20786" data-speed="5000" data-refresh-interval="50"></span>
 							<span class="fh5co-counter-label" style="color:black;" >헌혈팩 보유량</span>
 						</div>
 					</div>

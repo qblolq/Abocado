@@ -123,6 +123,15 @@
             top: 0;
         }
 
+        .container3 {
+			text-align: center;
+			margin-right: auto;
+			margin-left: -80px;
+			margin-bottom: 60px;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
 
     </style>
 
@@ -158,8 +167,8 @@
 	</aside> --%>
     
     <div id="fh5co-contact">
-        <div class="container" style="margin-bottom:20px">
-            <div class="col-md-6 animate-box">
+        <div class="container3" style="margin-bottom:10px">
+            <div class="col-md-6">
                 <h2><b>현황</b></h2>
             </div>
         </div>

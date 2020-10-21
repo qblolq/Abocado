@@ -76,14 +76,15 @@
             justify-content: center;
             align-items: center;
             margin-bottom: 230px;
-            margin-top:10px;
+            margin-top:100px;
             font-family:NotoSansKR-Light;
         }
 
         .donate_information{
-            width:1000px;
+            width:1140px;
             height:340px;
             border:2px solid #bf4044;
+            border-width: medium;
             margin:0 auto;
             margin-top:5px;
             margin-bottom:25.5px;
@@ -124,8 +125,8 @@
         <!-- 환자 상세 설명-->
   
         <div class="donate_information">
-            <img src="resources/images/snuhos.png" style="margin:0 auto; margin-left:150px; weight:210px; height:210px;">
-            <ul style="margin:0 auto; margin-top:10px; margin-right:300px; color:#30240F; text-align:left;">
+            <img src="resources/images/snuhos.png" style="margin:0 auto; margin-left:190px; weight:210px; height:210px;">
+            <ul style="margin:0 auto; margin-top:10px; margin-right:220px; color:#30240F; text-align:left;">
                 <p><b>등록한 병원명&emsp;</b>${patientInfo.basicHospitalVo.hosName}</p>
                 <p><b>환자 병명&emsp;</b>${patientInfo.basicPatientVo.patientSym}</p>
                 <p><b>목표 헌혈증 개수&emsp;</b>${patientInfo.basicPatientVo.patientbdMax}개</p>
@@ -143,7 +144,7 @@
                 <input type=hidden value="${patientInfo.basicPatientVo.patientIdx}" id="patientIdx" name="patientIdx">
                 <input type=hidden value="${patientInfo.basicHospitalVo.hosIdx}" id="hosIdx" name="hosIdx">
                 <input type=button value="-" onClick="javascript:this.form.b_amount.value--;">
-                <input type=text name=bloodAmount value=1 style="width:100px">
+                <input type=text name=bloodAmount value=1 style="width:80px; text-align:center">
                 <input type=button value="+" onClick="javascript:this.form.b_amount.value++;">
             </p>
             <p><td><b>&emsp;&emsp;헌혈증 종류&emsp;&emsp;</b></td>
