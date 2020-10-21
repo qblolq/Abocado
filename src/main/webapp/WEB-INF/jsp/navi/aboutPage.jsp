@@ -83,6 +83,17 @@
 		padding-right: 15px;
 	}
 
+	.container7 {
+			text-align: left;
+			width: 1400px;
+			height: auto;
+			margin-right: auto;
+			margin-left: auto;
+			margin-top: -80px;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
 
 	</style>
 
@@ -127,35 +138,39 @@
 
 	<div id="fh5co-about">
 		<div class="container">
-			<div class="col-md-6 animate-box">
-				<span>about donation</span>
-				<h2>기부하기</h2>
-				<p>1. 홈페이지 상단의 기부를 누르면 환자를 찾을 수 있습니다.</p>
-				<p>2. 메인화면에서 응급환자에게 바로 기부할 수 있습니다.</p>
-				<p>3. 기부대상을 선택했으면 기부하고 싶은 만큼의 헌혈증 갯수를 지정해주세요.</p>
-                <p>4. 기부버튼 클릭하세요.</p>
-                <p>5. 기부완료</p>
-                <p>6. 그동안의 기부내용은 마이페이지의 기부한 현황을 누르면 확인 할 수 있습니다.</p>
+			<div class="col-md-6">
+				<span>using your credit</span>
+				<h3>헌혈증 사용법</h3>
+				<p>1. 홈페이지에 로그인 후 오른쪽 상단의 마이페이지로 이동합니다.</p>
+				<p>2. '현재 보유 헌혈증' 탭에서 나의 헌혈증을 조회할 수 있습니다.</p>
+				<p>3. 헌혈증을 사용할 시에는 병원에서 개인정보로 조회 후 사용할 수 있습니다.</p>
+				<p>4. 헌혈증을 양도할 시에는 마이페이지의 우측의 기부하기 버튼을 클릭 후 </p>
+				<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp양도할 사람을 검색하여 기부하기를 통해 헌혈증을 양도할 수 있습니다.</p>
+				<p>4-1. 또는 직접 병원에 찾아가서 나의 헌혈증을 양도할 수 있습니다.</p>
+                <p>5. 사용한 헌혈증은 마이페이지의 '사용한 헌혈증' 탭에서 확인할 수 있습니다.</p>
 			</div>
 			<%-- 기부하기 이미지 넣기 --%>
-			<div class="col-md-6 animate-box">
-				<span>using your credit</span>
-				<h2>헌혈증 사용법</h2>
-				<p>1. 로그인 후 오른쪽 상단 mypage로 이동하세요.</p>
-				<p>2. 보유한 헌혈증을 클릭해주세요.</p>
-				<p>3. 화면에 올라온 바코드 로 직접 사용가능합니다.</p>
+			<div class="col-md-6">
+				<span>about donation</span>
+				<h3>기부하기</h3>
+				<p>1. 홈페이지에 로그인 후 다음의 세 가지 방법으로 기부 할 수 있습니다.</p>
+				<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp(1) 홈페이지 우측 상단의 기부를 클릭합니다.</p>
+				<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp(2) 메인화면에서 응급환자를 클릭합니다.</p>
+				<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp(3) 마이페이지에서 우측의 기부하기 버튼을 클릭합니다.</p>
+				<p>2. 기부대상을 선택했으면 기부하고 싶은 만큼의 헌헐증 갯수를 지정합니다.</p>
+				<p>3. 기부완료 버튼을 클릭하면 기부가 완료됩니다.</p>
+				<p>4. 기부한 내역은 마이페이지의 '기부한 현황'을 클릭하면 확인할 수 있습니다.</p>
 			</div>
 
 				<%-- <img class="img-responsive" src="resources/images/img_bg_2.jpg" alt="Free HTML5 Bootstrap Template">  --%>
-			</div>
 		</div>
 	</div>
 
 	<div class="seperate_div"></div>
 	
 	<div id="fh5co-about">
-		<div class="container">
-			<div class="col-md-10 col-md-offset-1 animate-box">
+		<div class="container7">
+			<div class="col-md-10 col-md-offset-1">
 				<span>service flow image</span>
 				
 				<img class="img-responsive" src="resources/images/img_about_3.png"> 
