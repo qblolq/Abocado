@@ -7,7 +7,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Mypage</title>
+	<title>Education &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -121,6 +121,7 @@
 			margin-bottom: 10px;	
 			margin-left: 20px;
 			margin-right: 450px;
+			padding-top: 10px;
 		}
 
 	tr,th{
@@ -144,7 +145,7 @@
 		background-color:#fff;
 		color: grey;
 		border: 2px solid #66493f;
-		padding: 10px 100px;
+		padding: 10px 90px;
 		text-align: center;
 		text-decoration: none;
 		display: inline-block;
@@ -188,7 +189,7 @@
 		color: white;
 	}
 
-	.container5 {
+	.container6 {
 		text-align: left;
 		margin-right: auto;
 		margin-left: 370px;
@@ -237,7 +238,7 @@
 	<div class="fh5co-loader"></div>
 	
 	<div id="fh5co-contact">
-		<div class="container5">
+		<div class="container">
 			<div class="fh5co-contact-info">
 				<h2><b>나의 정보</b></h2>
 			</div>
@@ -248,18 +249,15 @@
 					<div class="fh5co-contact-info">			
 						<div class="donate_information ">
 							<div class="myPageInfo1">
-								<img src="resources/images/profile.jpg" alt="My Image" width="100px" height="100px">
+								<img src="resources/images/rc.jpg" alt="My Image" width="100px" height="100px">
 								<div class="donateInfoArea">
-									<h4><b>${userBloodList[0].basicUserVo.userName} 님, 반갑습니다.</b></h4>
-									<h4>- ID: ${userBloodList[0].basicUserVo.userId}</h4>
-									<h4>- 헌혈 가능 일: 2020년 10월 17일</h4>
+									<h4><b>대한적십자사, 반갑습니다.</b></h4>
+									<h4>- ID: 관리자</h4>
 								</div> 
-								<a href="./listPage" class="donateButton"role="button">기부하기</button><br></a>
 							</div>
 							<div class="myPageInfo2">
-								<button type="button" class="paperButton"onclick="openTable(event, 'totalPaper')">총 헌혈 횟수<br><br>${totalListSize} 개</button>
-								<button type="button" class="paperButton"onclick="openTable(event, 'usedPaper')">현재 보유 헌혈증<br><br>${gettingBloodSize} 개</button>
-								<button type="button" class="paperButton"onclick="openTable(event, 'currentPaper')">기부한 헌혈증<br><br>${donatedUsageBloodSize} 개</button>
+								<button type="button" class="paperButton"onclick="openTable(event, 'totalPaper')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;전체 헌혈증&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>${totalCount} 개</button>
+								<button type="button" class="paperButton"onclick="openTable(event, 'usedPaper')">기부 완료된 헌혈증<br><br>${waitCount} 개</button>
 							</div>
 							
 						</div>
@@ -269,99 +267,77 @@
 					<div id="totalPaper" class="tabcontent">
 						<br>
 						<h3><b>전체 헌혈증</b></h3>
-						<p>보유하고 있는 헌혈증과 기부하여 차감된 헌혈증을 합쳐 표시됩니다.</p>            
+						<p>모든 회원의 전체 헌혈증이 표시됩니다.</p>            
 						<table class="table">
 							<thead>
 								<tr>
-									<th>헌혈증 소유자</th>
+                                    <th>헌혈증 번호</th>
+                                    <th>헌혈증 소유자</th>
 									<th>헌혈증 기부받은 사람</th>
-									<th>헌혈증 기부 병원</th>
-									<th>헌혈 날짜</th>
+                                    <th>헌혈증 기부받은 병원</th>
+                                    <th>헌혈 날짜</th>
 									<th>기부 날짜</th>
 									<th>사용 여부</th>
 								</tr>
 							</thead>
 							<tbody>
-								<c:forEach items="${userList}" var="userList">
-								<tr>
-									<td>${userList.userIdx}</td>
-									<td>${userList.patientIdx}</td>
-									<td>${userList.hosIdx}</td>
-									<td>${userList.bloodDate}</td>
-									<td>${userList.donateDate}</td>
-									<td>${userList.bloodUsage}</td>								
-								</tr>
+								<c:forEach items="${gaaList}" var="gaaList">
+									<tr>
+                                        <td>${gaaList.bloodIdx}</td>
+                                        <td>${gaaList.userIdx}</td>
+										<td>${gaaList.patientIdx}</td>
+                                        <td>${gaaList.hosIdx}</td>
+                                        <td>${gssList.bloodDate}</td>
+										<td>${gaaList.donateDate}</td>
+										<td>${gaaList.bloodUsage}</td>								
+									</tr>
 								</c:forEach>
 								<tr>
 									<td></td>
-									<td></td>
+                                    <td></td>
+                                    <td></td>
 									<td></td>
 									<td></td>
 									<td></td>
 									<th>총 ${totalListSize}개 기부</th>
 								</tr>
 							</tbody>
+							</tr>
+								</tbody>
 						</table>
 					</div>
-
-					
 					<div id="usedPaper" class="tabcontent">
 						<br>
-						<h3><b>현재 보유한 헌혈증</b></h3>
-						<p>현재 보유 헌혈증은 총 헌혈한 횟수에서 기부한 헌혈증 갯수를 차감하여 표시됩니다.</p>            
+						<h3><b>기부 완료된 헌혈증</b></h3>
+						<p>회원이 기부한 헌혈증이 표시됩니다.</p>            
 						<table class="table">
 							<thead>
 								<tr>
-									<th>헌혈증 소유자</th>
-									<th>헌혈 날짜</th>
-									<th>사용 여부</th>
-								</tr>
-							</thead>
-							<tbody>
-								<c:forEach items="${unuList}" var="unuList">
-								<tr>
-									<td>${unuList.userIdx}</td>
-									<td>${unuList.bloodDate}</td>
-									<td>${unuList.bloodUsage}</td>								
-								</tr>
-								</c:forEach>
-								<tr>
-									<td></td>
-									<td></td>
-									<th>총 ${totalListSize}개 보유 중</th>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div id="currentPaper" class="tabcontent">
-						<br>
-						<h3><b>기부한 헌혈증</b></h3>
-						<p>과거에 기부하여 차감된 헌혈증입니다.</p>            
-						<table class="table">
-							<thead>
-								<tr>
-									<th>헌혈증 소유자</th>
+                                    <th>헌혈증 번호</th>
+                                    <th>헌혈증 소유자</th>
 									<th>헌혈증 기부받은 사람</th>
-									<th>헌혈증 기부 병원</th>
-									<th>헌혈 날짜</th>
+                                    <th>헌혈증 기부받은 병원</th>
+                                    <th>헌혈 날짜</th>
 									<th>기부 날짜</th>
 									<th>사용 여부</th>
 								</tr>
 							</thead>
 							<tbody>
-								<c:forEach items="${uuList}" var="uuList">
-								<tr>
-									<td>${uuList.userIdx}</td>
-									<td>${uuList.patientIdx}</td>
-									<td>${uuList.hosIdx}</td>
-									<td>${uuList.bloodDate}</td>
-									<td>${uuList.donateDate}</td>
-									<td>${uuList.bloodUsage}</td>								
-								</tr>
+								<c:forEach items="${uaaList}" var="uaaList">
+									<tr>
+                                        <td>${uaaList.bloodIdx}</td>
+                                        <td>${uaaList.userIdx}</td>
+										<td>${uaaList.patientIdx}</td>
+                                        <td>${uaaList.hosIdx}</td>
+                                        <td>${uaaList.bloodDate}</td>
+										<td>${uaaList.donateDate}</td>
+										<td>${uaaList.bloodUsage}</td>								
+									</tr>
 								</c:forEach>
 								<tr>
 									<td></td>
-									<td></td>
+                                    <td></td>
+                                    <td></td>
 									<td></td>
 									<td></td>
 									<td></td>
@@ -385,8 +361,10 @@
 		</div>
 	</div>
 
-	
 
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
 	
 	<!-- jQuery -->
 	<script src="resources/js/jquery.min.js"></script>
@@ -434,4 +412,3 @@
 	</script>
 	</body>
 </html>
-

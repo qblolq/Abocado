@@ -273,25 +273,31 @@
 						<table class="table table-striped">
 							<thead>
 								<tr>
-									<th>등록 날짜</th>
-									<th>환자 주민번호</th>
-									<th>환자명</th>
-								
+									<th>헌혈증 번호</th>
+									<th>헌혈증 기부받은 사람</th>
+									<th>헌혈증 기부받은 병원</th>
+									<th>기부 날짜</th>
+									<th>사용 여부</th>
 								</tr>
-								</thead>
-								<tbody>
-								<c:forEach items="${mypageHosPatientList}" var="mypageHos">
+							</thead>
+							<tbody>
+								<c:forEach items="${hosList}" var="hosList">
 									<tr>
-										<th>${mypageHos.basicPatientVo.patientStartdate}</th>
-										<th>${mypageHos.basicPatientVo.patientRegiNum}</th>
-										<th>${mypageHos.basicPatientVo.patientName}</th>
+										<td>${hosList.bloodIdx}</td>
+										<td>${hosList.patientIdx}</td>
+										<td>${hosList.hosIdx}</td>
+										<td>${hosList.donateDate}</td>
+										<td>${hosList.bloodUsage}</td>								
 									</tr>
 								</c:forEach>
 								<tr>
-								
-								<td></td>
-								<td></td>
-								<th>총 ${totalCount}명</th>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<th>총 ${totalListSize}개 기부</th>
+								</tr>
+							</tbody>
 							</tr>
 								</tbody>
 						</table>
@@ -379,21 +385,6 @@
 	</div>
 
 	
-
-	<div id="fh5co-register" style="background-image: url(images/img_bg_2.jpg);">
-		<div class="overlay"></div>
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2 animate-box">
-				<div class="date-counter text-center">
-					<h2>Get 400 of Online Courses for Free</h2>
-					<h3>By Mike Smith</h3>
-					<div class="simply-countdown simply-countdown-one"></div>
-					<p><strong>Limited Offer, Hurry Up!</strong></p>
-					<p><a href="#" class="btn btn-primary btn-lg btn-reg">Register Now!</a></p>
-				</div>
-			</div>
-		</div>
-	</div>
 
 
 	<div class="gototop js-top">

@@ -18,7 +18,8 @@ dependencies {
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.0'
 	implementation 'com.google.guava:guava:29.0-jre'
     implementation 'org.hyperledger.fabric:fabric-gateway-java:2.1.1'
-	
+	implementation 'com.google.code.gson:gson:2.8.6'
+	implementation 'org.json:json:20190722'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'mysql:mysql-connector-java'

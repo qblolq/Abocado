@@ -43,8 +43,6 @@ public class MainController {
         return "navi/statusPage";
     }
 
-
-
-    
+   
 
 }
