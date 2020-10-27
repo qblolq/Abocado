@@ -70,7 +70,7 @@
 
   .user_tab:hover, .hos_tab:hover, .gov_tab:hover{
     font-size: 16px;
-    color: #684402;
+    color: #66493f;
     font-weight: bolder;
   }
 
@@ -96,7 +96,7 @@
         			<div class="domain_image_header_wrapper">
             			<a href="./indexPage">
                 			<div class="header_image">
-                   				<img src="resources/images/abocado-main.png" alt="로고">
+                   				<img src="resources/images/abo.jpg" alt="로고">
                    				<div class="header_image_name"></div>
                 			</div>
             			</a>
@@ -161,7 +161,7 @@
                 <section class="main_section2">
                   <div class="main_section2-text">아직 회원이 아니신가요?</div>
                   <!--회원가입 페이지 만들면 a태그 추가-->
-                    <div class="main_section2-joinMember">
+                    <div class="main_section2-joinMember" style="color: white;">
                        	회원가입
                     </div>
                   

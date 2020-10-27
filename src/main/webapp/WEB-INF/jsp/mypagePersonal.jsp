@@ -250,8 +250,8 @@
 							<div class="myPageInfo1">
 								<img src="resources/images/profile.jpg" alt="My Image" width="100px" height="100px">
 								<div class="donateInfoArea">
-									<h4><b>${userBloodList[0].basicUserVo.userName} 님, 반갑습니다.</b></h4>
-									<h4>- ID: ${userBloodList[0].basicUserVo.userId}</h4>
+									<h4><b>${sessionUserInfo.userName}님, 반갑습니다.</b></h4>
+									<h4>- ID: ${sessionUserInfo.userId}</h4>
 									<h4>- 헌혈 가능 일: 2020년 10월 17일</h4>
 								</div> 
 								<a href="./listPage" class="donateButton"role="button">기부하기</button><br></a>

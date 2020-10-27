@@ -71,62 +71,83 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+	<style>
+	.registerButton {
+	background-color: #66493f;
+	border: none;
+	color: white;
+	padding: 10px 5px;
+	text-align: center;
+	text-decoration: none;
+	display: auto;
+	font-size: 16px;
+	width: 120px;
+	height: 50px;
+	border-radius: 30px;
+	margin-top:20px;
+	}
+
+	.myPageInfo1{
+	border: none;
+	margin:0 auto;
+	display: flex;
+	flex-direction:row;
+	align-items:left;
+	width: auto;
+	}
+
+	.donateInfoArea{
+	border: none;
+	margin-left: 150px;
+	display: flex;
+	flex-direction: column	;
+	align-items:left;
+	width: auto;
+	height: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	}
+
+	</style>
+
 	</head>
 
   <body>
-
+	<br>
+	<br>
     <div class="container">
       <div class="col-lg-4"></div>
-      <div class="col=lg-4">
         <div class="jumbotron" style="padding-top:20px;">
           <form method="GET" action="./insertPatientAction">
-          	<b><font size="6" color="gray">환자등록</font></b>
+		  <br>
+          	<b><font size="6" color="black">환자등록</font></b>
           	<br><br>
-	
-			<input type="hidden" name="hosIdx" value="${sessionHosInfo.hosIdx}">	
-          	<div class="form-group" id="title">이름
-          		<input type="text" placeholder="이름" name="patientName" maxlength="20" style="margin-left: 80px;">
-          	</div>
-          	<div class="form-group" id="title">주민등록번호
-          	    <input type="text" name="patientRegiNum" maxlength="16"style="margin-left: 20px;"> 
-          	</div>
-
-
-			<div class="form-group" id="title">증상
-          	    <input type="text" name="patientSym" maxlength="25"style="margin-left: 20px;"> 
-          	</div>
-
-
-			<div class="form-group" id="title"> 수혈 종류
-          	    <select name="patientBtype" style="margin-left: 65px;">
-          	      <option value="전혈320">전혈 320</option>
-          	      <option value="전혈400">전혈 400</option>
-          	      <option value="혈장">혈장</option>
-          	      <option value="혈소판">혈소판</option>
-          	    </select>
-          	</div>
-
-          	<div class="form-group" id="title">헌혈증 필요개수
-          	    <input type="text" name="patientbdMax" maxlength="50" style="margin-left: 2px;">개
-          	</div>
-
-          	<div class="form-group" id="title">마감기한
-          	    <input type="date" name="patientEnddate" style="margin-left: 50px;">
-          	</div>
-
-          	    <br>
-          	<button type="submit" class="btn btn-primary" >저장</button>
-          	<button type="button" class="btn btn-primary">취소</button>
-
-
+			  <div class="myPageInfo1">
+				<div class="donateInfoArea">
+					<input type="hidden" name="hosIdx" value="${sessionHosInfo.hosIdx}">
+					<h3 style="padding-bottom: 10px"><b>이름</b></h3>
+					<h3 style="padding-bottom: 10px"><b>주민등록번호</b></h3>
+					<h3 style="padding-bottom: 10px"><b>증상</b></h3>
+					<h3 style="padding-bottom: 10px"><b>헌혈증 필요개수</b></h3>
+					<h3 style="padding-bottom: 10px"><b>마감기한</b></h3>
+				</div> 
+				<div class="donateInfoArea" >
+					<input type="text" placeholder="이름" name="patientName" maxlength="20" style="width:400px; height:35px; margin:0px 0px 20px 0px">
+					<input type="text" placeholder="주민등록번호" name="patientRegiNum" maxlength="20" style="width:400px; height:35px; margin:0px 0px 20px 0px"> 
+					<input type="text" placeholder="증상" name="patientSym" maxlength="25" style="width:400px; height:35px; margin:0px 0px 20px 0px"> 
+					<input type="text" placeholder="헌혈증 필요개수" name="patientbdMax" maxlength="50" style="width:400px; height:35px; margin:0px 0px 20px 0px">
+					<input type="date" name="patientEnddate">
+				</div>
+			  </div>
+          	<br>
+			  <div style="display: flex; justify-content: center;">
+				<button type="submit" class="btn registerButton" style="margin:0px 70px 0px 0px">저장</button>
+				<button type="button" class="btn registerButton" style="margin:0px 0px 0px 70px">취소</button>
+			  </div>
           </form>
+		</div>
+	</div>
 
-
-
-
-
-
-	
 	<!-- jQuery -->
 	<script src="resources/js/jquery.min.js"></script>
 	<!-- jQuery Easing -->

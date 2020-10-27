@@ -312,7 +312,7 @@ h1, h2, h3, h4, h5, h6, figure {
   left: 0;
   right: 0;
   content: '';
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0);
   z-index: 1;
 }
 #fh5co-hero .flexslider .flex-control-nav {
@@ -320,7 +320,7 @@ h1, h2, h3, h4, h5, h6, figure {
   z-index: 1000;
 }
 #fh5co-hero .flexslider .flex-control-nav li a {
-  background: rgba(255, 255, 255, 0.2);
+  background: #66493f;
   box-shadow: none;
   width: 12px;
   height: 12px;
@@ -328,7 +328,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 #fh5co-hero .flexslider .flex-control-nav li a.flex-active {
   cursor: pointer;
-  background: rgba(255, 255, 255, 0.7);
+  background:#bf4044;
 }
 #fh5co-hero .flexslider .flex-direction-nav {
   display: none;

@@ -135,14 +135,24 @@
         </div>
     </div>
 		
-
+	<div id="fh5co-about">
+		<div class="container7">
+			<div class="col-md-10 col-md-offset-1">
+				
+				<img class="img-responsive" src="resources/images/img_about_3.png"> 
+			</div>
+		</div>
+	</div>
+	
+	<div class="seperate_div"></div>
+	
 	<div id="fh5co-about">
 		<div class="container">
 			<div class="col-md-6">
-				<span>using your credit</span>
-				<h3>헌혈증 사용법</h3>
+				<span><b>using your credit</span>
+				<h3><b>헌혈증 사용법</b></h3>
 				<p>1. 홈페이지에 로그인 후 오른쪽 상단의 마이페이지로 이동합니다.</p>
-				<p>2. '현재 보유 헌혈증' 탭에서 나의 헌혈증을 조회할 수 있습니다.</p>
+				<p>2. '현재 보유 헌혈증<b>' 탭에서 나의 헌혈증을 조회할 수 있습니다.</p>
 				<p>3. 헌혈증을 사용할 시에는 병원에서 개인정보로 조회 후 사용할 수 있습니다.</p>
 				<p>4. 헌혈증을 양도할 시에는 마이페이지의 우측의 기부하기 버튼을 클릭 후 </p>
 				<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp양도할 사람을 검색하여 기부하기를 통해 헌혈증을 양도할 수 있습니다.</p>
@@ -152,7 +162,7 @@
 			<%-- 기부하기 이미지 넣기 --%>
 			<div class="col-md-6">
 				<span>about donation</span>
-				<h3>기부하기</h3>
+				<h3><b>기부하기</b></h3>
 				<p>1. 홈페이지에 로그인 후 다음의 세 가지 방법으로 기부 할 수 있습니다.</p>
 				<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp(1) 홈페이지 우측 상단의 기부를 클릭합니다.</p>
 				<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp(2) 메인화면에서 응급환자를 클릭합니다.</p>
@@ -166,17 +176,7 @@
 		</div>
 	</div>
 
-	<div class="seperate_div"></div>
-	
-	<div id="fh5co-about">
-		<div class="container7">
-			<div class="col-md-10 col-md-offset-1">
-				<span>service flow image</span>
-				
-				<img class="img-responsive" src="resources/images/img_about_3.png"> 
-			</div>
-		</div>
-	</div>
+
 
 
 	<%-- 현재 기부된 횟수와 완치된 횟수 섹션 --%>

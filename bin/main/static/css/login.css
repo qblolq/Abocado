@@ -41,7 +41,7 @@ a{
 }
 
 .topBox_loginText{
-    color:#684402;
+    color:#66493f;
     font-weight: bolder;
     font-family: 'East Sea Dokdo', cursive;
     font-size: 32px;
@@ -50,7 +50,7 @@ a{
 
 .topBox_forgotPassword{
     font-size:11px;
-    color: #684402;
+    color: #66493f;
 }
 
 .main_section1-loginBox{
@@ -82,7 +82,7 @@ a{
     font-size:15px;
     padding: 13px 0;
     border-radius: 30px;
-    background-color: #684402;
+    background-color: #66493f;
     color:rgb(224, 243, 224);
     border:none;
     margin-bottom: 25px;
@@ -94,7 +94,7 @@ a{
     font-size:15px;
     padding: 13px 0;
     border-radius: 30px;
-    background-color: #684402;
+    background-color: #66493f;
     color:balck;
     border:none;
     margin-bottom: 25px;
@@ -108,7 +108,7 @@ a{
 }
 
 .main_section2-text{
-    color:rgba(19, 18, 18, 0.8);
+    color:white;
     margin-bottom:15px;
     font-size:12px;
     font-weight: bolder;
@@ -119,8 +119,8 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(70, 168, 92);
-    color:#684402;
+    background-color: #bf4044;
+    color:white;
     border:none;
     padding:13px 0;
     font-size:15px;
@@ -136,8 +136,8 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(70, 168, 92);
-    color:balck;
+    background-color: #bf4044;
+    color:white;
     border:none;
     padding:13px 0;
     font-size:15px;
@@ -194,7 +194,7 @@ a{
 
 
 .topBox_forgotPassword{
-    color: #684402;
+    color: #66493f;
 }
 
 

@@ -83,7 +83,7 @@
         .donate_information{
             width:1140px;
             height:340px;
-            border:2px solid #bf4044;
+            border:2px solid #66493f;
             border-width: medium;
             margin:0 auto;
             margin-top:5px;
@@ -107,6 +107,31 @@
             align-items: center;
             font-family:NotoSansKR-Light;
         }
+
+        .donateButton {
+		background-color: #66493f;
+		border: none;
+		color: white;
+		padding: 10px 5px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		width: 120px;
+		height: 50px;
+		border-radius: 30px;
+		margin-top:20px;
+	}
+	.donateButton:hover{
+		background-color: #66493f;
+		border: none;
+		color: white;
+	}
+	.donateButton:focus{
+		background-color: #66493f;
+		border: none;
+		color: white;
+	}
     </style>
 
 </head>
@@ -126,7 +151,7 @@
   
         <div class="donate_information">
             <img src="resources/images/snuhos.png" style="margin:0 auto; margin-left:190px; weight:210px; height:210px;">
-            <ul style="margin:0 auto; margin-top:10px; margin-right:220px; color:#30240F; text-align:left;">
+            <ul style="margin:0 auto; margin-top:10px; margin-right:220px; color:#66493f; text-align:left;">
                 <p><b>등록한 병원명&emsp;</b>${patientInfo.basicHospitalVo.hosName}</p>
                 <p><b>환자 병명&emsp;</b>${patientInfo.basicPatientVo.patientSym}</p>
                 <p><b>목표 헌혈증 개수&emsp;</b>${patientInfo.basicPatientVo.patientbdMax}개</p>
@@ -147,20 +172,12 @@
                 <input type=text name=bloodAmount value=1 style="width:80px; text-align:center">
                 <input type=button value="+" onClick="javascript:this.form.b_amount.value++;">
             </p>
-            <p><td><b>&emsp;&emsp;헌혈증 종류&emsp;&emsp;</b></td>
-                <select id="blood_kinds" name="bloodKind" style="width:145px; height:36px;" margin-top:"20px">
-                    <option value="전혈320">전혈 320</option>
-                    <option value="전혈400">전혈 400</option>
-                    <option value="혈장">혈장</option>
-                    <option value="혈소판">혈소판</option>
-                </select>
-            </p>
         </div>                  
                 
         <!--확인/취소 버튼-->
         <div class="donate_buttons">
-            <button type=submit class="do_donate_btn"  style="width:100pt; height:22pt; margin-top:10pt; margin-right:50pt; background-color:#846F58; color:#FFFFFF">기부 완료</button>
-            <button type=submit class="cancel_donate_btn" style="width:100pt; height:22pt; margin-top:10pt; margin-left:50pt; background-color:#846F58; color:#FFFFFF">기부 취소</button>
+            <button type=submit class="donateButton" style="margin:0px 70px 0px 0px">기부 완료</button>
+            <button type=submit class="donateButton" style="margin:0px 0px 0px 70px">기부 취소</button>
         </div>
         </form>
     </main>

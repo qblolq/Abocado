@@ -48,45 +48,12 @@
 			<ul class="slides">
 		   	<li style="background-image: url(resources/images/img_bg_1.jpg);"> <!--service flow imge-->
 		   		<div class="overlay-gradient"></div>
-		   		<div class="container">
-		   			<div class="row">
-			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
-			   				<div class="slider-text-inner">
-			   					<h1>This is our service flow image</h1>
-									<h2>this is our service flow image <a href="#" target="_blank">go to about</a></h2>
-									<p><a class="btn btn-primary btn-lg" href="#">Learnig how to flow your credit</a></p>
-			   				</div>
-			   			</div>
-			   		</div>
-		   		</div>
 		   	</li>
-		   	<li style="background-image: url(resources/images/img_bg_2.jpg);"> <!--donate image-->
+		   	<li style="background-image: url(resources/images/img_bg_2.png);"> <!--donate image-->
 		   		<div class="overlay-gradient"></div>
-		   		<div class="container">
-		   			<div class="row">
-			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
-			   				<div class="slider-text-inner">
-			   					<h1>This is our donation image</h1>
-									<h2>Show how to Donate your credit by <a href="./aboutPage" target="_blank">about</a></h2>
-									<p><a class="btn btn-primary btn-lg btn-learn" href="./aboutPage">Learning how to donate</a></p>
-			   				</div>
-			   			</div>
-			   		</div>
-		   		</div>
 		   	</li>
 		   	<li style="background-image: url(resources/images/img_bg_3.jpg);"> <!--use credit image-->
 		   		<div class="overlay-gradient"></div>
-		   		<div class="container">
-		   			<div class="row">
-			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
-			   				<div class="slider-text-inner">
-			   					<h1>This is our using credit image</h1>
-									<h2>Show how to user your credit by<a href="aboutPage" target="_blank">about</a></h2>
-									<p><a class="btn btn-primary btn-lg btn-learn" href="aboutPage">Learning how to use your credit</a></p>
-			   				</div>
-			   			</div>
-			   		</div>
-		   		</div>
 		   	</li>		   	
 		  	</ul>
 	  	</div>

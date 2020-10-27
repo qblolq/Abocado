@@ -24,9 +24,7 @@
 	<meta name="twitter:url" content="" />
 	<meta name="twitter:card" content="" />
 
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
-	
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet"> 
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="resources/css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -187,7 +185,6 @@
                     <li><b>No</b></li>
                     <li><b>환자</b></li>
                     <li><b>증상</b></li>
-                    <li><b>종류</b></li>
                     <li><b>모금갯수</b></li>
 					<li><b>모금 마감일</b></li>
 					<li><b>기부하러가기</b></li>
@@ -200,7 +197,6 @@
                 		    <li>1</li>
 							<li>${patientList.patientName}</li>
                 		    <li>${patientList.patientSym}</li>
-							<li>${patientList.patientBtype}</li>
 							<li>${patientList.patientbdNow}/${patientList.patientbdMax}</li>
                 		    <li>${patientList.patientEnddate}</li>
 							<li><a href="./donatePage?patientIdx=${patientList.patientIdx}" style="color=#66493f">기부하기</a></li>
@@ -213,7 +209,6 @@
                 		    <li>1</li>
 							<li>${patientList.patientName}</li>
                 		    <li>${patientList.patientSym}</li>
-							<li>${patientList.patientBtype}</li>
 							<li>${patientList.patientbdNow}/${patientList.patientbdMax}</li>
                 		    <li>${patientList.patientEnddate}</li>
 							<li></li>
@@ -228,7 +223,6 @@
                 		    <li>1</li>
 							<li>${patientList.patientName}</li>
                 		    <li>${patientList.patientSym}</li>
-							<li>${patientList.patientBtype}</li>
 							<li>${patientList.patientbdNow}/${patientList.patientbdMax}</li>
                 		    <li>${patientList.patientEnddate}</li>
 							<li></li>
@@ -242,7 +236,6 @@
                 		    <li>1</li>
 							<li>${patientList.patientName}</li>
                 		    <li>${patientList.patientSym}</li>
-							<li>${patientList.patientBtype}</li>
 							<li>${patientList.patientbdNow}/${patientList.patientbdMax}</li>
                 		    <li>${patientList.patientEnddate}</li>
 							<li><a href="./loginPage" style="color=#66493f">기부하기</a></li>

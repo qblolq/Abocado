@@ -115,8 +115,8 @@ public class MyPageController {
             byte[] result1,result2,result3;
 
             result1 = contract.evaluateTransaction("UserPaper",sessionInfo.getUserName());
-            result2 = contract.evaluateTransaction("UserUsedPaper",sessionInfo.getUserName(),"F");
-            result3 = contract.evaluateTransaction("UserUsedPaper",sessionInfo.getUserName(),"T");            
+            result2 = contract.evaluateTransaction("UserUsedPaper",sessionInfo.getUserName(),"T");
+            result3 = contract.evaluateTransaction("UserUsedPaper",sessionInfo.getUserName(),"F");            
 
             String str1 = new String(result1);
             String str2 = new String(result2);
