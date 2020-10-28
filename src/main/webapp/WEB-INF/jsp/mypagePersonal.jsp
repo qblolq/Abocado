@@ -237,7 +237,7 @@
 	<div class="fh5co-loader"></div>
 	
 	<div id="fh5co-contact">
-		<div class="container5">
+		<div class="container">
 			<div class="fh5co-contact-info">
 				<h2><b>나의 정보</b></h2>
 			</div>
@@ -376,15 +376,6 @@
 	</div>
 
 	
-
-	<div id="fh5co-contact">
-		<div class="container">
-			<div class="animate-box">
-				
-			</div>
-		</div>
-	</div>
-
 	
 
 	

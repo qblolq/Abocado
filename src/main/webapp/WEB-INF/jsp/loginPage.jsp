@@ -27,6 +27,7 @@
               document.getElementById(cityName).style.display = "block";
               evt.currentTarget.className += " active";
             }
+            
     </script>
 
    

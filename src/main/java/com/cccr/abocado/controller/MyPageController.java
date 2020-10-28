@@ -32,8 +32,9 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import org.json.JSONArray;
 import org.json.JSONObject;
-
+import org.checkerframework.checker.units.qual.g;
 import org.hyperledger.fabric.gateway.Contract;
+import org.hyperledger.fabric.gateway.ContractException;
 import org.hyperledger.fabric.gateway.Gateway;
 import org.hyperledger.fabric.gateway.Network;
 import org.hyperledger.fabric.gateway.Wallet;
@@ -45,7 +46,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class MyPageController {
 
-    public static Gateway connect() throws Exception{
+    public static Gateway connect() throws Exception {
         // Load a file system based wallet for managing identities.
         System.out.println("connect start\n");
         Path walletPath = Paths.get("wallet");
@@ -57,8 +58,9 @@ public class MyPageController {
         builder.identity(wallet, "appUser").networkConfig(networkConfigPath).discovery(true);
         System.out.println("connect end\n");
         return builder.connect();
-}
+    }
 
+    public static Gateway gateway = null;
     @Autowired
     MypageUserService mypageUserService;
 
@@ -70,6 +72,14 @@ public class MyPageController {
 
     @RequestMapping("mypagePersonal")
     public String mypagePersonal(HttpSession session, Model model) {
+
+        if (gateway == null) {
+            try {
+                gateway = connect();
+            } catch (Exception e) {
+                System.err.println(e);
+            }
+        }
 
         SessionUserVo sessionInfo = (SessionUserVo) session.getAttribute("sessionUserInfo");
         String userIdx = sessionInfo.getUserIdx();
@@ -97,96 +107,94 @@ public class MyPageController {
         // donate blood
         String donatedUsageBloodSize = Integer.toString(donatedBloodCount);
 
-
-        
-        //HLF
+        // HLF
         try {
             EnrollAdmin.main(null);
-                RegisterUser.main(null);
+            RegisterUser.main(null);
         } catch (Exception e) {
-                System.err.println(e);
+            System.err.println(e);
         }
-        try (Gateway gateway = connect()) {
 
-            // get the network and contract
-            Network network = gateway.getNetwork("mychannel");
-            Contract contract = network.getContract("basic");
+        // get the network and contract
+        Network network = gateway.getNetwork("mychannel");
+        Contract contract = network.getContract("basic");
 
-            byte[] result1,result2,result3;
+        byte[] result1 = null;
+        byte[] result2 = null;
+        byte[] result3 = null;
 
-            result1 = contract.evaluateTransaction("UserPaper",sessionInfo.getUserName());
+        try {
+            result1 = contract.evaluateTransaction("UserPaper", sessionInfo.getUserName());
             result2 = contract.evaluateTransaction("UserUsedPaper",sessionInfo.getUserName(),"T");
-            result3 = contract.evaluateTransaction("UserUsedPaper",sessionInfo.getUserName(),"F");            
-
-            String str1 = new String(result1);
-            String str2 = new String(result2);
-            String str3 = new String(result3);
-
-            JsonParser jsonParser = new JsonParser();
-            JsonArray jsonArray1 = (JsonArray) jsonParser.parse(str1);
-            JsonArray jsonArray2 = (JsonArray) jsonParser.parse(str2);
-            JsonArray jsonArray3 = (JsonArray) jsonParser.parse(str3);
-
-            System.out.println("Submit Transaction: InitLedger creates the initial set of assets on the ledger.");
-            contract.submitTransaction("InitLedger");
-
-            System.out.println("Evaluate Transaction: UserPaper, result: " + new String(result1));  
-
-            for (int i=0; i<jsonArray1.size();i++){
-                JsonObject object = (JsonObject) jsonArray1.get(i);
-                String blood = object.get("bloodIdx").getAsString();
-                String user = object.get("userIdx").getAsString();
-                String patient = object.get("patientIdx").getAsString();
-                String hos = object.get("hosIdx").getAsString();
-                String usage = object.get("bloodUsage").getAsString();
-                String bdate = object.get("bloodDate").getAsString();
-                String ddate = object.get("donateDate").getAsString();
-
-                System.out.println(blood + user + patient + hos + usage + bdate + ddate);
-
-                GetAllAssets up1 = new GetAllAssets(blood, user, patient, hos, usage, bdate, ddate);
-                userList.add(up1);
-            }
-
-            System.out.println("Evaluate Transaction: UserNotUsedPaper, result: " + new String(result2));  
-
-            for (int i=0; i <jsonArray2.size(); i++){
-                JsonObject object = (JsonObject) jsonArray2.get(i);
-                String blood = object.get("bloodIdx").getAsString();
-                String user = object.get("userIdx").getAsString();
-                String patient = object.get("patientIdx").getAsString();
-                String hos = object.get("hosIdx").getAsString();
-                String usage = object.get("bloodUsage").getAsString();
-                String bdate = object.get("bloodDate").getAsString();
-                String ddate = object.get("donateDate").getAsString();
-
-                System.out.println(blood + user + patient + hos + usage + bdate + ddate);
-
-                GetAllAssets up2 = new GetAllAssets(blood, user, patient, hos, usage, bdate, ddate);
-                uuList.add(up2);
-            }
-
-            System.out.println("Evaluate Transaction: UserUsedPaper, result: " + new String(result3));
-
-            for (int i=0; i <jsonArray3.size(); i++){
-                JsonObject object = (JsonObject) jsonArray3.get(i);
-                String blood = object.get("bloodIdx").getAsString();
-                String user = object.get("userIdx").getAsString();
-                String patient = object.get("patientIdx").getAsString();
-                String hos = object.get("hosIdx").getAsString();
-                String usage = object.get("bloodUsage").getAsString();
-                String bdate = object.get("bloodDate").getAsString();
-                String ddate = object.get("donateDate").getAsString();
-
-                System.out.println(blood + user + patient + hos + usage + bdate + ddate);
-
-                GetAllAssets up3 = new GetAllAssets(blood, user, patient, hos, usage, bdate, ddate);
-                unuList.add(up3);
-            } 
+            result3 = contract.evaluateTransaction("UserUsedPaper",sessionInfo.getUserName(),"F");       
+        } catch (ContractException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
         }
-        catch(Exception e){
-                System.err.println(e);
+             
+
+        String str1 = new String(result1);
+        String str2 = new String(result2);
+        String str3 = new String(result3);
+
+        JsonParser jsonParser = new JsonParser();
+        JsonArray jsonArray1 = (JsonArray) jsonParser.parse(str1);
+        JsonArray jsonArray2 = (JsonArray) jsonParser.parse(str2);
+        JsonArray jsonArray3 = (JsonArray) jsonParser.parse(str3);
+
+        System.out.println("Evaluate Transaction: UserPaper, result: " + new String(result1));  
+
+        for (int i=0; i<jsonArray1.size();i++){
+            JsonObject object = (JsonObject) jsonArray1.get(i);
+            String blood = object.get("bloodIdx").getAsString();
+            String user = object.get("userIdx").getAsString();
+            String patient = object.get("patientIdx").getAsString();
+            String hos = object.get("hosIdx").getAsString();
+            String usage = object.get("bloodUsage").getAsString();
+            String bdate = object.get("bloodDate").getAsString();
+            String ddate = object.get("donateDate").getAsString();
+
+            System.out.println(blood + user + patient + hos + usage + bdate + ddate);
+
+            GetAllAssets up1 = new GetAllAssets(blood, user, patient, hos, usage, bdate, ddate);
+            userList.add(up1);
         }
+
+        System.out.println("Evaluate Transaction: UserNotUsedPaper, result: " + new String(result2));  
+
+        for (int i=0; i <jsonArray2.size(); i++){
+            JsonObject object = (JsonObject) jsonArray2.get(i);
+            String blood = object.get("bloodIdx").getAsString();
+            String user = object.get("userIdx").getAsString();
+            String patient = object.get("patientIdx").getAsString();
+            String hos = object.get("hosIdx").getAsString();
+            String usage = object.get("bloodUsage").getAsString();
+            String bdate = object.get("bloodDate").getAsString();
+            String ddate = object.get("donateDate").getAsString();
+
+            System.out.println(blood + user + patient + hos + usage + bdate + ddate);
+
+            GetAllAssets up2 = new GetAllAssets(blood, user, patient, hos, usage, bdate, ddate);
+            uuList.add(up2);
+        }
+
+        System.out.println("Evaluate Transaction: UserUsedPaper, result: " + new String(result3));
+
+        for (int i=0; i <jsonArray3.size(); i++){
+            JsonObject object = (JsonObject) jsonArray3.get(i);
+            String blood = object.get("bloodIdx").getAsString();
+            String user = object.get("userIdx").getAsString();
+            String patient = object.get("patientIdx").getAsString();
+            String hos = object.get("hosIdx").getAsString();
+            String usage = object.get("bloodUsage").getAsString();
+            String bdate = object.get("bloodDate").getAsString();
+            String ddate = object.get("donateDate").getAsString();
+
+            System.out.println(blood + user + patient + hos + usage + bdate + ddate);
+
+            GetAllAssets up3 = new GetAllAssets(blood, user, patient, hos, usage, bdate, ddate);
+            unuList.add(up3);
+        } 
 
         model.addAttribute("userList", userList);
         model.addAttribute("uuList", uuList);

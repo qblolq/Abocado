@@ -142,9 +142,8 @@
 	.paperButton {
 		width:auto;
 		height: 130px;
-		background-color:#fff;
-		color: grey;
-		border: 2px solid #66493f;
+		background-color: #66493f;
+		color: white;
 		padding: 10px 90px;
 		text-align: center;
 		text-decoration: none;
@@ -155,12 +154,14 @@
 		cursor: pointer;
 	}
 	.paperButton:hover{ 
-		color: white;
-		background-color: #66493f; 
+		color: #66493f;
+		background-color: white;
+		border: 2px solid #66493f;
 	 }
 	 .paperButton:focus{ 
-		color: white;
-		background-color: #66493f; 
+		color: #66493f;
+		background-color: white; 
+		border: 2px solid #66493f;
 	 }
 	
 
@@ -206,6 +207,8 @@
 	<!--tab js-->
 	<script language="javascript">
 		
+		document.getElementById("defaultOpen").click();
+
 		function openTable(evt, tablename) {
 		// Declare all variables
 		var i, tabcontent, tablinks;
@@ -224,7 +227,11 @@
 	
 		// Show the current tab, and add an "active" class to the button that opened the tab
 		document.getElementById(tablename).style.display = "block";
-		evt.currentTarget.className += " active";}
+		evt.currentTarget.className += " active";
+		}
+
+		
+		
 	</script>
 
 
@@ -249,15 +256,16 @@
 					<div class="fh5co-contact-info">			
 						<div class="donate_information ">
 							<div class="myPageInfo1">
-								<img src="resources/images/rc.jpg" alt="My Image" width="100px" height="100px">
+								<img src="resources/images/rc.jpg" alt="My Image" width="100px" height="100px" style="border: 2px solid #66493f; margin-top: 10px;">
 								<div class="donateInfoArea">
 									<h4><b>대한적십자사, 반갑습니다.</b></h4>
-									<h4>- ID: 관리자</h4>
+									<h4>- ID: ABOCADO 관리자</h4>
+									<h4>- 시스템 관리자 연락처: yjkim325@gmail.com</h4>
 								</div> 
 							</div>
 							<div class="myPageInfo2">
-								<button type="button" class="paperButton"onclick="openTable(event, 'totalPaper')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;전체 헌혈증&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>${totalCount} 개</button>
-								<button type="button" class="paperButton"onclick="openTable(event, 'usedPaper')">기부 완료된 헌혈증<br><br>${waitCount} 개</button>
+								<button type="button" class="paperButton"onclick="openTable(event, 'totalPaper')" style="margin:0px 70px 0px 0px" id="defaultOpen">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;전체 헌혈증&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>${totalCount} 개</button>
+								<button type="button" class="paperButton"onclick="openTable(event, 'usedPaper')" style="margin:0px 0px 0px 70px">기부 완료된 헌혈증<br><br>${waitCount} 개</button>
 							</div>
 							
 						</div>
@@ -287,7 +295,7 @@
                                         <td>${gaaList.userIdx}</td>
 										<td>${gaaList.patientIdx}</td>
                                         <td>${gaaList.hosIdx}</td>
-                                        <td>${gssList.bloodDate}</td>
+                                        <td>${gaaList.bloodDate}</td>
 										<td>${gaaList.donateDate}</td>
 										<td>${gaaList.bloodUsage}</td>								
 									</tr>

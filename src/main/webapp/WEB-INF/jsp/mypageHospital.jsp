@@ -376,13 +376,7 @@
 
 	
 
-	<div id="fh5co-contact">
-		<div class="container">
-			<div class="animate-box">
-				
-			</div>
-		</div>
-	</div>
+
 
 	
 

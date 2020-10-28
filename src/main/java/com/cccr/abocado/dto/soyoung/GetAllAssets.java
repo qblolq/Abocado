@@ -21,6 +21,9 @@ public class GetAllAssets {
         this.bloodDate = bloodDate;
         this.donateDate = donateDate;
     }
+    
+
+
     /**
      * @return String return the bloodIdx
      */
@@ -92,14 +95,14 @@ public class GetAllAssets {
     }
 
     /**
-     * @return String return the bloodonateDate
+     * @return String return the bloodDate
      */
     public String getBloodDate() {
         return bloodDate;
     }
 
     /**
-     * @param bloodonateDate the bloodonateDate to set
+     * @param bloodDate the bloodDate to set
      */
     public void setBloodDate(String bloodDate) {
         this.bloodDate = bloodDate;
