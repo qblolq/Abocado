@@ -257,9 +257,9 @@
 								<a href="./listPage" class="donateButton"role="button">기부하기</button><br></a>
 							</div>
 							<div class="myPageInfo2">
-								<button type="button" class="paperButton"onclick="openTable(event, 'totalPaper')">총 헌혈 횟수<br><br>${totalListSize} 개</button>
-								<button type="button" class="paperButton"onclick="openTable(event, 'usedPaper')">현재 보유 헌혈증<br><br>${gettingBloodSize} 개</button>
-								<button type="button" class="paperButton"onclick="openTable(event, 'currentPaper')">기부한 헌혈증<br><br>${donatedUsageBloodSize} 개</button>
+								<button type="button" class="paperButton"onclick="openTable(event, 'totalPaper')">총 헌혈 횟수<br><br>${totalCount} 개</button>
+								<button type="button" class="paperButton"onclick="openTable(event, 'usedPaper')">현재 보유 헌혈증<br><br>${trueCount} 개</button>
+								<button type="button" class="paperButton"onclick="openTable(event, 'currentPaper')">기부한 헌혈증<br><br>${falseCount} 개</button>
 							</div>
 							
 						</div>
@@ -298,7 +298,7 @@
 									<td></td>
 									<td></td>
 									<td></td>
-									<th>총 ${totalListSize}개 기부</th>
+									<th>총 ${totalCount}개 기부</th>
 								</tr>
 							</tbody>
 						</table>
@@ -328,7 +328,7 @@
 								<tr>
 									<td></td>
 									<td></td>
-									<th>총 ${totalListSize}개 보유 중</th>
+									<th>총 ${trueCount}개 보유 중</th>
 								</tr>
 							</tbody>
 						</table>
@@ -365,7 +365,7 @@
 									<td></td>
 									<td></td>
 									<td></td>
-									<th>총 ${totalListSize}개 기부</th>
+									<th>총 ${falseCount}개 기부</th>
 								</tr>
 							</tbody>
 						</table>

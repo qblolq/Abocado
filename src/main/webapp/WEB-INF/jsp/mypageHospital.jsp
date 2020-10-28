@@ -251,7 +251,7 @@
 							<div class="myPageInfo1">
 								<img src="resources/images/profile.jpg" alt="My Image" width="100px" height="100px">
 								<div class="donateInfoArea">
-									<h4><b>${mypageHosPatientList[0].basicHospitalVo.hosName} 병원, 반갑습니다.</b></h4>
+									<h4><b>${mypageHosPatientList[0].basicHospitalVo.hosName}, 반갑습니다.</b></h4>
 									<h4>- ID: ${mypageHosPatientList[0].basicHospitalVo.hosId}(병원 회원)</h4>
 								</div> 
 								<a href="./patientEnrollPage" class="donateButton"role="button">환자 등록하기</button><br></a>
@@ -295,7 +295,7 @@
 									<td></td>
 									<td></td>
 									<td></td>
-									<th>총 ${totalListSize}개 기부</th>
+									<th>총 ${totalCount}개 기부 받음</th>
 								</tr>
 							</tbody>
 							</tr>

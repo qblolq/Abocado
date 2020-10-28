@@ -265,7 +265,7 @@
 							</div>
 							<div class="myPageInfo2">
 								<button type="button" class="paperButton"onclick="openTable(event, 'totalPaper')" style="margin:0px 70px 0px 0px" id="defaultOpen">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;전체 헌혈증&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>${totalCount} 개</button>
-								<button type="button" class="paperButton"onclick="openTable(event, 'usedPaper')" style="margin:0px 0px 0px 70px">기부 완료된 헌혈증<br><br>${waitCount} 개</button>
+								<button type="button" class="paperButton"onclick="openTable(event, 'usedPaper')" style="margin:0px 0px 0px 70px">기부 완료된 헌혈증<br><br>${usedCount} 개</button>
 							</div>
 							
 						</div>
@@ -307,7 +307,7 @@
 									<td></td>
 									<td></td>
 									<td></td>
-									<th>총 ${totalListSize}개 기부</th>
+									<th>총 ${totalCount}개 기부</th>
 								</tr>
 							</tbody>
 							</tr>
@@ -349,7 +349,7 @@
 									<td></td>
 									<td></td>
 									<td></td>
-									<th>총 ${totalListSize}개 기부</th>
+									<th>총 ${usedCount}개 기부</th>
 								</tr>
 							</tbody>
 						</table>

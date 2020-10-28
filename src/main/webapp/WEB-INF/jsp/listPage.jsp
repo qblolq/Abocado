@@ -62,7 +62,7 @@
 		}
 
     	#mainWrapper{
-        	width: 1140px;
+        	width: 1000px;
         	margin: 0 auto; /*가운데 정렬*/
 			font-family:NotoSansKR-Light;
     	}
@@ -102,13 +102,12 @@
         	vertical-align:baseline;
 		}    
 
- 		#ulTable > li > ul > li:first-child               {list-style:none; text-align:center; width:8%;} /*No 열 크기*/
-    	#ulTable > li > ul > li:first-child +li           {list-style:none; text-align:center; width:10%;} /*환자 열 크기*/
-    	#ulTable > li > ul > li:first-child +li+li        {list-style:none; text-align:center; width:25%;} /*증상 열 크기*/
-    	#ulTable > li > ul > li:first-child +li+li+li     {list-style:none; text-align:center; width:15%;} /*종류 열 크기*/
-    	#ulTable > li > ul > li:first-child +li+li+li+li	{list-style:none; text-align:center; width:10%;} /*모금갯수 열 크기*/
-		#ulTable > li > ul > li:first-child +li+li+li+li+li	{list-style:none; text-align:center; width:15%;} /*마감일 열 크기*/
-		#ulTable > li > ul > li:first-child +li+li+li+li+li+li	{list-style:none; text-align:center; width:15%;} /*기부하기 열 크기*/
+ 		#ulTable > li > ul > li:first-child               {list-style:none; text-align:center; width:10%;} /*No 열 크기*/
+    	#ulTable > li > ul > li:first-child +li           {list-style:none; text-align:center; width:15%;} /*환자 열 크기*/
+    	#ulTable > li > ul > li:first-child +li+li        {list-style:none; text-align:center; width:35%;} /*증상 열 크기*/
+    	#ulTable > li > ul > li:first-child +li+li+li	{list-style:none; text-align:center; width:10%;} /*모금갯수 열 크기*/
+		#ulTable > li > ul > li:first-child +li+li+li+li	{list-style:none; text-align:center; width:15%;} /*마감일 열 크기*/
+		#ulTable > li > ul > li:first-child +li+li+li+li+li	{list-style:none; text-align:center; width:15%;} /*기부하기 열 크기*/
 		
 		#divPaging {
           	clear:both; 
@@ -170,14 +169,6 @@
 
 	<div id="mainWrapper">
 
-	    <%-- <!-- 제목 -->
-        <p style="color:#30240F; text-align:left; font-size:18px; padding:10px; margin:0;">
-			<b style="font-size:30px">헌혈증을 기다리는 사람들</b><br>
-
-            <!-- 게시판 목록  -->
-            당신의 헌혈증으로 따뜻한 마음을 전하세요
-		</p> --%>
-
         <ul style="list-style:none; text-align:center; padding:0; margin:0; margin-top:5.5px;">
 			<li style="list-style:none; text-align:center; padding:0; margin:0;">
 			<ul id ="ulTable" style="list-style:none; text-align:center; padding:0; margin:0;">
@@ -189,30 +180,33 @@
 					<li><b>모금 마감일</b></li>
 					<li><b>기부하러가기</b></li>
             	</ul></li>
+				<% int id = 1; %>
 
 				<c:choose>
 					<c:when test="${not empty sessionUserInfo}">
 						<c:forEach items="${patientList}" var="patientList">
                 			<li style="list-style:none; text-align:center; padding:0; margin:0;"><ul style="list-style:none; text-align:center; padding:0; margin:0;">
-                		    <li>1</li>
+                		    <li><%=id%></li>
 							<li>${patientList.patientName}</li>
                 		    <li>${patientList.patientSym}</li>
 							<li>${patientList.patientbdNow}/${patientList.patientbdMax}</li>
                 		    <li>${patientList.patientEnddate}</li>
 							<li><a href="./donatePage?patientIdx=${patientList.patientIdx}" style="color=#66493f">기부하기</a></li>
                 		</ul></li>
+						<% id++; %>
 						</c:forEach>
 					</c:when>
 					<c:when test="${not empty sessionHosInfo}">
 						<c:forEach items="${patientList}" var="patientList">
                 			<li style="list-style:none; text-align:center; padding:0; margin:0;"><ul style="list-style:none; text-align:center; padding:0; margin:0;">
-                		    <li>1</li>
+                		    <li><%=id%></li>
 							<li>${patientList.patientName}</li>
                 		    <li>${patientList.patientSym}</li>
 							<li>${patientList.patientbdNow}/${patientList.patientbdMax}</li>
                 		    <li>${patientList.patientEnddate}</li>
 							<li></li>
                 		</ul></li>
+						<% id++; %>
 						</c:forEach>
 						
                 	</ul></li>
@@ -220,26 +214,28 @@
 					<c:when test="${not empty sessionGovInfo}">
 						<c:forEach items="${patientList}" var="patientList">
                 			<li style="list-style:none; text-align:center; padding:0; margin:0;"><ul style="list-style:none; text-align:center; padding:0; margin:0;">
-                		    <li>1</li>
+                		    <li><%=id%></li>
 							<li>${patientList.patientName}</li>
                 		    <li>${patientList.patientSym}</li>
 							<li>${patientList.patientbdNow}/${patientList.patientbdMax}</li>
                 		    <li>${patientList.patientEnddate}</li>
 							<li></li>
                 		</ul></li>
+						<% id++; %>
 						</c:forEach>
                 	</ul></li>
 					</c:when>
 					<c:otherwise>
 						<c:forEach items="${patientList}" var="patientList">
                 			<li style="list-style:none; text-align:center; padding:0; margin:0;"><ul style="list-style:none; text-align:center; padding:0; margin:0;">
-                		    <li>1</li>
+                		    <li><%=id%></li>
 							<li>${patientList.patientName}</li>
                 		    <li>${patientList.patientSym}</li>
 							<li>${patientList.patientbdNow}/${patientList.patientbdMax}</li>
                 		    <li>${patientList.patientEnddate}</li>
 							<li><a href="./loginPage" style="color=#66493f">기부하기</a></li>
                 		</ul></li>
+						<% id++; %>
 						</c:forEach>
 					</c:otherwise>
 				</c:choose>

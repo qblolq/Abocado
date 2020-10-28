@@ -72,6 +72,13 @@ public class MyPageController {
 
     @RequestMapping("mypagePersonal")
     public String mypagePersonal(HttpSession session, Model model) {
+        
+        try {
+            EnrollAdmin.main(null);
+            RegisterUser.main(null);
+        } catch (Exception e) {
+            System.err.println(e);
+        }
 
         if (gateway == null) {
             try {
@@ -88,32 +95,12 @@ public class MyPageController {
         ArrayList<GetAllAssets> unuList = new ArrayList<GetAllAssets>();
         ArrayList<UserBloodConVo> userBloodList = mypageUserService.getUserBloodList(userIdx);
 
-        int gettingBloodCount = 0;
-        int donatedBloodCount = 0;
+        int totalCount = 0;
+        int trueCount = 0;
+        int falseCount =0;
 
-        for (UserBloodConVo userBloodConVo : userBloodList) {
-            if (userBloodConVo.getBasicBloodVo().getBloodUsage().equals("n")) {
-                gettingBloodCount++;
-            }
-            if (userBloodConVo.getBasicBloodVo().getPatientIdx() != null) {
-                donatedBloodCount++;
-            }
-        }
-
-        // total blood
-        String totalUserBloodSize = Integer.toString(userBloodList.size());
-        // getting blood
-        String gettingBloodSize = Integer.toString(gettingBloodCount);
-        // donate blood
-        String donatedUsageBloodSize = Integer.toString(donatedBloodCount);
 
         // HLF
-        try {
-            EnrollAdmin.main(null);
-            RegisterUser.main(null);
-        } catch (Exception e) {
-            System.err.println(e);
-        }
 
         // get the network and contract
         Network network = gateway.getNetwork("mychannel");
@@ -157,6 +144,7 @@ public class MyPageController {
             System.out.println(blood + user + patient + hos + usage + bdate + ddate);
 
             GetAllAssets up1 = new GetAllAssets(blood, user, patient, hos, usage, bdate, ddate);
+            totalCount++;
             userList.add(up1);
         }
 
@@ -175,6 +163,7 @@ public class MyPageController {
             System.out.println(blood + user + patient + hos + usage + bdate + ddate);
 
             GetAllAssets up2 = new GetAllAssets(blood, user, patient, hos, usage, bdate, ddate);
+            falseCount++;
             uuList.add(up2);
         }
 
@@ -193,6 +182,7 @@ public class MyPageController {
             System.out.println(blood + user + patient + hos + usage + bdate + ddate);
 
             GetAllAssets up3 = new GetAllAssets(blood, user, patient, hos, usage, bdate, ddate);
+            trueCount++;
             unuList.add(up3);
         } 
 
@@ -201,9 +191,9 @@ public class MyPageController {
         model.addAttribute("unuList", unuList);
 
         model.addAttribute("userBloodList", userBloodList);
-        model.addAttribute("totalListSize", totalUserBloodSize);
-        model.addAttribute("gettingBloodSize", gettingBloodSize);
-        model.addAttribute("donatedUsageBloodSize", donatedUsageBloodSize);
+        model.addAttribute("totalCount", totalCount);
+        model.addAttribute("trueCount", trueCount);
+        model.addAttribute("falseCount", falseCount);
 
         return "mypagePersonal";
     }
@@ -219,7 +209,7 @@ public class MyPageController {
         ArrayList<BasicPatientVo> endedPatient = new ArrayList<>();
         ArrayList<BasicPatientVo> waitingPatient = new ArrayList<>();
 
-        int totalCount;
+        int totalCount = 0;
         int waitCount;
         int endCount;
 
@@ -281,6 +271,7 @@ public class MyPageController {
                 System.out.println(blood + patient + hos + usage + ddate);
 
                 HosPaper hp = new HosPaper(blood, patient, hos, usage, ddate);
+                totalCount++;
                 hosList.add(hp);
             }
         }
@@ -289,7 +280,7 @@ public class MyPageController {
         }
                 
 
-        totalCount = patientHosConVos.size();
+
         waitCount = waitingPatient.size();
         endCount = endedPatient.size();
         
@@ -311,6 +302,8 @@ public class MyPageController {
     public String hlf(HttpSession session,Model model) {
         // enrolls the admin and registers the user
 
+        int totalCount = 0;
+        int usedCount = 0;
         SessionGovVo sessionInfo =  (SessionGovVo) session.getAttribute("sessionGovInfo");
         ArrayList<GetAllAssets> gaaList = new ArrayList<GetAllAssets>();
         ArrayList<GetAllAssets> uaaList = new ArrayList<GetAllAssets>();
@@ -356,6 +349,7 @@ public class MyPageController {
 
                         GetAllAssets gaa = new GetAllAssets(blood, user, patient, hos, usage, bdate, ddate);
                         gaaList.add(gaa);
+                        totalCount++;
                 }
 
                 System.out.println("Evaluate Transaction: GetAllAssets, result: " + new String(result2));
@@ -372,12 +366,15 @@ public class MyPageController {
 
                         GetAllAssets uaa = new GetAllAssets(blood, user, patient, hos, usage, bdate, ddate);
                         uaaList.add(uaa);
+                        usedCount++;
                 }
 
         }
         catch(Exception e){
                 System.err.println(e);
         }
+        model.addAttribute("totalCount", totalCount);
+        model.addAttribute("usedCount", usedCount);
         model.addAttribute("gaaList", gaaList);
         model.addAttribute("uaaList", uaaList);
         return "mypageGov";
